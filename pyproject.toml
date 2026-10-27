@@ -1,0 +1,42 @@
+[project]
+name = "rostov-guide"
+version = "0.1.0"
+description = "Ростов-гид: агент-справочник по местам Ростова-на-Дону на Google ADK с семантическим поиском"
+readme = "README.md"
+authors = [
+    { name = "InZainer", email = "samezain@yandex.ru" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "aiosqlite>=0.22.1",
+    "fastapi>=0.141.1",
+    "google-adk>=2.11.0",
+    "httpx>=0.28.1",
+    "litellm>=1.104.0",
+    "pydantic-settings>=2.15.0",
+    "pyjwt>=2.15.1",
+    "qdrant-client>=1.19.1",
+    "snowballstemmer>=3.1.1",
+    "sse-starlette>=3.5.0",
+    "uvicorn[standard]>=0.54.0",
+]
+
+[project.scripts]
+rostov-guide = "rostov_guide:main"
+
+[build-system]
+requires = ["uv_build>=0.11.18,<0.12.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+    "pytest-asyncio>=1.4.0",
+]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+testpaths = ["tests"]
+pythonpath = ["tests"]
+filterwarnings = ["ignore::UserWarning", "ignore::DeprecationWarning"]

@@ -1,0 +1,3102 @@
+{
+  "$schema": "nexus-mapper/concept-model/v1",
+  "generated_at": "2026-10-22T12:00:00Z",
+  "repo_path": "C:\\Users\\Azuz\\Desktop\\SFEDU_MASTERS\\Urushkin_NLP\\rostov-guide",
+  "generator": "nexus-mapper v2",
+  "nodes": [
+    {
+      "id": "rostov-guide.places",
+      "type": "System",
+      "label": "Places Directory",
+      "responsibility": "Справочник 8860 мест OSM в памяти: фильтры, геопоиск, геокодинг по адресам базы, часы работы, словарь видов и кухонь",
+      "code_path": "src/rostov_guide/places/",
+      "tech_stack": [
+        "python",
+        "aiosqlite"
+      ],
+      "complexity": "medium",
+      "hotspot": false,
+      "implementation_status": "implemented",
+      "evidence_path": null,
+      "evidence_gap": null,
+      "related_reqs": []
+    },
+    {
+      "id": "rostov-guide.search",
+      "type": "System",
+      "label": "Hybrid Semantic Search",
+      "responsibility": "Индекс Qdrant: документы со словарным расширением, эмбеддинги bge-m3 с дисковым кешем, BM25, слияние RRF, оценка поиска",
+      "code_path": "src/rostov_guide/search/",
+      "tech_stack": [
+        "qdrant-client",
+        "httpx",
+        "snowballstemmer"
+      ],
+      "complexity": "high",
+      "hotspot": false,
+      "implementation_status": "implemented",
+      "evidence_path": null,
+      "evidence_gap": null,
+      "related_reqs": []
+    },
+    {
+      "id": "rostov-guide.agent",
+      "type": "System",
+      "label": "ADK Agent",
+      "responsibility": "LlmAgent Google ADK: инструкция, 4 инструмента, плагины (журнал, ошибки-наблюдения, RepeatGuard, UserTurnGuard), сжатие контекста, eval-agent",
+      "code_path": "src/rostov_guide/agent/",
+      "tech_stack": [
+        "google-adk",
+        "litellm"
+      ],
+      "complexity": "high",
+      "hotspot": false,
+      "implementation_status": "implemented",
+      "evidence_path": null,
+      "evidence_gap": null,
+      "related_reqs": []
+    },
+    {
+      "id": "rostov-guide.web",
+      "type": "System",
+      "label": "Web API and Run Manager",
+      "responsibility": "FastAPI: вход (scrypt+JWT cookie), чаты-сессии ADK, прогоны с очередью к модели, поток SSE с Last-Event-ID, перевод событий ADK",
+      "code_path": "src/rostov_guide/web/",
+      "tech_stack": [
+        "fastapi",
+        "sse-starlette",
+        "pyjwt"
+      ],
+      "complexity": "high",
+      "hotspot": false,
+      "implementation_status": "implemented",
+      "evidence_path": null,
+      "evidence_gap": null,
+      "related_reqs": []
+    },
+    {
+      "id": "rostov-guide.frontend",
+      "type": "System",
+      "label": "Browser UI",
+      "responsibility": "ES-модули без сборки: чат, живой ход мысли, карточки мест, карта Leaflet, вход, очередь, переподключение потока",
+      "code_path": "src/rostov_guide/static/",
+      "tech_stack": [
+        "javascript",
+        "leaflet"
+      ],
+      "complexity": "medium",
+      "hotspot": false,
+      "implementation_status": "implemented",
+      "evidence_path": null,
+      "evidence_gap": null,
+      "related_reqs": []
+    },
+    {
+      "id": "rostov-guide.composition",
+      "type": "Module",
+      "label": "Composition Root and CLI",
+      "responsibility": "Settings из .env, сборка Services (справочник, эмбеддер, индекс), CLI serve/index/eval-search/eval-agent",
+      "code_path": "src/rostov_guide/services.py",
+      "tech_stack": [
+        "pydantic-settings"
+      ],
+      "complexity": "low",
+      "hotspot": false,
+      "implementation_status": "implemented",
+      "evidence_path": null,
+      "evidence_gap": null,
+      "related_reqs": []
+    },
+    {
+      "id": "rostov-guide.tests",
+      "type": "Module",
+      "label": "Test Suite",
+      "responsibility": "62 pytest-теста без сети и модели: фейковые эмбеддер и ADK Runner, API через ASGITransport",
+      "code_path": "tests/",
+      "tech_stack": [
+        "pytest",
+        "pytest-asyncio"
+      ],
+      "complexity": "medium",
+      "hotspot": false,
+      "implementation_status": "implemented",
+      "evidence_path": null,
+      "evidence_gap": null,
+      "related_reqs": []
+    },
+    {
+      "id": "rostov-guide.lmstudio",
+      "type": "System",
+      "label": "LM Studio (external)",
+      "responsibility": "Внешний OpenAI-совместимый сервер: чат-модель qwen3.5-4b (окно 16k) и эмбеддинги bge-m3",
+      "code_path": null,
+      "implementation_status": "inferred",
+      "evidence_path": "README.md",
+      "evidence_gap": "внешний процесс, в репозитории только настройки (.env.example) и инструкции запуска",
+      "tech_stack": [
+        "lm-studio"
+      ],
+      "complexity": "low",
+      "hotspot": false,
+      "related_reqs": []
+    },
+    {
+      "id": "rostov-guide.domain-run",
+      "type": "Domain",
+      "label": "Run",
+      "responsibility": "Прогон: один вопрос, фоновая задача с буфером событий seq, статусы queued/running/done/error/cancelled",
+      "code_path": "src/rostov_guide/web/runs.py",
+      "tech_stack": [
+        "asyncio"
+      ],
+      "complexity": "medium",
+      "hotspot": false,
+      "implementation_status": "implemented",
+      "evidence_path": null,
+      "evidence_gap": null,
+      "related_reqs": []
+    },
+    {
+      "id": "rostov-guide.domain-place",
+      "type": "Domain",
+      "label": "Place",
+      "responsibility": "Место OSM: brief() для модели с «нет в базе», card() с координатами для интерфейса",
+      "code_path": "src/rostov_guide/places/repository.py",
+      "tech_stack": [
+        "python"
+      ],
+      "complexity": "low",
+      "hotspot": false,
+      "implementation_status": "implemented",
+      "evidence_path": null,
+      "evidence_gap": null,
+      "related_reqs": []
+    }
+  ],
+  "edges": [
+    {
+      "source": "src.rostov_guide",
+      "target": "src.rostov_guide.main",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide",
+      "target": "src.rostov_guide.run_index",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide",
+      "target": "src.rostov_guide.run_eval",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide",
+      "target": "src.rostov_guide.run_agent_eval",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide",
+      "target": "argparse",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide",
+      "target": "asyncio",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide",
+      "target": "json",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide",
+      "target": "logging",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide",
+      "target": "os",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide",
+      "target": "uvicorn",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.agent.evaluate",
+      "target": "src.rostov_guide.agent.evaluate.wilson_low",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.agent.evaluate",
+      "target": "src.rostov_guide.agent.evaluate._norm",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.agent.evaluate",
+      "target": "src.rostov_guide.agent.evaluate.Turn",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.agent.evaluate",
+      "target": "src.rostov_guide.agent.evaluate.Case",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.agent.evaluate",
+      "target": "src.rostov_guide.agent.evaluate._contains",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.agent.evaluate",
+      "target": "src.rostov_guide.agent.evaluate.check",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.agent.evaluate",
+      "target": "src.rostov_guide.agent.evaluate.build_cases",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.agent.evaluate",
+      "target": "src.rostov_guide.agent.evaluate.phone_followup",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.agent.evaluate",
+      "target": "src.rostov_guide.agent.evaluate.nearest_24_7_check",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.agent.evaluate",
+      "target": "src.rostov_guide.agent.evaluate.any_shawarma",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.agent.evaluate",
+      "target": "src.rostov_guide.agent.evaluate.off_topic",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.agent.evaluate",
+      "target": "src.rostov_guide.agent.evaluate._run_case",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.agent.evaluate",
+      "target": "src.rostov_guide.agent.evaluate.evaluate_agent",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.agent.evaluate",
+      "target": "json",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.agent.evaluate",
+      "target": "re",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.agent.evaluate",
+      "target": "time",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.agent.evaluate",
+      "target": "collections.abc",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.agent.evaluate",
+      "target": "dataclasses",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.agent.evaluate",
+      "target": "pathlib",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.agent.evaluate",
+      "target": "google.adk.agents.run_config",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.agent.evaluate",
+      "target": "google.adk.runners",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.agent.evaluate",
+      "target": "google.adk.sessions",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.agent.evaluate",
+      "target": "google.genai",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.agent.factory",
+      "target": "src.rostov_guide.agent.factory.build_model",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.agent.factory",
+      "target": "src.rostov_guide.agent.factory.build_agent",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.agent.factory",
+      "target": "src.rostov_guide.agent.factory.build_runner",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.agent.factory",
+      "target": "google.adk.agents",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.agent.factory",
+      "target": "google.adk.apps",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.agent.factory",
+      "target": "google.adk.apps.app",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.agent.factory",
+      "target": "google.adk.apps.llm_event_summarizer",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.agent.factory",
+      "target": "google.adk.models.lite_llm",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.agent.factory",
+      "target": "google.adk.runners",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.agent.factory",
+      "target": "google.adk.sessions.sqlite_session_service",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.agent.plugins",
+      "target": "src.rostov_guide.agent.plugins.ToolErrorsAsObservations",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.agent.plugins.ToolErrorsAsObservations",
+      "target": "src.rostov_guide.agent.plugins.ToolErrorsAsObservations.__init__",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.agent.plugins.ToolErrorsAsObservations",
+      "target": "src.rostov_guide.agent.plugins.ToolErrorsAsObservations.on_tool_error_callback",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.agent.plugins",
+      "target": "src.rostov_guide.agent.plugins.RepeatGuard",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.agent.plugins.RepeatGuard",
+      "target": "src.rostov_guide.agent.plugins.RepeatGuard.__init__",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.agent.plugins.RepeatGuard",
+      "target": "src.rostov_guide.agent.plugins.RepeatGuard.before_tool_callback",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.agent.plugins.RepeatGuard",
+      "target": "src.rostov_guide.agent.plugins.RepeatGuard.after_run_callback",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.agent.plugins",
+      "target": "src.rostov_guide.agent.plugins.UserTurnGuard",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.agent.plugins.UserTurnGuard",
+      "target": "src.rostov_guide.agent.plugins.UserTurnGuard.__init__",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.agent.plugins.UserTurnGuard",
+      "target": "src.rostov_guide.agent.plugins.UserTurnGuard.before_model_callback",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.agent.plugins",
+      "target": "src.rostov_guide.agent.plugins._short",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.agent.plugins",
+      "target": "src.rostov_guide.agent.plugins.JournalPlugin",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.agent.plugins.JournalPlugin",
+      "target": "src.rostov_guide.agent.plugins.JournalPlugin.__init__",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.agent.plugins.JournalPlugin",
+      "target": "src.rostov_guide.agent.plugins.JournalPlugin._write",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.agent.plugins.JournalPlugin",
+      "target": "src.rostov_guide.agent.plugins.JournalPlugin.before_run_callback",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.agent.plugins.JournalPlugin",
+      "target": "src.rostov_guide.agent.plugins.JournalPlugin.before_model_callback",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.agent.plugins.JournalPlugin",
+      "target": "src.rostov_guide.agent.plugins.JournalPlugin.after_model_callback",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.agent.plugins.JournalPlugin",
+      "target": "src.rostov_guide.agent.plugins.JournalPlugin.before_tool_callback",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.agent.plugins.JournalPlugin",
+      "target": "src.rostov_guide.agent.plugins.JournalPlugin.after_tool_callback",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.agent.plugins.JournalPlugin",
+      "target": "src.rostov_guide.agent.plugins.JournalPlugin.on_model_error_callback",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.agent.plugins.JournalPlugin",
+      "target": "src.rostov_guide.agent.plugins.JournalPlugin.after_run_callback",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.agent.plugins",
+      "target": "src.rostov_guide.agent.plugins._append",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.agent.plugins",
+      "target": "asyncio",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.agent.plugins",
+      "target": "json",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.agent.plugins",
+      "target": "logging",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.agent.plugins",
+      "target": "time",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.agent.plugins",
+      "target": "datetime",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.agent.plugins",
+      "target": "pathlib",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.agent.plugins",
+      "target": "typing",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.agent.plugins",
+      "target": "google.adk.agents.callback_context",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.agent.plugins",
+      "target": "google.adk.agents.invocation_context",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.agent.plugins",
+      "target": "google.adk.models.llm_request",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.agent.plugins",
+      "target": "google.adk.models.llm_response",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.agent.plugins",
+      "target": "google.adk.plugins.base_plugin",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.agent.plugins",
+      "target": "google.adk.tools.base_tool",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.agent.plugins",
+      "target": "google.adk.tools.tool_context",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.agent.prompt",
+      "target": "src.rostov_guide.agent.prompt.build_instruction",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.agent.prompt",
+      "target": "datetime",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.agent.prompt",
+      "target": "google.adk.agents.readonly_context",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.agent.tools",
+      "target": "src.rostov_guide.agent.tools.query_adds_meaning",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.agent.tools",
+      "target": "src.rostov_guide.agent.tools._now",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.agent.tools",
+      "target": "src.rostov_guide.agent.tools._limit",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.agent.tools",
+      "target": "src.rostov_guide.agent.tools.make_tools",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.agent.tools",
+      "target": "src.rostov_guide.agent.tools.kind_or_error",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.agent.tools",
+      "target": "src.rostov_guide.agent.tools.user_point",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.agent.tools",
+      "target": "src.rostov_guide.agent.tools.with_distance",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.agent.tools",
+      "target": "src.rostov_guide.agent.tools.search_places",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.agent.tools",
+      "target": "src.rostov_guide.agent.tools.find_places",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.agent.tools",
+      "target": "src.rostov_guide.agent.tools.nearest_places",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.agent.tools",
+      "target": "src.rostov_guide.agent.tools.place_details",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.agent.tools",
+      "target": "datetime",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.agent.tools",
+      "target": "google.adk.tools",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.config",
+      "target": "src.rostov_guide.config.Settings",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.config.Settings",
+      "target": "src.rostov_guide.config.Settings.embed_url",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.config.Settings",
+      "target": "src.rostov_guide.config.Settings.embed_key",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.config.Settings",
+      "target": "src.rostov_guide.config.Settings.poi_db",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.config.Settings",
+      "target": "src.rostov_guide.config.Settings.app_db",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.config.Settings",
+      "target": "src.rostov_guide.config.Settings.sessions_db",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.config.Settings",
+      "target": "src.rostov_guide.config.Settings.jwt_secret",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.config",
+      "target": "src.rostov_guide.config.get_settings",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.config",
+      "target": "secrets",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.config",
+      "target": "functools",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.config",
+      "target": "pathlib",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.config",
+      "target": "pydantic_settings",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.places.hours",
+      "target": "src.rostov_guide.places.hours.HoursStatus",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.places.hours",
+      "target": "src.rostov_guide.places.hours._days",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.places.hours",
+      "target": "src.rostov_guide.places.hours._intervals",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.places.hours",
+      "target": "src.rostov_guide.places.hours.parse",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.places.hours",
+      "target": "src.rostov_guide.places.hours._fmt",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.places.hours",
+      "target": "src.rostov_guide.places.hours.status",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.places.hours",
+      "target": "re",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.places.hours",
+      "target": "dataclasses",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.places.hours",
+      "target": "datetime",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.places.kinds",
+      "target": "src.rostov_guide.places.kinds.kind_label",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.places.kinds",
+      "target": "src.rostov_guide.places.kinds.cuisine_labels",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.places.kinds",
+      "target": "src.rostov_guide.places.kinds.cuisine_dishes",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.places.kinds",
+      "target": "src.rostov_guide.places.kinds._stem",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.places.kinds",
+      "target": "src.rostov_guide.places.kinds.resolve_kind",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.places.kinds",
+      "target": "src.rostov_guide.places.kinds.suggest_kinds",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.places.kinds",
+      "target": "re",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.places.kinds",
+      "target": "difflib",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.places.repository",
+      "target": "src.rostov_guide.places.repository.Place",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.places.repository.Place",
+      "target": "src.rostov_guide.places.repository.Place.address",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.places.repository.Place",
+      "target": "src.rostov_guide.places.repository.Place.title",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.places.repository.Place",
+      "target": "src.rostov_guide.places.repository.Place.brief",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.places.repository.Place",
+      "target": "src.rostov_guide.places.repository.Place.card",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.places.repository",
+      "target": "src.rostov_guide.places.repository.Point",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.places.repository",
+      "target": "src.rostov_guide.places.repository.distance_m",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.places.repository",
+      "target": "src.rostov_guide.places.repository._stem",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.places.repository",
+      "target": "src.rostov_guide.places.repository.PlaceRepository",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.places.repository.PlaceRepository",
+      "target": "src.rostov_guide.places.repository.PlaceRepository.load",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.places.repository.PlaceRepository",
+      "target": "src.rostov_guide.places.repository.PlaceRepository.__len__",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.places.repository.PlaceRepository",
+      "target": "src.rostov_guide.places.repository.PlaceRepository.get",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.places.repository.PlaceRepository",
+      "target": "src.rostov_guide.places.repository.PlaceRepository.filter",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.places.repository.PlaceRepository",
+      "target": "src.rostov_guide.places.repository.PlaceRepository.by_distance",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.places.repository.PlaceRepository",
+      "target": "src.rostov_guide.places.repository.PlaceRepository.geocode",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.places.repository",
+      "target": "src.rostov_guide.places.repository._street_key",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.places.repository",
+      "target": "math",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.places.repository",
+      "target": "re",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.places.repository",
+      "target": "collections",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.places.repository",
+      "target": "dataclasses",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.places.repository",
+      "target": "datetime",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.places.repository",
+      "target": "pathlib",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.places.repository",
+      "target": "aiosqlite",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.search.documents",
+      "target": "src.rostov_guide.search.documents.group_of",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.search.documents",
+      "target": "src.rostov_guide.search.documents.document",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.search.embeddings",
+      "target": "src.rostov_guide.search.embeddings.EmbeddingError",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.search.embeddings",
+      "target": "src.rostov_guide.search.embeddings.EmbeddingClient",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.search.embeddings.EmbeddingClient",
+      "target": "src.rostov_guide.search.embeddings.EmbeddingClient.__init__",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.search.embeddings.EmbeddingClient",
+      "target": "src.rostov_guide.search.embeddings.EmbeddingClient._request",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.search.embeddings.EmbeddingClient",
+      "target": "src.rostov_guide.search.embeddings.EmbeddingClient.embed",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.search.embeddings.EmbeddingClient",
+      "target": "src.rostov_guide.search.embeddings.EmbeddingClient.embed_query",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.search.embeddings.EmbeddingClient",
+      "target": "src.rostov_guide.search.embeddings.EmbeddingClient._key",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.search.embeddings.EmbeddingClient",
+      "target": "src.rostov_guide.search.embeddings.EmbeddingClient._cache_get",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.search.embeddings.EmbeddingClient",
+      "target": "src.rostov_guide.search.embeddings.EmbeddingClient._cache_put",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.search.embeddings.EmbeddingClient",
+      "target": "src.rostov_guide.search.embeddings.EmbeddingClient.aclose",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.search.embeddings",
+      "target": "array",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.search.embeddings",
+      "target": "asyncio",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.search.embeddings",
+      "target": "hashlib",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.search.embeddings",
+      "target": "collections",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.search.embeddings",
+      "target": "pathlib",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.search.embeddings",
+      "target": "aiosqlite",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.search.embeddings",
+      "target": "httpx",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.search.evaluate",
+      "target": "src.rostov_guide.search.evaluate._name",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.search.evaluate",
+      "target": "src.rostov_guide.search.evaluate._cuisine",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.search.evaluate",
+      "target": "src.rostov_guide.search.evaluate._kind",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.search.evaluate",
+      "target": "src.rostov_guide.search.evaluate._any",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.search.evaluate",
+      "target": "src.rostov_guide.search.evaluate.ModeScore",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.search.evaluate",
+      "target": "src.rostov_guide.search.evaluate.evaluate",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.search.evaluate",
+      "target": "json",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.search.evaluate",
+      "target": "time",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.search.evaluate",
+      "target": "collections.abc",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.search.evaluate",
+      "target": "dataclasses",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.search.evaluate",
+      "target": "pathlib",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.search.sparse",
+      "target": "src.rostov_guide.search.sparse._stem",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.search.sparse",
+      "target": "src.rostov_guide.search.sparse.terms",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.search.sparse",
+      "target": "src.rostov_guide.search.sparse.term_id",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.search.sparse",
+      "target": "src.rostov_guide.search.sparse.encode_document",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.search.sparse",
+      "target": "src.rostov_guide.search.sparse.encode_query",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.search.sparse",
+      "target": "src.rostov_guide.search.sparse.meaningful_terms",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.search.sparse",
+      "target": "re",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.search.sparse",
+      "target": "zlib",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.search.sparse",
+      "target": "collections",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.search.sparse",
+      "target": "functools",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.search.sparse",
+      "target": "snowballstemmer",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.search.store",
+      "target": "src.rostov_guide.search.store.Hit",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.search.store.Hit",
+      "target": "src.rostov_guide.search.store.Hit.found_by",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.search.store",
+      "target": "src.rostov_guide.search.store.IndexStatus",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.search.store.IndexStatus",
+      "target": "src.rostov_guide.search.store.IndexStatus.as_dict",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.search.store",
+      "target": "src.rostov_guide.search.store.PlaceIndex",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.search.store.PlaceIndex",
+      "target": "src.rostov_guide.search.store.PlaceIndex.open",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.search.store.PlaceIndex",
+      "target": "src.rostov_guide.search.store.PlaceIndex._expected",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.search.store.PlaceIndex",
+      "target": "src.rostov_guide.search.store.PlaceIndex._read_meta",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.search.store.PlaceIndex",
+      "target": "src.rostov_guide.search.store.PlaceIndex.attach",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.search.store.PlaceIndex",
+      "target": "src.rostov_guide.search.store.PlaceIndex.rebuild",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.search.store.PlaceIndex",
+      "target": "src.rostov_guide.search.store.PlaceIndex.search",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.search.store.PlaceIndex",
+      "target": "src.rostov_guide.search.store.PlaceIndex.aclose",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.search.store",
+      "target": "asyncio",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.search.store",
+      "target": "hashlib",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.search.store",
+      "target": "json",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.search.store",
+      "target": "logging",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.search.store",
+      "target": "time",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.search.store",
+      "target": "collections.abc",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.search.store",
+      "target": "dataclasses",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.search.store",
+      "target": "pathlib",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.search.store",
+      "target": "qdrant_client",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.services",
+      "target": "src.rostov_guide.services.Services",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.services.Services",
+      "target": "src.rostov_guide.services.Services.ensure_index",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.services.Services",
+      "target": "src.rostov_guide.services.Services.build",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.services.Services",
+      "target": "src.rostov_guide.services.Services.aclose",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.services",
+      "target": "src.rostov_guide.services._progress",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.services",
+      "target": "src.rostov_guide.services.build_services",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.services",
+      "target": "asyncio",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.services",
+      "target": "logging",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.services",
+      "target": "sys",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.services",
+      "target": "dataclasses",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.static.js.api",
+      "target": "src.rostov_guide.static.js.api.ApiError",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.api.ApiError",
+      "target": "src.rostov_guide.static.js.api.ApiError.constructor",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.api",
+      "target": "src.rostov_guide.static.js.api.request",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.api",
+      "target": "src.rostov_guide.static.js.api.follow",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.app",
+      "target": "src.rostov_guide.static.js.app.stick",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.app",
+      "target": "src.rostov_guide.static.js.app.showAuth",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.app",
+      "target": "src.rostov_guide.static.js.app.showApp",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.app",
+      "target": "src.rostov_guide.static.js.app.bindUi",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.app",
+      "target": "src.rostov_guide.static.js.app.autosize",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.app",
+      "target": "src.rostov_guide.static.js.app.updateSend",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.app",
+      "target": "src.rostov_guide.static.js.app.setRunning",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.app",
+      "target": "src.rostov_guide.static.js.app.closeDrawers",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.app",
+      "target": "src.rostov_guide.static.js.app.toggleMap",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.app",
+      "target": "src.rostov_guide.static.js.app.isDark",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.app",
+      "target": "src.rostov_guide.static.js.app.toggleTheme",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.app",
+      "target": "src.rostov_guide.static.js.app.updateThemeIcon",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.app",
+      "target": "src.rostov_guide.static.js.app.refreshStatus",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.app",
+      "target": "src.rostov_guide.static.js.app.renderStatus",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.app",
+      "target": "src.rostov_guide.static.js.app.setContext",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.app",
+      "target": "src.rostov_guide.static.js.app.loadChats",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.app",
+      "target": "src.rostov_guide.static.js.app.renderChatList",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.app",
+      "target": "src.rostov_guide.static.js.app.detachRun",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.app",
+      "target": "src.rostov_guide.static.js.app.newChat",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.app",
+      "target": "src.rostov_guide.static.js.app.renderEmpty",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.app",
+      "target": "src.rostov_guide.static.js.app.openChat",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.app",
+      "target": "src.rostov_guide.static.js.app.viewOptions",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.app",
+      "target": "src.rostov_guide.static.js.app.send",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.app",
+      "target": "src.rostov_guide.static.js.app.attachRun",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.app",
+      "target": "src.rostov_guide.static.js.app.startPick",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.app",
+      "target": "src.rostov_guide.static.js.app.cancelPick",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.app",
+      "target": "src.rostov_guide.static.js.app.onMapPick",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.app",
+      "target": "src.rostov_guide.static.js.app.setLocation",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.app",
+      "target": "src.rostov_guide.static.js.app.renderLocation",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.app",
+      "target": "./api.js",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.static.js.app",
+      "target": "./chat.js",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.static.js.app",
+      "target": "./map.js",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.static.js.app",
+      "target": "./ui.js",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.static.js.chat",
+      "target": "src.rostov_guide.static.js.chat.userMessage",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.chat",
+      "target": "src.rostov_guide.static.js.chat.systemNote",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.chat",
+      "target": "src.rostov_guide.static.js.chat.AssistantView",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.chat.AssistantView",
+      "target": "src.rostov_guide.static.js.chat.AssistantView.constructor",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.chat.AssistantView",
+      "target": "src.rostov_guide.static.js.chat.AssistantView.startTimer",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.chat.AssistantView",
+      "target": "src.rostov_guide.static.js.chat.AssistantView.stopTimer",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.chat.AssistantView",
+      "target": "src.rostov_guide.static.js.chat.AssistantView.handle",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.chat.AssistantView",
+      "target": "src.rostov_guide.static.js.chat.AssistantView.setQueued",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.chat.AssistantView",
+      "target": "src.rostov_guide.static.js.chat.AssistantView.setStatus",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.chat.AssistantView",
+      "target": "src.rostov_guide.static.js.chat.AssistantView.appendThought",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.chat.AssistantView",
+      "target": "src.rostov_guide.static.js.chat.AssistantView.finishThought",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.chat.AssistantView",
+      "target": "src.rostov_guide.static.js.chat.AssistantView.addMoreLink",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.chat.AssistantView",
+      "target": "src.rostov_guide.static.js.chat.AssistantView.step",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.chat.AssistantView",
+      "target": "src.rostov_guide.static.js.chat.AssistantView.addToolCall",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.chat.AssistantView",
+      "target": "src.rostov_guide.static.js.chat.AssistantView.addToolResult",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.chat.AssistantView",
+      "target": "src.rostov_guide.static.js.chat.AssistantView.setUsage",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.chat.AssistantView",
+      "target": "src.rostov_guide.static.js.chat.AssistantView.scheduleAnswer",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.chat.AssistantView",
+      "target": "src.rostov_guide.static.js.chat.AssistantView.showError",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.chat.AssistantView",
+      "target": "src.rostov_guide.static.js.chat.AssistantView.finish",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.chat.AssistantView",
+      "target": "src.rostov_guide.static.js.chat.AssistantView.cardsToShow",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.chat.AssistantView",
+      "target": "src.rostov_guide.static.js.chat.AssistantView.renderCards",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.chat.AssistantView",
+      "target": "src.rostov_guide.static.js.chat.AssistantView.showOnMap",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.chat.AssistantView",
+      "target": "src.rostov_guide.static.js.chat.AssistantView.cardEl",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.chat.AssistantView",
+      "target": "src.rostov_guide.static.js.chat.AssistantView.focusPlace",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.chat.AssistantView",
+      "target": "src.rostov_guide.static.js.chat.AssistantView.linkPlaces",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.chat.AssistantView",
+      "target": "src.rostov_guide.static.js.chat.AssistantView.renderMeta",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.chat.AssistantView",
+      "target": "src.rostov_guide.static.js.chat.AssistantView.stick",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.chat.AssistantView",
+      "target": "src.rostov_guide.static.js.chat.AssistantView.fromHistory",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.chat.AssistantView",
+      "target": "src.rostov_guide.static.js.chat.AssistantView.finishFromHistory",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.chat",
+      "target": "./markdown.js",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.static.js.chat",
+      "target": "./ui.js",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.static.js.map",
+      "target": "src.rostov_guide.static.js.map.pinIcon",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.map",
+      "target": "src.rostov_guide.static.js.map.popupFor",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.map",
+      "target": "src.rostov_guide.static.js.map.PlaceMap",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.map.PlaceMap",
+      "target": "src.rostov_guide.static.js.map.PlaceMap.constructor",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.map.PlaceMap",
+      "target": "src.rostov_guide.static.js.map.PlaceMap.init",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.map.PlaceMap",
+      "target": "src.rostov_guide.static.js.map.PlaceMap.setTheme",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.map.PlaceMap",
+      "target": "src.rostov_guide.static.js.map.PlaceMap.invalidate",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.map.PlaceMap",
+      "target": "src.rostov_guide.static.js.map.PlaceMap.showPlaces",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.map.PlaceMap",
+      "target": "src.rostov_guide.static.js.map.PlaceMap.highlight",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.map.PlaceMap",
+      "target": "src.rostov_guide.static.js.map.PlaceMap.focus",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.map.PlaceMap",
+      "target": "src.rostov_guide.static.js.map.PlaceMap.setUser",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.map.PlaceMap",
+      "target": "src.rostov_guide.static.js.map.PlaceMap.startPick",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.map.PlaceMap",
+      "target": "src.rostov_guide.static.js.map.PlaceMap.stopPick",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.map",
+      "target": "./ui.js",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.static.js.markdown",
+      "target": "src.rostov_guide.static.js.markdown.escapeHtml",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.markdown",
+      "target": "src.rostov_guide.static.js.markdown.inline",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.markdown",
+      "target": "src.rostov_guide.static.js.markdown.renderMarkdown",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.ui",
+      "target": "src.rostov_guide.static.js.ui.h",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.ui",
+      "target": "src.rostov_guide.static.js.ui.icon",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.ui",
+      "target": "src.rostov_guide.static.js.ui.spinner",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.ui",
+      "target": "src.rostov_guide.static.js.ui.plural",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.ui",
+      "target": "src.rostov_guide.static.js.ui.fmtTokens",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.ui",
+      "target": "src.rostov_guide.static.js.ui.fmtSeconds",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.ui",
+      "target": "src.rostov_guide.static.js.ui.fmtDistance",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.ui",
+      "target": "src.rostov_guide.static.js.ui.relTime",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.ui",
+      "target": "src.rostov_guide.static.js.ui.toast",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.ui",
+      "target": "src.rostov_guide.static.js.ui.get",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.ui",
+      "target": "src.rostov_guide.static.js.ui.set",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.ui",
+      "target": "src.rostov_guide.static.js.ui.remove",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.app",
+      "target": "src.rostov_guide.web.app.lifespan",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.app",
+      "target": "src.rostov_guide.web.app.create_app",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.app",
+      "target": "src.rostov_guide.web.app.same_origin_guard",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.app",
+      "target": "src.rostov_guide.web.app.index",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.app",
+      "target": "logging",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.web.app",
+      "target": "mimetypes",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.web.app",
+      "target": "contextlib",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.web.app",
+      "target": "pathlib",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.web.app",
+      "target": "urllib.parse",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.web.app",
+      "target": "fastapi",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.web.app",
+      "target": "fastapi.responses",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.web.app",
+      "target": "fastapi.staticfiles",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.web.app",
+      "target": "litellm",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.web.auth",
+      "target": "src.rostov_guide.web.auth.User",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.auth",
+      "target": "src.rostov_guide.web.auth.Credentials",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.auth",
+      "target": "src.rostov_guide.web.auth._hash",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.auth",
+      "target": "src.rostov_guide.web.auth.hash_password",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.auth",
+      "target": "src.rostov_guide.web.auth.verify_password",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.auth",
+      "target": "src.rostov_guide.web.auth.UserStore",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.auth.UserStore",
+      "target": "src.rostov_guide.web.auth.UserStore.__init__",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.auth.UserStore",
+      "target": "src.rostov_guide.web.auth.UserStore.init",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.auth.UserStore",
+      "target": "src.rostov_guide.web.auth.UserStore.create",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.auth.UserStore",
+      "target": "src.rostov_guide.web.auth.UserStore.authenticate",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.auth",
+      "target": "src.rostov_guide.web.auth.LoginLimiter",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.auth.LoginLimiter",
+      "target": "src.rostov_guide.web.auth.LoginLimiter.__init__",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.auth.LoginLimiter",
+      "target": "src.rostov_guide.web.auth.LoginLimiter.check",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.auth",
+      "target": "src.rostov_guide.web.auth.issue_token",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.auth",
+      "target": "src.rostov_guide.web.auth.current_user",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.auth",
+      "target": "src.rostov_guide.web.auth._set_cookie",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.auth",
+      "target": "src.rostov_guide.web.auth.register",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.auth",
+      "target": "src.rostov_guide.web.auth.login",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.auth",
+      "target": "src.rostov_guide.web.auth.logout",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.auth",
+      "target": "src.rostov_guide.web.auth.me",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.auth",
+      "target": "asyncio",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.web.auth",
+      "target": "base64",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.web.auth",
+      "target": "hashlib",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.web.auth",
+      "target": "hmac",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.web.auth",
+      "target": "re",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.web.auth",
+      "target": "secrets",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.web.auth",
+      "target": "time",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.web.auth",
+      "target": "uuid",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.web.auth",
+      "target": "collections",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.web.auth",
+      "target": "dataclasses",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.web.auth",
+      "target": "pathlib",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.web.auth",
+      "target": "aiosqlite",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.web.auth",
+      "target": "jwt",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.web.auth",
+      "target": "fastapi",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.web.auth",
+      "target": "pydantic",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.web.events",
+      "target": "src.rostov_guide.web.events._q",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.events",
+      "target": "src.rostov_guide.web.events.tool_title",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.events",
+      "target": "src.rostov_guide.web.events.result_view",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.events",
+      "target": "src.rostov_guide.web.events.translate",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.events",
+      "target": "src.rostov_guide.web.events.history",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.events",
+      "target": "collections.abc",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.web.events",
+      "target": "datetime",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.web.events",
+      "target": "typing",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.web.events",
+      "target": "google.adk.events",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.web.routes",
+      "target": "src.rostov_guide.web.routes.Location",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.routes",
+      "target": "src.rostov_guide.web.routes.Ask",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.routes",
+      "target": "src.rostov_guide.web.routes._title",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.routes",
+      "target": "src.rostov_guide.web.routes._sessions",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.routes",
+      "target": "src.rostov_guide.web.routes._own_session",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.routes",
+      "target": "src.rostov_guide.web.routes.list_chats",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.routes",
+      "target": "src.rostov_guide.web.routes.create_chat",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.routes",
+      "target": "src.rostov_guide.web.routes.get_chat",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.routes",
+      "target": "src.rostov_guide.web.routes.delete_chat",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.routes",
+      "target": "src.rostov_guide.web.routes.ask",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.routes",
+      "target": "src.rostov_guide.web.routes._own_run",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.routes",
+      "target": "src.rostov_guide.web.routes.run_events",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.routes",
+      "target": "src.rostov_guide.web.routes.stream",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.routes",
+      "target": "src.rostov_guide.web.routes.cancel_run",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.routes",
+      "target": "src.rostov_guide.web.routes.place",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.routes",
+      "target": "src.rostov_guide.web.routes.reverse",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.routes",
+      "target": "src.rostov_guide.web.routes._llm_probe_state",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.routes",
+      "target": "src.rostov_guide.web.routes.status",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.routes",
+      "target": "asyncio",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.web.routes",
+      "target": "json",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.web.routes",
+      "target": "time",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.web.routes",
+      "target": "datetime",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.web.routes",
+      "target": "httpx",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.web.routes",
+      "target": "fastapi",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.web.routes",
+      "target": "pydantic",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.web.routes",
+      "target": "sse_starlette.sse",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.web.runs",
+      "target": "src.rostov_guide.web.runs.Busy",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.runs",
+      "target": "src.rostov_guide.web.runs.Run",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.runs.Run",
+      "target": "src.rostov_guide.web.runs.Run.finished",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.runs.Run",
+      "target": "src.rostov_guide.web.runs.Run.emit",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.runs",
+      "target": "src.rostov_guide.web.runs.RunManager",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.runs.RunManager",
+      "target": "src.rostov_guide.web.runs.RunManager.__init__",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.runs.RunManager",
+      "target": "src.rostov_guide.web.runs.RunManager.active_for_chat",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.runs.RunManager",
+      "target": "src.rostov_guide.web.runs.RunManager.start",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.runs.RunManager",
+      "target": "src.rostov_guide.web.runs.RunManager.cancel",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.runs.RunManager",
+      "target": "src.rostov_guide.web.runs.RunManager._broadcast_queue",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.runs.RunManager",
+      "target": "src.rostov_guide.web.runs.RunManager._execute",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.runs.RunManager",
+      "target": "src.rostov_guide.web.runs.RunManager.subscribe",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.runs.RunManager",
+      "target": "src.rostov_guide.web.runs.RunManager._cleanup_loop",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.runs.RunManager",
+      "target": "src.rostov_guide.web.runs.RunManager.shutdown",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.runs.RunManager",
+      "target": "src.rostov_guide.web.runs.RunManager.stats",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.runs",
+      "target": "src.rostov_guide.web.runs._humanize",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.runs",
+      "target": "asyncio",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.web.runs",
+      "target": "logging",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.web.runs",
+      "target": "time",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.web.runs",
+      "target": "uuid",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.web.runs",
+      "target": "collections.abc",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.web.runs",
+      "target": "dataclasses",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.web.runs",
+      "target": "google.adk.agents.invocation_context",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.web.runs",
+      "target": "google.adk.agents.run_config",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.web.runs",
+      "target": "google.adk.runners",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.web.runs",
+      "target": "google.genai",
+      "type": "imports"
+    },
+    {
+      "source": "tests.conftest",
+      "target": "tests.conftest._row",
+      "type": "contains"
+    },
+    {
+      "source": "tests.conftest",
+      "target": "tests.conftest.poi_db",
+      "type": "contains"
+    },
+    {
+      "source": "tests.conftest",
+      "target": "tests.conftest.repo",
+      "type": "contains"
+    },
+    {
+      "source": "tests.conftest",
+      "target": "tests.conftest.FakeEmbedder",
+      "type": "contains"
+    },
+    {
+      "source": "tests.conftest.FakeEmbedder",
+      "target": "tests.conftest.FakeEmbedder.__init__",
+      "type": "contains"
+    },
+    {
+      "source": "tests.conftest.FakeEmbedder",
+      "target": "tests.conftest.FakeEmbedder._vec",
+      "type": "contains"
+    },
+    {
+      "source": "tests.conftest.FakeEmbedder",
+      "target": "tests.conftest.FakeEmbedder.embed",
+      "type": "contains"
+    },
+    {
+      "source": "tests.conftest.FakeEmbedder",
+      "target": "tests.conftest.FakeEmbedder.embed_query",
+      "type": "contains"
+    },
+    {
+      "source": "tests.conftest.FakeEmbedder",
+      "target": "tests.conftest.FakeEmbedder.aclose",
+      "type": "contains"
+    },
+    {
+      "source": "tests.conftest",
+      "target": "tests.conftest.fake_embedder",
+      "type": "contains"
+    },
+    {
+      "source": "tests.conftest",
+      "target": "hashlib",
+      "type": "imports"
+    },
+    {
+      "source": "tests.conftest",
+      "target": "math",
+      "type": "imports"
+    },
+    {
+      "source": "tests.conftest",
+      "target": "sqlite3",
+      "type": "imports"
+    },
+    {
+      "source": "tests.conftest",
+      "target": "pathlib",
+      "type": "imports"
+    },
+    {
+      "source": "tests.conftest",
+      "target": "pytest",
+      "type": "imports"
+    },
+    {
+      "source": "tests.conftest",
+      "target": "rostov_guide.places.repository",
+      "type": "imports"
+    },
+    {
+      "source": "tests.fakes",
+      "target": "tests.fakes.scripted_answer",
+      "type": "contains"
+    },
+    {
+      "source": "tests.fakes",
+      "target": "tests.fakes.FakeRunner",
+      "type": "contains"
+    },
+    {
+      "source": "tests.fakes.FakeRunner",
+      "target": "tests.fakes.FakeRunner.__init__",
+      "type": "contains"
+    },
+    {
+      "source": "tests.fakes.FakeRunner",
+      "target": "tests.fakes.FakeRunner.run_async",
+      "type": "contains"
+    },
+    {
+      "source": "tests.fakes",
+      "target": "asyncio",
+      "type": "imports"
+    },
+    {
+      "source": "tests.fakes",
+      "target": "uuid",
+      "type": "imports"
+    },
+    {
+      "source": "tests.fakes",
+      "target": "google.adk.events",
+      "type": "imports"
+    },
+    {
+      "source": "tests.fakes",
+      "target": "google.genai",
+      "type": "imports"
+    },
+    {
+      "source": "tests.fakes",
+      "target": "rostov_guide.agent.factory",
+      "type": "imports"
+    },
+    {
+      "source": "tests.test_api",
+      "target": "tests.test_api.app",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_api",
+      "target": "tests.test_api._client",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_api",
+      "target": "tests.test_api._signup",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_api",
+      "target": "tests.test_api.test_register_login_me",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_api",
+      "target": "tests.test_api.test_weak_credentials_rejected",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_api",
+      "target": "tests.test_api.test_foreign_origin_is_blocked",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_api",
+      "target": "tests.test_api._ask_and_stream",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_api",
+      "target": "tests.test_api.test_question_streams_and_lands_in_history",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_api",
+      "target": "tests.test_api.test_users_cannot_see_each_other",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_api",
+      "target": "tests.test_api.test_location_must_be_in_rostov",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_api",
+      "target": "tests.test_api.test_delete_chat",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_api",
+      "target": "tests.test_api.test_reverse_geocode_label",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_api",
+      "target": "tests.test_api.test_queued_question_survives_reload",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_api",
+      "target": "asyncio",
+      "type": "imports"
+    },
+    {
+      "source": "tests.test_api",
+      "target": "json",
+      "type": "imports"
+    },
+    {
+      "source": "tests.test_api",
+      "target": "types",
+      "type": "imports"
+    },
+    {
+      "source": "tests.test_api",
+      "target": "httpx",
+      "type": "imports"
+    },
+    {
+      "source": "tests.test_api",
+      "target": "pytest",
+      "type": "imports"
+    },
+    {
+      "source": "tests.test_api",
+      "target": "google.adk.sessions.sqlite_session_service",
+      "type": "imports"
+    },
+    {
+      "source": "tests.test_api",
+      "target": "fakes",
+      "type": "imports"
+    },
+    {
+      "source": "tests.test_api",
+      "target": "rostov_guide.config",
+      "type": "imports"
+    },
+    {
+      "source": "tests.test_api",
+      "target": "rostov_guide.search.store",
+      "type": "imports"
+    },
+    {
+      "source": "tests.test_api",
+      "target": "rostov_guide.web",
+      "type": "imports"
+    },
+    {
+      "source": "tests.test_api",
+      "target": "rostov_guide.web.app",
+      "type": "imports"
+    },
+    {
+      "source": "tests.test_api",
+      "target": "rostov_guide.web.runs",
+      "type": "imports"
+    },
+    {
+      "source": "tests.test_events",
+      "target": "tests.test_events._event",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_events",
+      "target": "tests.test_events.test_partial_thought_and_answer_become_deltas",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_events",
+      "target": "tests.test_events.test_tool_call_gets_human_title",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_events",
+      "target": "tests.test_events.test_tool_result_carries_cards_with_coordinates",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_events",
+      "target": "tests.test_events.test_tool_error_is_shown_as_failed_step",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_events",
+      "target": "tests.test_events.test_usage_is_reported",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_events",
+      "target": "tests.test_events.test_history_groups_steps_under_question",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_events",
+      "target": "google.adk.events",
+      "type": "imports"
+    },
+    {
+      "source": "tests.test_events",
+      "target": "google.genai",
+      "type": "imports"
+    },
+    {
+      "source": "tests.test_events",
+      "target": "rostov_guide.web.events",
+      "type": "imports"
+    },
+    {
+      "source": "tests.test_hours",
+      "target": "tests.test_hours.test_round_the_clock",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_hours",
+      "target": "tests.test_hours.test_everyday_interval_without_days",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_hours",
+      "target": "tests.test_hours.test_closed_before_opening_says_when",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_hours",
+      "target": "tests.test_hours.test_weekday_rules_and_day_off",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_hours",
+      "target": "tests.test_hours.test_lunch_break_is_closed",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_hours",
+      "target": "tests.test_hours.test_overnight_interval_spills_into_next_day",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_hours",
+      "target": "tests.test_hours.test_midnight_is_written_as_24",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_hours",
+      "target": "tests.test_hours.test_unknown_format_is_unknown_not_closed",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_hours",
+      "target": "tests.test_hours.test_later_rule_overrides_earlier",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_hours",
+      "target": "datetime",
+      "type": "imports"
+    },
+    {
+      "source": "tests.test_hours",
+      "target": "rostov_guide.places.hours",
+      "type": "imports"
+    },
+    {
+      "source": "tests.test_places",
+      "target": "tests.test_places.test_resolve_kind_accepts_tag_russian_and_variants",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_places",
+      "target": "tests.test_places.test_suggestions_for_typos",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_places",
+      "target": "tests.test_places.test_cuisine_labels_are_russian_and_deduplicated",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_places",
+      "target": "tests.test_places.test_repository_filters",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_places",
+      "target": "tests.test_places.test_geocode_house_street_and_place",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_places",
+      "target": "tests.test_places.test_nearest_by_distance",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_places",
+      "target": "tests.test_places.test_brief_says_what_is_missing",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_places",
+      "target": "tests.test_places.test_stemming_matches_word_forms",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_places",
+      "target": "tests.test_places.test_query_noise_words_do_not_reach_lexical_search",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_places",
+      "target": "tests.test_places.test_document_is_expanded_with_dishes_and_needs",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_places",
+      "target": "rostov_guide.places.kinds",
+      "type": "imports"
+    },
+    {
+      "source": "tests.test_places",
+      "target": "rostov_guide.search",
+      "type": "imports"
+    },
+    {
+      "source": "tests.test_places",
+      "target": "rostov_guide.search.documents",
+      "type": "imports"
+    },
+    {
+      "source": "tests.test_plugins",
+      "target": "tests.test_plugins._tool_ctx",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_plugins",
+      "target": "tests.test_plugins.test_repeat_guard_blocks_identical_call_only",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_plugins",
+      "target": "tests.test_plugins.test_repeat_guard_forgets_finished_runs",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_plugins",
+      "target": "tests.test_plugins._content",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_plugins",
+      "target": "tests.test_plugins.test_question_is_restored_after_compaction",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_plugins",
+      "target": "tests.test_plugins.test_request_with_question_is_left_alone",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_plugins",
+      "target": "types",
+      "type": "imports"
+    },
+    {
+      "source": "tests.test_plugins",
+      "target": "google.adk.models.llm_request",
+      "type": "imports"
+    },
+    {
+      "source": "tests.test_plugins",
+      "target": "google.genai",
+      "type": "imports"
+    },
+    {
+      "source": "tests.test_plugins",
+      "target": "rostov_guide.agent.plugins",
+      "type": "imports"
+    },
+    {
+      "source": "tests.test_runs",
+      "target": "tests.test_runs._settings",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_runs",
+      "target": "tests.test_runs._collect",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_runs",
+      "target": "tests.test_runs.test_events_stream_ends_with_totals",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_runs",
+      "target": "tests.test_runs.test_reconnect_replays_only_missed_events",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_runs",
+      "target": "tests.test_runs.test_queue_positions_when_model_is_busy",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_runs",
+      "target": "tests.test_runs.test_one_run_per_chat_and_two_per_user",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_runs",
+      "target": "tests.test_runs.test_queue_overflow_is_refused",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_runs",
+      "target": "tests.test_runs.test_cancel_stops_the_run",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_runs",
+      "target": "tests.test_runs.test_errors_reach_the_user_in_plain_words",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_runs",
+      "target": "asyncio",
+      "type": "imports"
+    },
+    {
+      "source": "tests.test_runs",
+      "target": "pytest",
+      "type": "imports"
+    },
+    {
+      "source": "tests.test_runs",
+      "target": "google.adk.agents.invocation_context",
+      "type": "imports"
+    },
+    {
+      "source": "tests.test_runs",
+      "target": "fakes",
+      "type": "imports"
+    },
+    {
+      "source": "tests.test_runs",
+      "target": "rostov_guide.config",
+      "type": "imports"
+    },
+    {
+      "source": "tests.test_runs",
+      "target": "rostov_guide.web.runs",
+      "type": "imports"
+    },
+    {
+      "source": "tests.test_search",
+      "target": "tests.test_search._index",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_search",
+      "target": "tests.test_search.test_search_before_build_is_refused",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_search",
+      "target": "tests.test_search.test_rebuild_then_hybrid_search",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_search",
+      "target": "tests.test_search.test_kind_filter_and_lexical_mode",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_search",
+      "target": "tests.test_search.test_embedded_mode_always_rebuilds_from_cache",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_search",
+      "target": "json",
+      "type": "imports"
+    },
+    {
+      "source": "tests.test_search",
+      "target": "rostov_guide.search.store",
+      "type": "imports"
+    },
+    {
+      "source": "tests.test_tools",
+      "target": "tests.test_tools.FakeToolContext",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_tools.FakeToolContext",
+      "target": "tests.test_tools.FakeToolContext.__init__",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_tools",
+      "target": "tests.test_tools.tools",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_tools",
+      "target": "tests.test_tools.test_find_places_total_answers_how_many",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_tools",
+      "target": "tests.test_tools.test_unknown_kind_is_an_observation_with_hint",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_tools",
+      "target": "tests.test_tools.test_find_places_requires_some_filter",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_tools",
+      "target": "tests.test_tools.test_nearest_by_address",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_tools",
+      "target": "tests.test_tools.test_nearest_uses_point_from_map",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_tools",
+      "target": "tests.test_tools.test_nearest_without_anchor_asks_for_one",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_tools",
+      "target": "tests.test_tools.test_search_places_marks_how_found",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_tools",
+      "target": "tests.test_tools.test_search_food_kind_covers_whole_food_group",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_tools",
+      "target": "tests.test_tools.test_place_details_unknown_id",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_tools",
+      "target": "tests.test_tools.test_nearest_can_be_limited_to_round_the_clock",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_tools",
+      "target": "tests.test_tools.test_query_repeating_kind_does_not_shrink_the_pool",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_tools",
+      "target": "tests.test_tools.test_query_adds_meaning",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_tools",
+      "target": "types",
+      "type": "imports"
+    },
+    {
+      "source": "tests.test_tools",
+      "target": "pytest",
+      "type": "imports"
+    },
+    {
+      "source": "tests.test_tools",
+      "target": "rostov_guide.agent.tools",
+      "type": "imports"
+    },
+    {
+      "source": "tests.test_tools",
+      "target": "rostov_guide.search.store",
+      "type": "imports"
+    },
+    {
+      "source": "rostov-guide.frontend",
+      "target": "rostov-guide.web",
+      "type": "calls",
+      "description": "REST + EventSource /api/runs/{id}/events"
+    },
+    {
+      "source": "rostov-guide.web",
+      "target": "rostov-guide.agent",
+      "type": "depends_on",
+      "description": "build_runner, APP_NAME, USER_LOCATION_KEY"
+    },
+    {
+      "source": "rostov-guide.web",
+      "target": "rostov-guide.places",
+      "type": "depends_on",
+      "description": "events.py строит карточки мест по id"
+    },
+    {
+      "source": "rostov-guide.web",
+      "target": "rostov-guide.composition",
+      "type": "depends_on",
+      "description": "app.py: build_services в lifespan"
+    },
+    {
+      "source": "rostov-guide.agent",
+      "target": "rostov-guide.places",
+      "type": "depends_on",
+      "description": "tools.py: фильтры, геокодинг, hours"
+    },
+    {
+      "source": "rostov-guide.agent",
+      "target": "rostov-guide.search",
+      "type": "depends_on",
+      "description": "tools.py: sparse.meaningful_terms; поиск через Services.index"
+    },
+    {
+      "source": "rostov-guide.agent",
+      "target": "rostov-guide.composition",
+      "type": "depends_on",
+      "description": "Services как контейнер зависимостей"
+    },
+    {
+      "source": "rostov-guide.composition",
+      "target": "rostov-guide.search",
+      "type": "depends_on",
+      "description": "EmbeddingClient, PlaceIndex"
+    },
+    {
+      "source": "rostov-guide.composition",
+      "target": "rostov-guide.places",
+      "type": "depends_on",
+      "description": "PlaceRepository.load"
+    },
+    {
+      "source": "rostov-guide.search",
+      "target": "rostov-guide.places",
+      "type": "depends_on",
+      "description": "documents/store читают Place"
+    },
+    {
+      "source": "rostov-guide.agent",
+      "target": "rostov-guide.lmstudio",
+      "type": "calls",
+      "description": "LiteLlm → /v1/chat/completions"
+    },
+    {
+      "source": "rostov-guide.search",
+      "target": "rostov-guide.lmstudio",
+      "type": "calls",
+      "description": "/v1/embeddings"
+    },
+    {
+      "source": "rostov-guide.web",
+      "target": "rostov-guide.lmstudio",
+      "type": "calls",
+      "description": "/api/status пробует /v1/models и /api/v0/models"
+    },
+    {
+      "source": "rostov-guide.tests",
+      "target": "rostov-guide.web",
+      "type": "depends_on",
+      "description": "inferred from manual inspection"
+    },
+    {
+      "source": "rostov-guide.tests",
+      "target": "rostov-guide.agent",
+      "type": "depends_on",
+      "description": "inferred from manual inspection"
+    },
+    {
+      "source": "rostov-guide.tests",
+      "target": "rostov-guide.search",
+      "type": "depends_on",
+      "description": "inferred from manual inspection"
+    },
+    {
+      "source": "rostov-guide.tests",
+      "target": "rostov-guide.places",
+      "type": "depends_on",
+      "description": "inferred from manual inspection"
+    },
+    {
+      "source": "rostov-guide.domain-run",
+      "target": "rostov-guide.web",
+      "type": "depends_on",
+      "description": "живёт в RunManager"
+    },
+    {
+      "source": "rostov-guide.domain-place",
+      "target": "rostov-guide.places",
+      "type": "depends_on",
+      "description": "inferred from manual inspection"
+    }
+  ],
+  "metadata": {
+    "total_files": 41,
+    "total_lines": 5072,
+    "languages": [
+      "python",
+      "javascript"
+    ],
+    "git_commits_analyzed": 0,
+    "analysis_days": 0
+  }
+}

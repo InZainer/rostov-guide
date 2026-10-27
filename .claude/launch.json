@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "rostov-guide",
+      "runtimeExecutable": "uv",
+      "runtimeArgs": ["run", "rostov-guide", "serve", "--port", "8000"],
+      "port": 8000
+    }
+  ]
+}

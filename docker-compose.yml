@@ -1,0 +1,12 @@
+# Необязательно. Сервер Qdrant для продового режима: коллекция переживает перезапуски,
+# несколько процессов приложения могут искать в одной базе.
+#   docker compose up -d qdrant
+#   QDRANT_URL=http://localhost:6333 uv run rostov-guide
+services:
+  qdrant:
+    image: qdrant/qdrant:v1.15.4
+    ports:
+      - "6333:6333"
+    volumes:
+      - ./data/qdrant-server:/qdrant/storage
+    restart: unless-stopped

@@ -1,0 +1,6540 @@
+{
+  "languages": [
+    "javascript",
+    "python"
+  ],
+  "stats": {
+    "total_files": 41,
+    "total_lines": 5072,
+    "parse_errors": 0,
+    "truncated": false,
+    "truncated_nodes": 0,
+    "supported_file_counts": {
+      "python": 35,
+      "javascript": 6
+    },
+    "languages_with_structural_queries": [
+      "c",
+      "cpp",
+      "csharp",
+      "elixir",
+      "gdscript",
+      "go",
+      "java",
+      "javascript",
+      "kotlin",
+      "lua",
+      "php",
+      "python",
+      "ruby",
+      "rust",
+      "scala",
+      "swift",
+      "tsx",
+      "typescript"
+    ],
+    "languages_with_custom_queries": [],
+    "module_only_file_counts": {},
+    "known_unsupported_file_counts": {},
+    "configured_but_unavailable_file_counts": {},
+    "custom_language_config_paths": []
+  },
+  "nodes": [
+    {
+      "id": "src.rostov_guide",
+      "type": "Module",
+      "label": "rostov_guide",
+      "path": "src/rostov_guide/__init__.py",
+      "lines": 76,
+      "lang": "python"
+    },
+    {
+      "id": "src.rostov_guide.main",
+      "type": "Function",
+      "label": "main",
+      "path": "src/rostov_guide/__init__.py",
+      "parent": "src.rostov_guide",
+      "start_line": 20,
+      "end_line": 75
+    },
+    {
+      "id": "src.rostov_guide.run_index",
+      "type": "Function",
+      "label": "run_index",
+      "path": "src/rostov_guide/__init__.py",
+      "parent": "src.rostov_guide",
+      "start_line": 50,
+      "end_line": 54
+    },
+    {
+      "id": "src.rostov_guide.run_eval",
+      "type": "Function",
+      "label": "run_eval",
+      "path": "src/rostov_guide/__init__.py",
+      "parent": "src.rostov_guide",
+      "start_line": 56,
+      "end_line": 63
+    },
+    {
+      "id": "src.rostov_guide.run_agent_eval",
+      "type": "Function",
+      "label": "run_agent_eval",
+      "path": "src/rostov_guide/__init__.py",
+      "parent": "src.rostov_guide",
+      "start_line": 65,
+      "end_line": 72
+    },
+    {
+      "id": "src.rostov_guide.agent",
+      "type": "Module",
+      "label": "agent",
+      "path": "src/rostov_guide/agent/__init__.py",
+      "lines": 1,
+      "lang": "python"
+    },
+    {
+      "id": "src.rostov_guide.agent.evaluate",
+      "type": "Module",
+      "label": "evaluate",
+      "path": "src/rostov_guide/agent/evaluate.py",
+      "lines": 184,
+      "lang": "python"
+    },
+    {
+      "id": "src.rostov_guide.agent.evaluate.wilson_low",
+      "type": "Function",
+      "label": "wilson_low",
+      "path": "src/rostov_guide/agent/evaluate.py",
+      "parent": "src.rostov_guide.agent.evaluate",
+      "start_line": 31,
+      "end_line": 38
+    },
+    {
+      "id": "src.rostov_guide.agent.evaluate._norm",
+      "type": "Function",
+      "label": "_norm",
+      "path": "src/rostov_guide/agent/evaluate.py",
+      "parent": "src.rostov_guide.agent.evaluate",
+      "start_line": 41,
+      "end_line": 42
+    },
+    {
+      "id": "src.rostov_guide.agent.evaluate.Turn",
+      "type": "Class",
+      "label": "Turn",
+      "path": "src/rostov_guide/agent/evaluate.py",
+      "parent": "src.rostov_guide.agent.evaluate",
+      "start_line": 46,
+      "end_line": 49
+    },
+    {
+      "id": "src.rostov_guide.agent.evaluate.Case",
+      "type": "Class",
+      "label": "Case",
+      "path": "src/rostov_guide/agent/evaluate.py",
+      "parent": "src.rostov_guide.agent.evaluate",
+      "start_line": 53,
+      "end_line": 56
+    },
+    {
+      "id": "src.rostov_guide.agent.evaluate._contains",
+      "type": "Function",
+      "label": "_contains",
+      "path": "src/rostov_guide/agent/evaluate.py",
+      "parent": "src.rostov_guide.agent.evaluate",
+      "start_line": 59,
+      "end_line": 63
+    },
+    {
+      "id": "src.rostov_guide.agent.evaluate.check",
+      "type": "Function",
+      "label": "check",
+      "path": "src/rostov_guide/agent/evaluate.py",
+      "parent": "src.rostov_guide.agent.evaluate",
+      "start_line": 60,
+      "end_line": 62
+    },
+    {
+      "id": "src.rostov_guide.agent.evaluate.build_cases",
+      "type": "Function",
+      "label": "build_cases",
+      "path": "src/rostov_guide/agent/evaluate.py",
+      "parent": "src.rostov_guide.agent.evaluate",
+      "start_line": 66,
+      "end_line": 114
+    },
+    {
+      "id": "src.rostov_guide.agent.evaluate.phone_followup",
+      "type": "Function",
+      "label": "phone_followup",
+      "path": "src/rostov_guide/agent/evaluate.py",
+      "parent": "src.rostov_guide.agent.evaluate",
+      "start_line": 79,
+      "end_line": 83
+    },
+    {
+      "id": "src.rostov_guide.agent.evaluate.nearest_24_7_check",
+      "type": "Function",
+      "label": "nearest_24_7_check",
+      "path": "src/rostov_guide/agent/evaluate.py",
+      "parent": "src.rostov_guide.agent.evaluate",
+      "start_line": 85,
+      "end_line": 90
+    },
+    {
+      "id": "src.rostov_guide.agent.evaluate.any_shawarma",
+      "type": "Function",
+      "label": "any_shawarma",
+      "path": "src/rostov_guide/agent/evaluate.py",
+      "parent": "src.rostov_guide.agent.evaluate",
+      "start_line": 92,
+      "end_line": 94
+    },
+    {
+      "id": "src.rostov_guide.agent.evaluate.off_topic",
+      "type": "Function",
+      "label": "off_topic",
+      "path": "src/rostov_guide/agent/evaluate.py",
+      "parent": "src.rostov_guide.agent.evaluate",
+      "start_line": 96,
+      "end_line": 97
+    },
+    {
+      "id": "src.rostov_guide.agent.evaluate._run_case",
+      "type": "Function",
+      "label": "_run_case",
+      "path": "src/rostov_guide/agent/evaluate.py",
+      "parent": "src.rostov_guide.agent.evaluate",
+      "start_line": 117,
+      "end_line": 146
+    },
+    {
+      "id": "src.rostov_guide.agent.evaluate.evaluate_agent",
+      "type": "Function",
+      "label": "evaluate_agent",
+      "path": "src/rostov_guide/agent/evaluate.py",
+      "parent": "src.rostov_guide.agent.evaluate",
+      "start_line": 149,
+      "end_line": 183
+    },
+    {
+      "id": "src.rostov_guide.agent.factory",
+      "type": "Module",
+      "label": "factory",
+      "path": "src/rostov_guide/agent/factory.py",
+      "lines": 70,
+      "lang": "python"
+    },
+    {
+      "id": "src.rostov_guide.agent.factory.build_model",
+      "type": "Function",
+      "label": "build_model",
+      "path": "src/rostov_guide/agent/factory.py",
+      "parent": "src.rostov_guide.agent.factory",
+      "start_line": 29,
+      "end_line": 39
+    },
+    {
+      "id": "src.rostov_guide.agent.factory.build_agent",
+      "type": "Function",
+      "label": "build_agent",
+      "path": "src/rostov_guide/agent/factory.py",
+      "parent": "src.rostov_guide.agent.factory",
+      "start_line": 42,
+      "end_line": 49
+    },
+    {
+      "id": "src.rostov_guide.agent.factory.build_runner",
+      "type": "Function",
+      "label": "build_runner",
+      "path": "src/rostov_guide/agent/factory.py",
+      "parent": "src.rostov_guide.agent.factory",
+      "start_line": 52,
+      "end_line": 69
+    },
+    {
+      "id": "src.rostov_guide.agent.plugins",
+      "type": "Module",
+      "label": "plugins",
+      "path": "src/rostov_guide/agent/plugins.py",
+      "lines": 167,
+      "lang": "python"
+    },
+    {
+      "id": "src.rostov_guide.agent.plugins.ToolErrorsAsObservations",
+      "type": "Class",
+      "label": "ToolErrorsAsObservations",
+      "path": "src/rostov_guide/agent/plugins.py",
+      "parent": "src.rostov_guide.agent.plugins",
+      "start_line": 32,
+      "end_line": 40
+    },
+    {
+      "id": "src.rostov_guide.agent.plugins.ToolErrorsAsObservations.__init__",
+      "type": "Function",
+      "label": "__init__",
+      "path": "src/rostov_guide/agent/plugins.py",
+      "parent": "src.rostov_guide.agent.plugins.ToolErrorsAsObservations",
+      "start_line": 33,
+      "end_line": 34
+    },
+    {
+      "id": "src.rostov_guide.agent.plugins.ToolErrorsAsObservations.on_tool_error_callback",
+      "type": "Function",
+      "label": "on_tool_error_callback",
+      "path": "src/rostov_guide/agent/plugins.py",
+      "parent": "src.rostov_guide.agent.plugins.ToolErrorsAsObservations",
+      "start_line": 36,
+      "end_line": 40
+    },
+    {
+      "id": "src.rostov_guide.agent.plugins.RepeatGuard",
+      "type": "Class",
+      "label": "RepeatGuard",
+      "path": "src/rostov_guide/agent/plugins.py",
+      "parent": "src.rostov_guide.agent.plugins",
+      "start_line": 43,
+      "end_line": 67
+    },
+    {
+      "id": "src.rostov_guide.agent.plugins.RepeatGuard.__init__",
+      "type": "Function",
+      "label": "__init__",
+      "path": "src/rostov_guide/agent/plugins.py",
+      "parent": "src.rostov_guide.agent.plugins.RepeatGuard",
+      "start_line": 51,
+      "end_line": 53
+    },
+    {
+      "id": "src.rostov_guide.agent.plugins.RepeatGuard.before_tool_callback",
+      "type": "Function",
+      "label": "before_tool_callback",
+      "path": "src/rostov_guide/agent/plugins.py",
+      "parent": "src.rostov_guide.agent.plugins.RepeatGuard",
+      "start_line": 55,
+      "end_line": 64
+    },
+    {
+      "id": "src.rostov_guide.agent.plugins.RepeatGuard.after_run_callback",
+      "type": "Function",
+      "label": "after_run_callback",
+      "path": "src/rostov_guide/agent/plugins.py",
+      "parent": "src.rostov_guide.agent.plugins.RepeatGuard",
+      "start_line": 66,
+      "end_line": 67
+    },
+    {
+      "id": "src.rostov_guide.agent.plugins.UserTurnGuard",
+      "type": "Class",
+      "label": "UserTurnGuard",
+      "path": "src/rostov_guide/agent/plugins.py",
+      "parent": "src.rostov_guide.agent.plugins",
+      "start_line": 70,
+      "end_line": 90
+    },
+    {
+      "id": "src.rostov_guide.agent.plugins.UserTurnGuard.__init__",
+      "type": "Function",
+      "label": "__init__",
+      "path": "src/rostov_guide/agent/plugins.py",
+      "parent": "src.rostov_guide.agent.plugins.UserTurnGuard",
+      "start_line": 80,
+      "end_line": 81
+    },
+    {
+      "id": "src.rostov_guide.agent.plugins.UserTurnGuard.before_model_callback",
+      "type": "Function",
+      "label": "before_model_callback",
+      "path": "src/rostov_guide/agent/plugins.py",
+      "parent": "src.rostov_guide.agent.plugins.UserTurnGuard",
+      "start_line": 83,
+      "end_line": 90
+    },
+    {
+      "id": "src.rostov_guide.agent.plugins._short",
+      "type": "Function",
+      "label": "_short",
+      "path": "src/rostov_guide/agent/plugins.py",
+      "parent": "src.rostov_guide.agent.plugins",
+      "start_line": 93,
+      "end_line": 95
+    },
+    {
+      "id": "src.rostov_guide.agent.plugins.JournalPlugin",
+      "type": "Class",
+      "label": "JournalPlugin",
+      "path": "src/rostov_guide/agent/plugins.py",
+      "parent": "src.rostov_guide.agent.plugins",
+      "start_line": 98,
+      "end_line": 161
+    },
+    {
+      "id": "src.rostov_guide.agent.plugins.JournalPlugin.__init__",
+      "type": "Function",
+      "label": "__init__",
+      "path": "src/rostov_guide/agent/plugins.py",
+      "parent": "src.rostov_guide.agent.plugins.JournalPlugin",
+      "start_line": 99,
+      "end_line": 104
+    },
+    {
+      "id": "src.rostov_guide.agent.plugins.JournalPlugin._write",
+      "type": "Function",
+      "label": "_write",
+      "path": "src/rostov_guide/agent/plugins.py",
+      "parent": "src.rostov_guide.agent.plugins.JournalPlugin",
+      "start_line": 106,
+      "end_line": 111
+    },
+    {
+      "id": "src.rostov_guide.agent.plugins.JournalPlugin.before_run_callback",
+      "type": "Function",
+      "label": "before_run_callback",
+      "path": "src/rostov_guide/agent/plugins.py",
+      "parent": "src.rostov_guide.agent.plugins.JournalPlugin",
+      "start_line": 113,
+      "end_line": 119
+    },
+    {
+      "id": "src.rostov_guide.agent.plugins.JournalPlugin.before_model_callback",
+      "type": "Function",
+      "label": "before_model_callback",
+      "path": "src/rostov_guide/agent/plugins.py",
+      "parent": "src.rostov_guide.agent.plugins.JournalPlugin",
+      "start_line": 121,
+      "end_line": 123
+    },
+    {
+      "id": "src.rostov_guide.agent.plugins.JournalPlugin.after_model_callback",
+      "type": "Function",
+      "label": "after_model_callback",
+      "path": "src/rostov_guide/agent/plugins.py",
+      "parent": "src.rostov_guide.agent.plugins.JournalPlugin",
+      "start_line": 125,
+      "end_line": 140
+    },
+    {
+      "id": "src.rostov_guide.agent.plugins.JournalPlugin.before_tool_callback",
+      "type": "Function",
+      "label": "before_tool_callback",
+      "path": "src/rostov_guide/agent/plugins.py",
+      "parent": "src.rostov_guide.agent.plugins.JournalPlugin",
+      "start_line": 142,
+      "end_line": 144
+    },
+    {
+      "id": "src.rostov_guide.agent.plugins.JournalPlugin.after_tool_callback",
+      "type": "Function",
+      "label": "after_tool_callback",
+      "path": "src/rostov_guide/agent/plugins.py",
+      "parent": "src.rostov_guide.agent.plugins.JournalPlugin",
+      "start_line": 146,
+      "end_line": 153
+    },
+    {
+      "id": "src.rostov_guide.agent.plugins.JournalPlugin.on_model_error_callback",
+      "type": "Function",
+      "label": "on_model_error_callback",
+      "path": "src/rostov_guide/agent/plugins.py",
+      "parent": "src.rostov_guide.agent.plugins.JournalPlugin",
+      "start_line": 155,
+      "end_line": 158
+    },
+    {
+      "id": "src.rostov_guide.agent.plugins.JournalPlugin.after_run_callback",
+      "type": "Function",
+      "label": "after_run_callback",
+      "path": "src/rostov_guide/agent/plugins.py",
+      "parent": "src.rostov_guide.agent.plugins.JournalPlugin",
+      "start_line": 160,
+      "end_line": 161
+    },
+    {
+      "id": "src.rostov_guide.agent.plugins._append",
+      "type": "Function",
+      "label": "_append",
+      "path": "src/rostov_guide/agent/plugins.py",
+      "parent": "src.rostov_guide.agent.plugins",
+      "start_line": 164,
+      "end_line": 166
+    },
+    {
+      "id": "src.rostov_guide.agent.prompt",
+      "type": "Module",
+      "label": "prompt",
+      "path": "src/rostov_guide/agent/prompt.py",
+      "lines": 57,
+      "lang": "python"
+    },
+    {
+      "id": "src.rostov_guide.agent.prompt.build_instruction",
+      "type": "Function",
+      "label": "build_instruction",
+      "path": "src/rostov_guide/agent/prompt.py",
+      "parent": "src.rostov_guide.agent.prompt",
+      "start_line": 39,
+      "end_line": 48
+    },
+    {
+      "id": "src.rostov_guide.agent.tools",
+      "type": "Module",
+      "label": "tools",
+      "path": "src/rostov_guide/agent/tools.py",
+      "lines": 250,
+      "lang": "python"
+    },
+    {
+      "id": "src.rostov_guide.agent.tools.query_adds_meaning",
+      "type": "Function",
+      "label": "query_adds_meaning",
+      "path": "src/rostov_guide/agent/tools.py",
+      "parent": "src.rostov_guide.agent.tools",
+      "start_line": 30,
+      "end_line": 40
+    },
+    {
+      "id": "src.rostov_guide.agent.tools._now",
+      "type": "Function",
+      "label": "_now",
+      "path": "src/rostov_guide/agent/tools.py",
+      "parent": "src.rostov_guide.agent.tools",
+      "start_line": 45,
+      "end_line": 46
+    },
+    {
+      "id": "src.rostov_guide.agent.tools._limit",
+      "type": "Function",
+      "label": "_limit",
+      "path": "src/rostov_guide/agent/tools.py",
+      "parent": "src.rostov_guide.agent.tools",
+      "start_line": 49,
+      "end_line": 53
+    },
+    {
+      "id": "src.rostov_guide.agent.tools.make_tools",
+      "type": "Function",
+      "label": "make_tools",
+      "path": "src/rostov_guide/agent/tools.py",
+      "parent": "src.rostov_guide.agent.tools",
+      "start_line": 56,
+      "end_line": 249
+    },
+    {
+      "id": "src.rostov_guide.agent.tools.kind_or_error",
+      "type": "Function",
+      "label": "kind_or_error",
+      "path": "src/rostov_guide/agent/tools.py",
+      "parent": "src.rostov_guide.agent.tools",
+      "start_line": 60,
+      "end_line": 67
+    },
+    {
+      "id": "src.rostov_guide.agent.tools.user_point",
+      "type": "Function",
+      "label": "user_point",
+      "path": "src/rostov_guide/agent/tools.py",
+      "parent": "src.rostov_guide.agent.tools",
+      "start_line": 69,
+      "end_line": 73
+    },
+    {
+      "id": "src.rostov_guide.agent.tools.with_distance",
+      "type": "Function",
+      "label": "with_distance",
+      "path": "src/rostov_guide/agent/tools.py",
+      "parent": "src.rostov_guide.agent.tools",
+      "start_line": 75,
+      "end_line": 78
+    },
+    {
+      "id": "src.rostov_guide.agent.tools.search_places",
+      "type": "Function",
+      "label": "search_places",
+      "path": "src/rostov_guide/agent/tools.py",
+      "parent": "src.rostov_guide.agent.tools",
+      "start_line": 80,
+      "end_line": 122
+    },
+    {
+      "id": "src.rostov_guide.agent.tools.find_places",
+      "type": "Function",
+      "label": "find_places",
+      "path": "src/rostov_guide/agent/tools.py",
+      "parent": "src.rostov_guide.agent.tools",
+      "start_line": 124,
+      "end_line": 160
+    },
+    {
+      "id": "src.rostov_guide.agent.tools.nearest_places",
+      "type": "Function",
+      "label": "nearest_places",
+      "path": "src/rostov_guide/agent/tools.py",
+      "parent": "src.rostov_guide.agent.tools",
+      "start_line": 162,
+      "end_line": 228
+    },
+    {
+      "id": "src.rostov_guide.agent.tools.place_details",
+      "type": "Function",
+      "label": "place_details",
+      "path": "src/rostov_guide/agent/tools.py",
+      "parent": "src.rostov_guide.agent.tools",
+      "start_line": 230,
+      "end_line": 247
+    },
+    {
+      "id": "src.rostov_guide.config",
+      "type": "Module",
+      "label": "config",
+      "path": "src/rostov_guide/config.py",
+      "lines": 97,
+      "lang": "python"
+    },
+    {
+      "id": "src.rostov_guide.config.Settings",
+      "type": "Class",
+      "label": "Settings",
+      "path": "src/rostov_guide/config.py",
+      "parent": "src.rostov_guide.config",
+      "start_line": 14,
+      "end_line": 91
+    },
+    {
+      "id": "src.rostov_guide.config.Settings.embed_url",
+      "type": "Function",
+      "label": "embed_url",
+      "path": "src/rostov_guide/config.py",
+      "parent": "src.rostov_guide.config.Settings",
+      "start_line": 64,
+      "end_line": 65
+    },
+    {
+      "id": "src.rostov_guide.config.Settings.embed_key",
+      "type": "Function",
+      "label": "embed_key",
+      "path": "src/rostov_guide/config.py",
+      "parent": "src.rostov_guide.config.Settings",
+      "start_line": 68,
+      "end_line": 69
+    },
+    {
+      "id": "src.rostov_guide.config.Settings.poi_db",
+      "type": "Function",
+      "label": "poi_db",
+      "path": "src/rostov_guide/config.py",
+      "parent": "src.rostov_guide.config.Settings",
+      "start_line": 72,
+      "end_line": 73
+    },
+    {
+      "id": "src.rostov_guide.config.Settings.app_db",
+      "type": "Function",
+      "label": "app_db",
+      "path": "src/rostov_guide/config.py",
+      "parent": "src.rostov_guide.config.Settings",
+      "start_line": 76,
+      "end_line": 77
+    },
+    {
+      "id": "src.rostov_guide.config.Settings.sessions_db",
+      "type": "Function",
+      "label": "sessions_db",
+      "path": "src/rostov_guide/config.py",
+      "parent": "src.rostov_guide.config.Settings",
+      "start_line": 80,
+      "end_line": 81
+    },
+    {
+      "id": "src.rostov_guide.config.Settings.jwt_secret",
+      "type": "Function",
+      "label": "jwt_secret",
+      "path": "src/rostov_guide/config.py",
+      "parent": "src.rostov_guide.config.Settings",
+      "start_line": 83,
+      "end_line": 91
+    },
+    {
+      "id": "src.rostov_guide.config.get_settings",
+      "type": "Function",
+      "label": "get_settings",
+      "path": "src/rostov_guide/config.py",
+      "parent": "src.rostov_guide.config",
+      "start_line": 95,
+      "end_line": 96
+    },
+    {
+      "id": "src.rostov_guide.places",
+      "type": "Module",
+      "label": "places",
+      "path": "src/rostov_guide/places/__init__.py",
+      "lines": 1,
+      "lang": "python"
+    },
+    {
+      "id": "src.rostov_guide.places.hours",
+      "type": "Module",
+      "label": "hours",
+      "path": "src/rostov_guide/places/hours.py",
+      "lines": 126,
+      "lang": "python"
+    },
+    {
+      "id": "src.rostov_guide.places.hours.HoursStatus",
+      "type": "Class",
+      "label": "HoursStatus",
+      "path": "src/rostov_guide/places/hours.py",
+      "parent": "src.rostov_guide.places.hours",
+      "start_line": 26,
+      "end_line": 28
+    },
+    {
+      "id": "src.rostov_guide.places.hours._days",
+      "type": "Function",
+      "label": "_days",
+      "path": "src/rostov_guide/places/hours.py",
+      "parent": "src.rostov_guide.places.hours",
+      "start_line": 31,
+      "end_line": 41
+    },
+    {
+      "id": "src.rostov_guide.places.hours._intervals",
+      "type": "Function",
+      "label": "_intervals",
+      "path": "src/rostov_guide/places/hours.py",
+      "parent": "src.rostov_guide.places.hours",
+      "start_line": 44,
+      "end_line": 55
+    },
+    {
+      "id": "src.rostov_guide.places.hours.parse",
+      "type": "Function",
+      "label": "parse",
+      "path": "src/rostov_guide/places/hours.py",
+      "parent": "src.rostov_guide.places.hours",
+      "start_line": 58,
+      "end_line": 86
+    },
+    {
+      "id": "src.rostov_guide.places.hours._fmt",
+      "type": "Function",
+      "label": "_fmt",
+      "path": "src/rostov_guide/places/hours.py",
+      "parent": "src.rostov_guide.places.hours",
+      "start_line": 89,
+      "end_line": 93
+    },
+    {
+      "id": "src.rostov_guide.places.hours.status",
+      "type": "Function",
+      "label": "status",
+      "path": "src/rostov_guide/places/hours.py",
+      "parent": "src.rostov_guide.places.hours",
+      "start_line": 96,
+      "end_line": 125
+    },
+    {
+      "id": "src.rostov_guide.places.kinds",
+      "type": "Module",
+      "label": "kinds",
+      "path": "src/rostov_guide/places/kinds.py",
+      "lines": 235,
+      "lang": "python"
+    },
+    {
+      "id": "src.rostov_guide.places.kinds.kind_label",
+      "type": "Function",
+      "label": "kind_label",
+      "path": "src/rostov_guide/places/kinds.py",
+      "parent": "src.rostov_guide.places.kinds",
+      "start_line": 165,
+      "end_line": 166
+    },
+    {
+      "id": "src.rostov_guide.places.kinds.cuisine_labels",
+      "type": "Function",
+      "label": "cuisine_labels",
+      "path": "src/rostov_guide/places/kinds.py",
+      "parent": "src.rostov_guide.places.kinds",
+      "start_line": 169,
+      "end_line": 178
+    },
+    {
+      "id": "src.rostov_guide.places.kinds.cuisine_dishes",
+      "type": "Function",
+      "label": "cuisine_dishes",
+      "path": "src/rostov_guide/places/kinds.py",
+      "parent": "src.rostov_guide.places.kinds",
+      "start_line": 181,
+      "end_line": 185
+    },
+    {
+      "id": "src.rostov_guide.places.kinds._stem",
+      "type": "Function",
+      "label": "_stem",
+      "path": "src/rostov_guide/places/kinds.py",
+      "parent": "src.rostov_guide.places.kinds",
+      "start_line": 188,
+      "end_line": 190
+    },
+    {
+      "id": "src.rostov_guide.places.kinds.resolve_kind",
+      "type": "Function",
+      "label": "resolve_kind",
+      "path": "src/rostov_guide/places/kinds.py",
+      "parent": "src.rostov_guide.places.kinds",
+      "start_line": 199,
+      "end_line": 219
+    },
+    {
+      "id": "src.rostov_guide.places.kinds.suggest_kinds",
+      "type": "Function",
+      "label": "suggest_kinds",
+      "path": "src/rostov_guide/places/kinds.py",
+      "parent": "src.rostov_guide.places.kinds",
+      "start_line": 222,
+      "end_line": 234
+    },
+    {
+      "id": "src.rostov_guide.places.repository",
+      "type": "Module",
+      "label": "repository",
+      "path": "src/rostov_guide/places/repository.py",
+      "lines": 218,
+      "lang": "python"
+    },
+    {
+      "id": "src.rostov_guide.places.repository.Place",
+      "type": "Class",
+      "label": "Place",
+      "path": "src/rostov_guide/places/repository.py",
+      "parent": "src.rostov_guide.places.repository",
+      "start_line": 35,
+      "end_line": 94
+    },
+    {
+      "id": "src.rostov_guide.places.repository.Place.address",
+      "type": "Function",
+      "label": "address",
+      "path": "src/rostov_guide/places/repository.py",
+      "parent": "src.rostov_guide.places.repository.Place",
+      "start_line": 56,
+      "end_line": 59
+    },
+    {
+      "id": "src.rostov_guide.places.repository.Place.title",
+      "type": "Function",
+      "label": "title",
+      "path": "src/rostov_guide/places/repository.py",
+      "parent": "src.rostov_guide.places.repository.Place",
+      "start_line": 62,
+      "end_line": 63
+    },
+    {
+      "id": "src.rostov_guide.places.repository.Place.brief",
+      "type": "Function",
+      "label": "brief",
+      "path": "src/rostov_guide/places/repository.py",
+      "parent": "src.rostov_guide.places.repository.Place",
+      "start_line": 65,
+      "end_line": 82
+    },
+    {
+      "id": "src.rostov_guide.places.repository.Place.card",
+      "type": "Function",
+      "label": "card",
+      "path": "src/rostov_guide/places/repository.py",
+      "parent": "src.rostov_guide.places.repository.Place",
+      "start_line": 84,
+      "end_line": 94
+    },
+    {
+      "id": "src.rostov_guide.places.repository.Point",
+      "type": "Class",
+      "label": "Point",
+      "path": "src/rostov_guide/places/repository.py",
+      "parent": "src.rostov_guide.places.repository",
+      "start_line": 98,
+      "end_line": 102
+    },
+    {
+      "id": "src.rostov_guide.places.repository.distance_m",
+      "type": "Function",
+      "label": "distance_m",
+      "path": "src/rostov_guide/places/repository.py",
+      "parent": "src.rostov_guide.places.repository",
+      "start_line": 105,
+      "end_line": 107
+    },
+    {
+      "id": "src.rostov_guide.places.repository._stem",
+      "type": "Function",
+      "label": "_stem",
+      "path": "src/rostov_guide/places/repository.py",
+      "parent": "src.rostov_guide.places.repository",
+      "start_line": 110,
+      "end_line": 111
+    },
+    {
+      "id": "src.rostov_guide.places.repository.PlaceRepository",
+      "type": "Class",
+      "label": "PlaceRepository",
+      "path": "src/rostov_guide/places/repository.py",
+      "parent": "src.rostov_guide.places.repository",
+      "start_line": 115,
+      "end_line": 207
+    },
+    {
+      "id": "src.rostov_guide.places.repository.PlaceRepository.load",
+      "type": "Function",
+      "label": "load",
+      "path": "src/rostov_guide/places/repository.py",
+      "parent": "src.rostov_guide.places.repository.PlaceRepository",
+      "start_line": 120,
+      "end_line": 133
+    },
+    {
+      "id": "src.rostov_guide.places.repository.PlaceRepository.__len__",
+      "type": "Function",
+      "label": "__len__",
+      "path": "src/rostov_guide/places/repository.py",
+      "parent": "src.rostov_guide.places.repository.PlaceRepository",
+      "start_line": 135,
+      "end_line": 136
+    },
+    {
+      "id": "src.rostov_guide.places.repository.PlaceRepository.get",
+      "type": "Function",
+      "label": "get",
+      "path": "src/rostov_guide/places/repository.py",
+      "parent": "src.rostov_guide.places.repository.PlaceRepository",
+      "start_line": 138,
+      "end_line": 139
+    },
+    {
+      "id": "src.rostov_guide.places.repository.PlaceRepository.filter",
+      "type": "Function",
+      "label": "filter",
+      "path": "src/rostov_guide/places/repository.py",
+      "parent": "src.rostov_guide.places.repository.PlaceRepository",
+      "start_line": 141,
+      "end_line": 168
+    },
+    {
+      "id": "src.rostov_guide.places.repository.PlaceRepository.by_distance",
+      "type": "Function",
+      "label": "by_distance",
+      "path": "src/rostov_guide/places/repository.py",
+      "parent": "src.rostov_guide.places.repository.PlaceRepository",
+      "start_line": 171,
+      "end_line": 174
+    },
+    {
+      "id": "src.rostov_guide.places.repository.PlaceRepository.geocode",
+      "type": "Function",
+      "label": "geocode",
+      "path": "src/rostov_guide/places/repository.py",
+      "parent": "src.rostov_guide.places.repository.PlaceRepository",
+      "start_line": 176,
+      "end_line": 207
+    },
+    {
+      "id": "src.rostov_guide.places.repository._street_key",
+      "type": "Function",
+      "label": "_street_key",
+      "path": "src/rostov_guide/places/repository.py",
+      "parent": "src.rostov_guide.places.repository",
+      "start_line": 210,
+      "end_line": 217
+    },
+    {
+      "id": "src.rostov_guide.search",
+      "type": "Module",
+      "label": "search",
+      "path": "src/rostov_guide/search/__init__.py",
+      "lines": 1,
+      "lang": "python"
+    },
+    {
+      "id": "src.rostov_guide.search.documents",
+      "type": "Module",
+      "label": "documents",
+      "path": "src/rostov_guide/search/documents.py",
+      "lines": 42,
+      "lang": "python"
+    },
+    {
+      "id": "src.rostov_guide.search.documents.group_of",
+      "type": "Function",
+      "label": "group_of",
+      "path": "src/rostov_guide/search/documents.py",
+      "parent": "src.rostov_guide.search.documents",
+      "start_line": 21,
+      "end_line": 22
+    },
+    {
+      "id": "src.rostov_guide.search.documents.document",
+      "type": "Function",
+      "label": "document",
+      "path": "src/rostov_guide/search/documents.py",
+      "parent": "src.rostov_guide.search.documents",
+      "start_line": 25,
+      "end_line": 41
+    },
+    {
+      "id": "src.rostov_guide.search.embeddings",
+      "type": "Module",
+      "label": "embeddings",
+      "path": "src/rostov_guide/search/embeddings.py",
+      "lines": 114,
+      "lang": "python"
+    },
+    {
+      "id": "src.rostov_guide.search.embeddings.EmbeddingError",
+      "type": "Class",
+      "label": "EmbeddingError",
+      "path": "src/rostov_guide/search/embeddings.py",
+      "parent": "src.rostov_guide.search.embeddings",
+      "start_line": 23,
+      "end_line": 24
+    },
+    {
+      "id": "src.rostov_guide.search.embeddings.EmbeddingClient",
+      "type": "Class",
+      "label": "EmbeddingClient",
+      "path": "src/rostov_guide/search/embeddings.py",
+      "parent": "src.rostov_guide.search.embeddings",
+      "start_line": 27,
+      "end_line": 113
+    },
+    {
+      "id": "src.rostov_guide.search.embeddings.EmbeddingClient.__init__",
+      "type": "Function",
+      "label": "__init__",
+      "path": "src/rostov_guide/search/embeddings.py",
+      "parent": "src.rostov_guide.search.embeddings.EmbeddingClient",
+      "start_line": 28,
+      "end_line": 41
+    },
+    {
+      "id": "src.rostov_guide.search.embeddings.EmbeddingClient._request",
+      "type": "Function",
+      "label": "_request",
+      "path": "src/rostov_guide/search/embeddings.py",
+      "parent": "src.rostov_guide.search.embeddings.EmbeddingClient",
+      "start_line": 43,
+      "end_line": 60
+    },
+    {
+      "id": "src.rostov_guide.search.embeddings.EmbeddingClient.embed",
+      "type": "Function",
+      "label": "embed",
+      "path": "src/rostov_guide/search/embeddings.py",
+      "parent": "src.rostov_guide.search.embeddings.EmbeddingClient",
+      "start_line": 62,
+      "end_line": 73
+    },
+    {
+      "id": "src.rostov_guide.search.embeddings.EmbeddingClient.embed_query",
+      "type": "Function",
+      "label": "embed_query",
+      "path": "src/rostov_guide/search/embeddings.py",
+      "parent": "src.rostov_guide.search.embeddings.EmbeddingClient",
+      "start_line": 75,
+      "end_line": 84
+    },
+    {
+      "id": "src.rostov_guide.search.embeddings.EmbeddingClient._key",
+      "type": "Function",
+      "label": "_key",
+      "path": "src/rostov_guide/search/embeddings.py",
+      "parent": "src.rostov_guide.search.embeddings.EmbeddingClient",
+      "start_line": 86,
+      "end_line": 87
+    },
+    {
+      "id": "src.rostov_guide.search.embeddings.EmbeddingClient._cache_get",
+      "type": "Function",
+      "label": "_cache_get",
+      "path": "src/rostov_guide/search/embeddings.py",
+      "parent": "src.rostov_guide.search.embeddings.EmbeddingClient",
+      "start_line": 89,
+      "end_line": 100
+    },
+    {
+      "id": "src.rostov_guide.search.embeddings.EmbeddingClient._cache_put",
+      "type": "Function",
+      "label": "_cache_put",
+      "path": "src/rostov_guide/search/embeddings.py",
+      "parent": "src.rostov_guide.search.embeddings.EmbeddingClient",
+      "start_line": 102,
+      "end_line": 110
+    },
+    {
+      "id": "src.rostov_guide.search.embeddings.EmbeddingClient.aclose",
+      "type": "Function",
+      "label": "aclose",
+      "path": "src/rostov_guide/search/embeddings.py",
+      "parent": "src.rostov_guide.search.embeddings.EmbeddingClient",
+      "start_line": 112,
+      "end_line": 113
+    },
+    {
+      "id": "src.rostov_guide.search.evaluate",
+      "type": "Module",
+      "label": "evaluate",
+      "path": "src/rostov_guide/search/evaluate.py",
+      "lines": 95,
+      "lang": "python"
+    },
+    {
+      "id": "src.rostov_guide.search.evaluate._name",
+      "type": "Function",
+      "label": "_name",
+      "path": "src/rostov_guide/search/evaluate.py",
+      "parent": "src.rostov_guide.search.evaluate",
+      "start_line": 22,
+      "end_line": 23
+    },
+    {
+      "id": "src.rostov_guide.search.evaluate._cuisine",
+      "type": "Function",
+      "label": "_cuisine",
+      "path": "src/rostov_guide/search/evaluate.py",
+      "parent": "src.rostov_guide.search.evaluate",
+      "start_line": 26,
+      "end_line": 27
+    },
+    {
+      "id": "src.rostov_guide.search.evaluate._kind",
+      "type": "Function",
+      "label": "_kind",
+      "path": "src/rostov_guide/search/evaluate.py",
+      "parent": "src.rostov_guide.search.evaluate",
+      "start_line": 30,
+      "end_line": 31
+    },
+    {
+      "id": "src.rostov_guide.search.evaluate._any",
+      "type": "Function",
+      "label": "_any",
+      "path": "src/rostov_guide/search/evaluate.py",
+      "parent": "src.rostov_guide.search.evaluate",
+      "start_line": 34,
+      "end_line": 35
+    },
+    {
+      "id": "src.rostov_guide.search.evaluate.ModeScore",
+      "type": "Class",
+      "label": "ModeScore",
+      "path": "src/rostov_guide/search/evaluate.py",
+      "parent": "src.rostov_guide.search.evaluate",
+      "start_line": 63,
+      "end_line": 66
+    },
+    {
+      "id": "src.rostov_guide.search.evaluate.evaluate",
+      "type": "Function",
+      "label": "evaluate",
+      "path": "src/rostov_guide/search/evaluate.py",
+      "parent": "src.rostov_guide.search.evaluate",
+      "start_line": 69,
+      "end_line": 94
+    },
+    {
+      "id": "src.rostov_guide.search.sparse",
+      "type": "Module",
+      "label": "sparse",
+      "path": "src/rostov_guide/search/sparse.py",
+      "lines": 69,
+      "lang": "python"
+    },
+    {
+      "id": "src.rostov_guide.search.sparse._stem",
+      "type": "Function",
+      "label": "_stem",
+      "path": "src/rostov_guide/search/sparse.py",
+      "parent": "src.rostov_guide.search.sparse",
+      "start_line": 32,
+      "end_line": 35
+    },
+    {
+      "id": "src.rostov_guide.search.sparse.terms",
+      "type": "Function",
+      "label": "terms",
+      "path": "src/rostov_guide/search/sparse.py",
+      "parent": "src.rostov_guide.search.sparse",
+      "start_line": 38,
+      "end_line": 39
+    },
+    {
+      "id": "src.rostov_guide.search.sparse.term_id",
+      "type": "Function",
+      "label": "term_id",
+      "path": "src/rostov_guide/search/sparse.py",
+      "parent": "src.rostov_guide.search.sparse",
+      "start_line": 42,
+      "end_line": 44
+    },
+    {
+      "id": "src.rostov_guide.search.sparse.encode_document",
+      "type": "Function",
+      "label": "encode_document",
+      "path": "src/rostov_guide/search/sparse.py",
+      "parent": "src.rostov_guide.search.sparse",
+      "start_line": 47,
+      "end_line": 55
+    },
+    {
+      "id": "src.rostov_guide.search.sparse.encode_query",
+      "type": "Function",
+      "label": "encode_query",
+      "path": "src/rostov_guide/search/sparse.py",
+      "parent": "src.rostov_guide.search.sparse",
+      "start_line": 58,
+      "end_line": 60
+    },
+    {
+      "id": "src.rostov_guide.search.sparse.meaningful_terms",
+      "type": "Function",
+      "label": "meaningful_terms",
+      "path": "src/rostov_guide/search/sparse.py",
+      "parent": "src.rostov_guide.search.sparse",
+      "start_line": 66,
+      "end_line": 68
+    },
+    {
+      "id": "src.rostov_guide.search.store",
+      "type": "Module",
+      "label": "store",
+      "path": "src/rostov_guide/search/store.py",
+      "lines": 207,
+      "lang": "python"
+    },
+    {
+      "id": "src.rostov_guide.search.store.Hit",
+      "type": "Class",
+      "label": "Hit",
+      "path": "src/rostov_guide/search/store.py",
+      "parent": "src.rostov_guide.search.store",
+      "start_line": 45,
+      "end_line": 55
+    },
+    {
+      "id": "src.rostov_guide.search.store.Hit.found_by",
+      "type": "Function",
+      "label": "found_by",
+      "path": "src/rostov_guide/search/store.py",
+      "parent": "src.rostov_guide.search.store.Hit",
+      "start_line": 52,
+      "end_line": 55
+    },
+    {
+      "id": "src.rostov_guide.search.store.IndexStatus",
+      "type": "Class",
+      "label": "IndexStatus",
+      "path": "src/rostov_guide/search/store.py",
+      "parent": "src.rostov_guide.search.store",
+      "start_line": 59,
+      "end_line": 68
+    },
+    {
+      "id": "src.rostov_guide.search.store.IndexStatus.as_dict",
+      "type": "Function",
+      "label": "as_dict",
+      "path": "src/rostov_guide/search/store.py",
+      "parent": "src.rostov_guide.search.store.IndexStatus",
+      "start_line": 66,
+      "end_line": 68
+    },
+    {
+      "id": "src.rostov_guide.search.store.PlaceIndex",
+      "type": "Class",
+      "label": "PlaceIndex",
+      "path": "src/rostov_guide/search/store.py",
+      "parent": "src.rostov_guide.search.store",
+      "start_line": 72,
+      "end_line": 206
+    },
+    {
+      "id": "src.rostov_guide.search.store.PlaceIndex.open",
+      "type": "Function",
+      "label": "open",
+      "path": "src/rostov_guide/search/store.py",
+      "parent": "src.rostov_guide.search.store.PlaceIndex",
+      "start_line": 83,
+      "end_line": 87
+    },
+    {
+      "id": "src.rostov_guide.search.store.PlaceIndex._expected",
+      "type": "Function",
+      "label": "_expected",
+      "path": "src/rostov_guide/search/store.py",
+      "parent": "src.rostov_guide.search.store.PlaceIndex",
+      "start_line": 89,
+      "end_line": 90
+    },
+    {
+      "id": "src.rostov_guide.search.store.PlaceIndex._read_meta",
+      "type": "Function",
+      "label": "_read_meta",
+      "path": "src/rostov_guide/search/store.py",
+      "parent": "src.rostov_guide.search.store.PlaceIndex",
+      "start_line": 92,
+      "end_line": 95
+    },
+    {
+      "id": "src.rostov_guide.search.store.PlaceIndex.attach",
+      "type": "Function",
+      "label": "attach",
+      "path": "src/rostov_guide/search/store.py",
+      "parent": "src.rostov_guide.search.store.PlaceIndex",
+      "start_line": 97,
+      "end_line": 109
+    },
+    {
+      "id": "src.rostov_guide.search.store.PlaceIndex.rebuild",
+      "type": "Function",
+      "label": "rebuild",
+      "path": "src/rostov_guide/search/store.py",
+      "parent": "src.rostov_guide.search.store.PlaceIndex",
+      "start_line": 111,
+      "end_line": 165
+    },
+    {
+      "id": "src.rostov_guide.search.store.PlaceIndex.search",
+      "type": "Function",
+      "label": "search",
+      "path": "src/rostov_guide/search/store.py",
+      "parent": "src.rostov_guide.search.store.PlaceIndex",
+      "start_line": 167,
+      "end_line": 203
+    },
+    {
+      "id": "src.rostov_guide.search.store.PlaceIndex.aclose",
+      "type": "Function",
+      "label": "aclose",
+      "path": "src/rostov_guide/search/store.py",
+      "parent": "src.rostov_guide.search.store.PlaceIndex",
+      "start_line": 205,
+      "end_line": 206
+    },
+    {
+      "id": "src.rostov_guide.services",
+      "type": "Module",
+      "label": "services",
+      "path": "src/rostov_guide/services.py",
+      "lines": 76,
+      "lang": "python"
+    },
+    {
+      "id": "src.rostov_guide.services.Services",
+      "type": "Class",
+      "label": "Services",
+      "path": "src/rostov_guide/services.py",
+      "parent": "src.rostov_guide.services",
+      "start_line": 23,
+      "end_line": 56
+    },
+    {
+      "id": "src.rostov_guide.services.Services.ensure_index",
+      "type": "Function",
+      "label": "ensure_index",
+      "path": "src/rostov_guide/services.py",
+      "parent": "src.rostov_guide.services.Services",
+      "start_line": 30,
+      "end_line": 50
+    },
+    {
+      "id": "src.rostov_guide.services.Services.build",
+      "type": "Function",
+      "label": "build",
+      "path": "src/rostov_guide/services.py",
+      "parent": "src.rostov_guide.services.Services",
+      "start_line": 44,
+      "end_line": 48
+    },
+    {
+      "id": "src.rostov_guide.services.Services.aclose",
+      "type": "Function",
+      "label": "aclose",
+      "path": "src/rostov_guide/services.py",
+      "parent": "src.rostov_guide.services.Services",
+      "start_line": 52,
+      "end_line": 56
+    },
+    {
+      "id": "src.rostov_guide.services._progress",
+      "type": "Function",
+      "label": "_progress",
+      "path": "src/rostov_guide/services.py",
+      "parent": "src.rostov_guide.services",
+      "start_line": 59,
+      "end_line": 63
+    },
+    {
+      "id": "src.rostov_guide.services.build_services",
+      "type": "Function",
+      "label": "build_services",
+      "path": "src/rostov_guide/services.py",
+      "parent": "src.rostov_guide.services",
+      "start_line": 66,
+      "end_line": 75
+    },
+    {
+      "id": "src.rostov_guide.static.js.api",
+      "type": "Module",
+      "label": "api",
+      "path": "src/rostov_guide/static/js/api.js",
+      "lines": 73,
+      "lang": "javascript"
+    },
+    {
+      "id": "src.rostov_guide.static.js.api.ApiError",
+      "type": "Class",
+      "label": "ApiError",
+      "path": "src/rostov_guide/static/js/api.js",
+      "parent": "src.rostov_guide.static.js.api",
+      "start_line": 3,
+      "end_line": 8
+    },
+    {
+      "id": "src.rostov_guide.static.js.api.ApiError.constructor",
+      "type": "Function",
+      "label": "constructor",
+      "path": "src/rostov_guide/static/js/api.js",
+      "parent": "src.rostov_guide.static.js.api.ApiError",
+      "start_line": 4,
+      "end_line": 7
+    },
+    {
+      "id": "src.rostov_guide.static.js.api.request",
+      "type": "Function",
+      "label": "request",
+      "path": "src/rostov_guide/static/js/api.js",
+      "parent": "src.rostov_guide.static.js.api",
+      "start_line": 10,
+      "end_line": 31
+    },
+    {
+      "id": "src.rostov_guide.static.js.api.follow",
+      "type": "Function",
+      "label": "follow",
+      "path": "src/rostov_guide/static/js/api.js",
+      "parent": "src.rostov_guide.static.js.api",
+      "start_line": 51,
+      "end_line": 72
+    },
+    {
+      "id": "src.rostov_guide.static.js.app",
+      "type": "Module",
+      "label": "app",
+      "path": "src/rostov_guide/static/js/app.js",
+      "lines": 525,
+      "lang": "javascript"
+    },
+    {
+      "id": "src.rostov_guide.static.js.app.stick",
+      "type": "Function",
+      "label": "stick",
+      "path": "src/rostov_guide/static/js/app.js",
+      "parent": "src.rostov_guide.static.js.app",
+      "start_line": 30,
+      "end_line": 33
+    },
+    {
+      "id": "src.rostov_guide.static.js.app.showAuth",
+      "type": "Function",
+      "label": "showAuth",
+      "path": "src/rostov_guide/static/js/app.js",
+      "parent": "src.rostov_guide.static.js.app",
+      "start_line": 38,
+      "end_line": 79
+    },
+    {
+      "id": "src.rostov_guide.static.js.app.showApp",
+      "type": "Function",
+      "label": "showApp",
+      "path": "src/rostov_guide/static/js/app.js",
+      "parent": "src.rostov_guide.static.js.app",
+      "start_line": 83,
+      "end_line": 101
+    },
+    {
+      "id": "src.rostov_guide.static.js.app.bindUi",
+      "type": "Function",
+      "label": "bindUi",
+      "path": "src/rostov_guide/static/js/app.js",
+      "parent": "src.rostov_guide.static.js.app",
+      "start_line": 103,
+      "end_line": 150
+    },
+    {
+      "id": "src.rostov_guide.static.js.app.autosize",
+      "type": "Function",
+      "label": "autosize",
+      "path": "src/rostov_guide/static/js/app.js",
+      "parent": "src.rostov_guide.static.js.app",
+      "start_line": 152,
+      "end_line": 157
+    },
+    {
+      "id": "src.rostov_guide.static.js.app.updateSend",
+      "type": "Function",
+      "label": "updateSend",
+      "path": "src/rostov_guide/static/js/app.js",
+      "parent": "src.rostov_guide.static.js.app",
+      "start_line": 159,
+      "end_line": 161
+    },
+    {
+      "id": "src.rostov_guide.static.js.app.setRunning",
+      "type": "Function",
+      "label": "setRunning",
+      "path": "src/rostov_guide/static/js/app.js",
+      "parent": "src.rostov_guide.static.js.app",
+      "start_line": 163,
+      "end_line": 167
+    },
+    {
+      "id": "src.rostov_guide.static.js.app.closeDrawers",
+      "type": "Function",
+      "label": "closeDrawers",
+      "path": "src/rostov_guide/static/js/app.js",
+      "parent": "src.rostov_guide.static.js.app",
+      "start_line": 169,
+      "end_line": 172
+    },
+    {
+      "id": "src.rostov_guide.static.js.app.toggleMap",
+      "type": "Function",
+      "label": "toggleMap",
+      "path": "src/rostov_guide/static/js/app.js",
+      "parent": "src.rostov_guide.static.js.app",
+      "start_line": 174,
+      "end_line": 180
+    },
+    {
+      "id": "src.rostov_guide.static.js.app.isDark",
+      "type": "Function",
+      "label": "isDark",
+      "path": "src/rostov_guide/static/js/app.js",
+      "parent": "src.rostov_guide.static.js.app",
+      "start_line": 184,
+      "end_line": 188
+    },
+    {
+      "id": "src.rostov_guide.static.js.app.toggleTheme",
+      "type": "Function",
+      "label": "toggleTheme",
+      "path": "src/rostov_guide/static/js/app.js",
+      "parent": "src.rostov_guide.static.js.app",
+      "start_line": 190,
+      "end_line": 196
+    },
+    {
+      "id": "src.rostov_guide.static.js.app.updateThemeIcon",
+      "type": "Function",
+      "label": "updateThemeIcon",
+      "path": "src/rostov_guide/static/js/app.js",
+      "parent": "src.rostov_guide.static.js.app",
+      "start_line": 198,
+      "end_line": 200
+    },
+    {
+      "id": "src.rostov_guide.static.js.app.refreshStatus",
+      "type": "Function",
+      "label": "refreshStatus",
+      "path": "src/rostov_guide/static/js/app.js",
+      "parent": "src.rostov_guide.static.js.app",
+      "start_line": 206,
+      "end_line": 214
+    },
+    {
+      "id": "src.rostov_guide.static.js.app.renderStatus",
+      "type": "Function",
+      "label": "renderStatus",
+      "path": "src/rostov_guide/static/js/app.js",
+      "parent": "src.rostov_guide.static.js.app",
+      "start_line": 216,
+      "end_line": 254
+    },
+    {
+      "id": "src.rostov_guide.static.js.app.setContext",
+      "type": "Function",
+      "label": "setContext",
+      "path": "src/rostov_guide/static/js/app.js",
+      "parent": "src.rostov_guide.static.js.app",
+      "start_line": 256,
+      "end_line": 263
+    },
+    {
+      "id": "src.rostov_guide.static.js.app.loadChats",
+      "type": "Function",
+      "label": "loadChats",
+      "path": "src/rostov_guide/static/js/app.js",
+      "parent": "src.rostov_guide.static.js.app",
+      "start_line": 267,
+      "end_line": 275
+    },
+    {
+      "id": "src.rostov_guide.static.js.app.renderChatList",
+      "type": "Function",
+      "label": "renderChatList",
+      "path": "src/rostov_guide/static/js/app.js",
+      "parent": "src.rostov_guide.static.js.app",
+      "start_line": 277,
+      "end_line": 305
+    },
+    {
+      "id": "src.rostov_guide.static.js.app.detachRun",
+      "type": "Function",
+      "label": "detachRun",
+      "path": "src/rostov_guide/static/js/app.js",
+      "parent": "src.rostov_guide.static.js.app",
+      "start_line": 307,
+      "end_line": 313
+    },
+    {
+      "id": "src.rostov_guide.static.js.app.newChat",
+      "type": "Function",
+      "label": "newChat",
+      "path": "src/rostov_guide/static/js/app.js",
+      "parent": "src.rostov_guide.static.js.app",
+      "start_line": 315,
+      "end_line": 323
+    },
+    {
+      "id": "src.rostov_guide.static.js.app.renderEmpty",
+      "type": "Function",
+      "label": "renderEmpty",
+      "path": "src/rostov_guide/static/js/app.js",
+      "parent": "src.rostov_guide.static.js.app",
+      "start_line": 325,
+      "end_line": 343
+    },
+    {
+      "id": "src.rostov_guide.static.js.app.openChat",
+      "type": "Function",
+      "label": "openChat",
+      "path": "src/rostov_guide/static/js/app.js",
+      "parent": "src.rostov_guide.static.js.app",
+      "start_line": 345,
+      "end_line": 393
+    },
+    {
+      "id": "src.rostov_guide.static.js.app.viewOptions",
+      "type": "Function",
+      "label": "viewOptions",
+      "path": "src/rostov_guide/static/js/app.js",
+      "parent": "src.rostov_guide.static.js.app",
+      "start_line": 395,
+      "end_line": 403
+    },
+    {
+      "id": "src.rostov_guide.static.js.app.send",
+      "type": "Function",
+      "label": "send",
+      "path": "src/rostov_guide/static/js/app.js",
+      "parent": "src.rostov_guide.static.js.app",
+      "start_line": 407,
+      "end_line": 452
+    },
+    {
+      "id": "src.rostov_guide.static.js.app.attachRun",
+      "type": "Function",
+      "label": "attachRun",
+      "path": "src/rostov_guide/static/js/app.js",
+      "parent": "src.rostov_guide.static.js.app",
+      "start_line": 454,
+      "end_line": 467
+    },
+    {
+      "id": "src.rostov_guide.static.js.app.startPick",
+      "type": "Function",
+      "label": "startPick",
+      "path": "src/rostov_guide/static/js/app.js",
+      "parent": "src.rostov_guide.static.js.app",
+      "start_line": 471,
+      "end_line": 477
+    },
+    {
+      "id": "src.rostov_guide.static.js.app.cancelPick",
+      "type": "Function",
+      "label": "cancelPick",
+      "path": "src/rostov_guide/static/js/app.js",
+      "parent": "src.rostov_guide.static.js.app",
+      "start_line": 479,
+      "end_line": 484
+    },
+    {
+      "id": "src.rostov_guide.static.js.app.onMapPick",
+      "type": "Function",
+      "label": "onMapPick",
+      "path": "src/rostov_guide/static/js/app.js",
+      "parent": "src.rostov_guide.static.js.app",
+      "start_line": 486,
+      "end_line": 496
+    },
+    {
+      "id": "src.rostov_guide.static.js.app.setLocation",
+      "type": "Function",
+      "label": "setLocation",
+      "path": "src/rostov_guide/static/js/app.js",
+      "parent": "src.rostov_guide.static.js.app",
+      "start_line": 498,
+      "end_line": 504
+    },
+    {
+      "id": "src.rostov_guide.static.js.app.renderLocation",
+      "type": "Function",
+      "label": "renderLocation",
+      "path": "src/rostov_guide/static/js/app.js",
+      "parent": "src.rostov_guide.static.js.app",
+      "start_line": 506,
+      "end_line": 511
+    },
+    {
+      "id": "src.rostov_guide.static.js.chat",
+      "type": "Module",
+      "label": "chat",
+      "path": "src/rostov_guide/static/js/chat.js",
+      "lines": 374,
+      "lang": "javascript"
+    },
+    {
+      "id": "src.rostov_guide.static.js.chat.userMessage",
+      "type": "Function",
+      "label": "userMessage",
+      "path": "src/rostov_guide/static/js/chat.js",
+      "parent": "src.rostov_guide.static.js.chat",
+      "start_line": 15,
+      "end_line": 17
+    },
+    {
+      "id": "src.rostov_guide.static.js.chat.systemNote",
+      "type": "Function",
+      "label": "systemNote",
+      "path": "src/rostov_guide/static/js/chat.js",
+      "parent": "src.rostov_guide.static.js.chat",
+      "start_line": 19,
+      "end_line": 21
+    },
+    {
+      "id": "src.rostov_guide.static.js.chat.AssistantView",
+      "type": "Class",
+      "label": "AssistantView",
+      "path": "src/rostov_guide/static/js/chat.js",
+      "parent": "src.rostov_guide.static.js.chat",
+      "start_line": 23,
+      "end_line": 373
+    },
+    {
+      "id": "src.rostov_guide.static.js.chat.AssistantView.constructor",
+      "type": "Function",
+      "label": "constructor",
+      "path": "src/rostov_guide/static/js/chat.js",
+      "parent": "src.rostov_guide.static.js.chat.AssistantView",
+      "start_line": 24,
+      "end_line": 54
+    },
+    {
+      "id": "src.rostov_guide.static.js.chat.AssistantView.startTimer",
+      "type": "Function",
+      "label": "startTimer",
+      "path": "src/rostov_guide/static/js/chat.js",
+      "parent": "src.rostov_guide.static.js.chat.AssistantView",
+      "start_line": 58,
+      "end_line": 63
+    },
+    {
+      "id": "src.rostov_guide.static.js.chat.AssistantView.stopTimer",
+      "type": "Function",
+      "label": "stopTimer",
+      "path": "src/rostov_guide/static/js/chat.js",
+      "parent": "src.rostov_guide.static.js.chat.AssistantView",
+      "start_line": 65,
+      "end_line": 69
+    },
+    {
+      "id": "src.rostov_guide.static.js.chat.AssistantView.handle",
+      "type": "Function",
+      "label": "handle",
+      "path": "src/rostov_guide/static/js/chat.js",
+      "parent": "src.rostov_guide.static.js.chat.AssistantView",
+      "start_line": 71,
+      "end_line": 87
+    },
+    {
+      "id": "src.rostov_guide.static.js.chat.AssistantView.setQueued",
+      "type": "Function",
+      "label": "setQueued",
+      "path": "src/rostov_guide/static/js/chat.js",
+      "parent": "src.rostov_guide.static.js.chat.AssistantView",
+      "start_line": 89,
+      "end_line": 96
+    },
+    {
+      "id": "src.rostov_guide.static.js.chat.AssistantView.setStatus",
+      "type": "Function",
+      "label": "setStatus",
+      "path": "src/rostov_guide/static/js/chat.js",
+      "parent": "src.rostov_guide.static.js.chat.AssistantView",
+      "start_line": 98,
+      "end_line": 101
+    },
+    {
+      "id": "src.rostov_guide.static.js.chat.AssistantView.appendThought",
+      "type": "Function",
+      "label": "appendThought",
+      "path": "src/rostov_guide/static/js/chat.js",
+      "parent": "src.rostov_guide.static.js.chat.AssistantView",
+      "start_line": 103,
+      "end_line": 112
+    },
+    {
+      "id": "src.rostov_guide.static.js.chat.AssistantView.finishThought",
+      "type": "Function",
+      "label": "finishThought",
+      "path": "src/rostov_guide/static/js/chat.js",
+      "parent": "src.rostov_guide.static.js.chat.AssistantView",
+      "start_line": 114,
+      "end_line": 128
+    },
+    {
+      "id": "src.rostov_guide.static.js.chat.AssistantView.addMoreLink",
+      "type": "Function",
+      "label": "addMoreLink",
+      "path": "src/rostov_guide/static/js/chat.js",
+      "parent": "src.rostov_guide.static.js.chat.AssistantView",
+      "start_line": 131,
+      "end_line": 142
+    },
+    {
+      "id": "src.rostov_guide.static.js.chat.AssistantView.step",
+      "type": "Function",
+      "label": "step",
+      "path": "src/rostov_guide/static/js/chat.js",
+      "parent": "src.rostov_guide.static.js.chat.AssistantView",
+      "start_line": 144,
+      "end_line": 150
+    },
+    {
+      "id": "src.rostov_guide.static.js.chat.AssistantView.addToolCall",
+      "type": "Function",
+      "label": "addToolCall",
+      "path": "src/rostov_guide/static/js/chat.js",
+      "parent": "src.rostov_guide.static.js.chat.AssistantView",
+      "start_line": 152,
+      "end_line": 164
+    },
+    {
+      "id": "src.rostov_guide.static.js.chat.AssistantView.addToolResult",
+      "type": "Function",
+      "label": "addToolResult",
+      "path": "src/rostov_guide/static/js/chat.js",
+      "parent": "src.rostov_guide.static.js.chat.AssistantView",
+      "start_line": 166,
+      "end_line": 195
+    },
+    {
+      "id": "src.rostov_guide.static.js.chat.AssistantView.setUsage",
+      "type": "Function",
+      "label": "setUsage",
+      "path": "src/rostov_guide/static/js/chat.js",
+      "parent": "src.rostov_guide.static.js.chat.AssistantView",
+      "start_line": 197,
+      "end_line": 200
+    },
+    {
+      "id": "src.rostov_guide.static.js.chat.AssistantView.scheduleAnswer",
+      "type": "Function",
+      "label": "scheduleAnswer",
+      "path": "src/rostov_guide/static/js/chat.js",
+      "parent": "src.rostov_guide.static.js.chat.AssistantView",
+      "start_line": 202,
+      "end_line": 213
+    },
+    {
+      "id": "src.rostov_guide.static.js.chat.AssistantView.showError",
+      "type": "Function",
+      "label": "showError",
+      "path": "src/rostov_guide/static/js/chat.js",
+      "parent": "src.rostov_guide.static.js.chat.AssistantView",
+      "start_line": 215,
+      "end_line": 219
+    },
+    {
+      "id": "src.rostov_guide.static.js.chat.AssistantView.finish",
+      "type": "Function",
+      "label": "finish",
+      "path": "src/rostov_guide/static/js/chat.js",
+      "parent": "src.rostov_guide.static.js.chat.AssistantView",
+      "start_line": 223,
+      "end_line": 252
+    },
+    {
+      "id": "src.rostov_guide.static.js.chat.AssistantView.cardsToShow",
+      "type": "Function",
+      "label": "cardsToShow",
+      "path": "src/rostov_guide/static/js/chat.js",
+      "parent": "src.rostov_guide.static.js.chat.AssistantView",
+      "start_line": 255,
+      "end_line": 263
+    },
+    {
+      "id": "src.rostov_guide.static.js.chat.AssistantView.renderCards",
+      "type": "Function",
+      "label": "renderCards",
+      "path": "src/rostov_guide/static/js/chat.js",
+      "parent": "src.rostov_guide.static.js.chat.AssistantView",
+      "start_line": 265,
+      "end_line": 272
+    },
+    {
+      "id": "src.rostov_guide.static.js.chat.AssistantView.showOnMap",
+      "type": "Function",
+      "label": "showOnMap",
+      "path": "src/rostov_guide/static/js/chat.js",
+      "parent": "src.rostov_guide.static.js.chat.AssistantView",
+      "start_line": 274,
+      "end_line": 276
+    },
+    {
+      "id": "src.rostov_guide.static.js.chat.AssistantView.cardEl",
+      "type": "Function",
+      "label": "cardEl",
+      "path": "src/rostov_guide/static/js/chat.js",
+      "parent": "src.rostov_guide.static.js.chat.AssistantView",
+      "start_line": 278,
+      "end_line": 300
+    },
+    {
+      "id": "src.rostov_guide.static.js.chat.AssistantView.focusPlace",
+      "type": "Function",
+      "label": "focusPlace",
+      "path": "src/rostov_guide/static/js/chat.js",
+      "parent": "src.rostov_guide.static.js.chat.AssistantView",
+      "start_line": 302,
+      "end_line": 310
+    },
+    {
+      "id": "src.rostov_guide.static.js.chat.AssistantView.linkPlaces",
+      "type": "Function",
+      "label": "linkPlaces",
+      "path": "src/rostov_guide/static/js/chat.js",
+      "parent": "src.rostov_guide.static.js.chat.AssistantView",
+      "start_line": 313,
+      "end_line": 323
+    },
+    {
+      "id": "src.rostov_guide.static.js.chat.AssistantView.renderMeta",
+      "type": "Function",
+      "label": "renderMeta",
+      "path": "src/rostov_guide/static/js/chat.js",
+      "parent": "src.rostov_guide.static.js.chat.AssistantView",
+      "start_line": 325,
+      "end_line": 338
+    },
+    {
+      "id": "src.rostov_guide.static.js.chat.AssistantView.stick",
+      "type": "Function",
+      "label": "stick",
+      "path": "src/rostov_guide/static/js/chat.js",
+      "parent": "src.rostov_guide.static.js.chat.AssistantView",
+      "start_line": 340,
+      "end_line": 342
+    },
+    {
+      "id": "src.rostov_guide.static.js.chat.AssistantView.fromHistory",
+      "type": "Function",
+      "label": "fromHistory",
+      "path": "src/rostov_guide/static/js/chat.js",
+      "parent": "src.rostov_guide.static.js.chat.AssistantView",
+      "start_line": 346,
+      "end_line": 363
+    },
+    {
+      "id": "src.rostov_guide.static.js.chat.AssistantView.finishFromHistory",
+      "type": "Function",
+      "label": "finishFromHistory",
+      "path": "src/rostov_guide/static/js/chat.js",
+      "parent": "src.rostov_guide.static.js.chat.AssistantView",
+      "start_line": 365,
+      "end_line": 372
+    },
+    {
+      "id": "src.rostov_guide.static.js.map",
+      "type": "Module",
+      "label": "map",
+      "path": "src/rostov_guide/static/js/map.js",
+      "lines": 122,
+      "lang": "javascript"
+    },
+    {
+      "id": "src.rostov_guide.static.js.map.pinIcon",
+      "type": "Function",
+      "label": "pinIcon",
+      "path": "src/rostov_guide/static/js/map.js",
+      "parent": "src.rostov_guide.static.js.map",
+      "start_line": 11,
+      "end_line": 14
+    },
+    {
+      "id": "src.rostov_guide.static.js.map.popupFor",
+      "type": "Function",
+      "label": "popupFor",
+      "path": "src/rostov_guide/static/js/map.js",
+      "parent": "src.rostov_guide.static.js.map",
+      "start_line": 16,
+      "end_line": 22
+    },
+    {
+      "id": "src.rostov_guide.static.js.map.PlaceMap",
+      "type": "Class",
+      "label": "PlaceMap",
+      "path": "src/rostov_guide/static/js/map.js",
+      "parent": "src.rostov_guide.static.js.map",
+      "start_line": 24,
+      "end_line": 121
+    },
+    {
+      "id": "src.rostov_guide.static.js.map.PlaceMap.constructor",
+      "type": "Function",
+      "label": "constructor",
+      "path": "src/rostov_guide/static/js/map.js",
+      "parent": "src.rostov_guide.static.js.map.PlaceMap",
+      "start_line": 25,
+      "end_line": 32
+    },
+    {
+      "id": "src.rostov_guide.static.js.map.PlaceMap.init",
+      "type": "Function",
+      "label": "init",
+      "path": "src/rostov_guide/static/js/map.js",
+      "parent": "src.rostov_guide.static.js.map.PlaceMap",
+      "start_line": 34,
+      "end_line": 50
+    },
+    {
+      "id": "src.rostov_guide.static.js.map.PlaceMap.setTheme",
+      "type": "Function",
+      "label": "setTheme",
+      "path": "src/rostov_guide/static/js/map.js",
+      "parent": "src.rostov_guide.static.js.map.PlaceMap",
+      "start_line": 52,
+      "end_line": 54
+    },
+    {
+      "id": "src.rostov_guide.static.js.map.PlaceMap.invalidate",
+      "type": "Function",
+      "label": "invalidate",
+      "path": "src/rostov_guide/static/js/map.js",
+      "parent": "src.rostov_guide.static.js.map.PlaceMap",
+      "start_line": 56,
+      "end_line": 58
+    },
+    {
+      "id": "src.rostov_guide.static.js.map.PlaceMap.showPlaces",
+      "type": "Function",
+      "label": "showPlaces",
+      "path": "src/rostov_guide/static/js/map.js",
+      "parent": "src.rostov_guide.static.js.map.PlaceMap",
+      "start_line": 60,
+      "end_line": 84
+    },
+    {
+      "id": "src.rostov_guide.static.js.map.PlaceMap.highlight",
+      "type": "Function",
+      "label": "highlight",
+      "path": "src/rostov_guide/static/js/map.js",
+      "parent": "src.rostov_guide.static.js.map.PlaceMap",
+      "start_line": 86,
+      "end_line": 91
+    },
+    {
+      "id": "src.rostov_guide.static.js.map.PlaceMap.focus",
+      "type": "Function",
+      "label": "focus",
+      "path": "src/rostov_guide/static/js/map.js",
+      "parent": "src.rostov_guide.static.js.map.PlaceMap",
+      "start_line": 93,
+      "end_line": 98
+    },
+    {
+      "id": "src.rostov_guide.static.js.map.PlaceMap.setUser",
+      "type": "Function",
+      "label": "setUser",
+      "path": "src/rostov_guide/static/js/map.js",
+      "parent": "src.rostov_guide.static.js.map.PlaceMap",
+      "start_line": 100,
+      "end_line": 110
+    },
+    {
+      "id": "src.rostov_guide.static.js.map.PlaceMap.startPick",
+      "type": "Function",
+      "label": "startPick",
+      "path": "src/rostov_guide/static/js/map.js",
+      "parent": "src.rostov_guide.static.js.map.PlaceMap",
+      "start_line": 112,
+      "end_line": 115
+    },
+    {
+      "id": "src.rostov_guide.static.js.map.PlaceMap.stopPick",
+      "type": "Function",
+      "label": "stopPick",
+      "path": "src/rostov_guide/static/js/map.js",
+      "parent": "src.rostov_guide.static.js.map.PlaceMap",
+      "start_line": 117,
+      "end_line": 120
+    },
+    {
+      "id": "src.rostov_guide.static.js.markdown",
+      "type": "Module",
+      "label": "markdown",
+      "path": "src/rostov_guide/static/js/markdown.js",
+      "lines": 63,
+      "lang": "javascript"
+    },
+    {
+      "id": "src.rostov_guide.static.js.markdown.escapeHtml",
+      "type": "Function",
+      "label": "escapeHtml",
+      "path": "src/rostov_guide/static/js/markdown.js",
+      "parent": "src.rostov_guide.static.js.markdown",
+      "start_line": 5,
+      "end_line": 7
+    },
+    {
+      "id": "src.rostov_guide.static.js.markdown.inline",
+      "type": "Function",
+      "label": "inline",
+      "path": "src/rostov_guide/static/js/markdown.js",
+      "parent": "src.rostov_guide.static.js.markdown",
+      "start_line": 9,
+      "end_line": 16
+    },
+    {
+      "id": "src.rostov_guide.static.js.markdown.renderMarkdown",
+      "type": "Function",
+      "label": "renderMarkdown",
+      "path": "src/rostov_guide/static/js/markdown.js",
+      "parent": "src.rostov_guide.static.js.markdown",
+      "start_line": 18,
+      "end_line": 62
+    },
+    {
+      "id": "src.rostov_guide.static.js.ui",
+      "type": "Module",
+      "label": "ui",
+      "path": "src/rostov_guide/static/js/ui.js",
+      "lines": 99,
+      "lang": "javascript"
+    },
+    {
+      "id": "src.rostov_guide.static.js.ui.h",
+      "type": "Function",
+      "label": "h",
+      "path": "src/rostov_guide/static/js/ui.js",
+      "parent": "src.rostov_guide.static.js.ui",
+      "start_line": 3,
+      "end_line": 18
+    },
+    {
+      "id": "src.rostov_guide.static.js.ui.icon",
+      "type": "Function",
+      "label": "icon",
+      "path": "src/rostov_guide/static/js/ui.js",
+      "parent": "src.rostov_guide.static.js.ui",
+      "start_line": 39,
+      "end_line": 45
+    },
+    {
+      "id": "src.rostov_guide.static.js.ui.spinner",
+      "type": "Function",
+      "label": "spinner",
+      "path": "src/rostov_guide/static/js/ui.js",
+      "parent": "src.rostov_guide.static.js.ui",
+      "start_line": 47,
+      "end_line": 49
+    },
+    {
+      "id": "src.rostov_guide.static.js.ui.plural",
+      "type": "Function",
+      "label": "plural",
+      "path": "src/rostov_guide/static/js/ui.js",
+      "parent": "src.rostov_guide.static.js.ui",
+      "start_line": 51,
+      "end_line": 56
+    },
+    {
+      "id": "src.rostov_guide.static.js.ui.fmtTokens",
+      "type": "Function",
+      "label": "fmtTokens",
+      "path": "src/rostov_guide/static/js/ui.js",
+      "parent": "src.rostov_guide.static.js.ui",
+      "start_line": 58,
+      "end_line": 61
+    },
+    {
+      "id": "src.rostov_guide.static.js.ui.fmtSeconds",
+      "type": "Function",
+      "label": "fmtSeconds",
+      "path": "src/rostov_guide/static/js/ui.js",
+      "parent": "src.rostov_guide.static.js.ui",
+      "start_line": 63,
+      "end_line": 65
+    },
+    {
+      "id": "src.rostov_guide.static.js.ui.fmtDistance",
+      "type": "Function",
+      "label": "fmtDistance",
+      "path": "src/rostov_guide/static/js/ui.js",
+      "parent": "src.rostov_guide.static.js.ui",
+      "start_line": 67,
+      "end_line": 70
+    },
+    {
+      "id": "src.rostov_guide.static.js.ui.relTime",
+      "type": "Function",
+      "label": "relTime",
+      "path": "src/rostov_guide/static/js/ui.js",
+      "parent": "src.rostov_guide.static.js.ui",
+      "start_line": 72,
+      "end_line": 79
+    },
+    {
+      "id": "src.rostov_guide.static.js.ui.toast",
+      "type": "Function",
+      "label": "toast",
+      "path": "src/rostov_guide/static/js/ui.js",
+      "parent": "src.rostov_guide.static.js.ui",
+      "start_line": 81,
+      "end_line": 86
+    },
+    {
+      "id": "src.rostov_guide.static.js.ui.get",
+      "type": "Function",
+      "label": "get",
+      "path": "src/rostov_guide/static/js/ui.js",
+      "parent": "src.rostov_guide.static.js.ui",
+      "start_line": 89,
+      "end_line": 91
+    },
+    {
+      "id": "src.rostov_guide.static.js.ui.set",
+      "type": "Function",
+      "label": "set",
+      "path": "src/rostov_guide/static/js/ui.js",
+      "parent": "src.rostov_guide.static.js.ui",
+      "start_line": 92,
+      "end_line": 94
+    },
+    {
+      "id": "src.rostov_guide.static.js.ui.remove",
+      "type": "Function",
+      "label": "remove",
+      "path": "src/rostov_guide/static/js/ui.js",
+      "parent": "src.rostov_guide.static.js.ui",
+      "start_line": 95,
+      "end_line": 97
+    },
+    {
+      "id": "src.rostov_guide.web",
+      "type": "Module",
+      "label": "web",
+      "path": "src/rostov_guide/web/__init__.py",
+      "lines": 1,
+      "lang": "python"
+    },
+    {
+      "id": "src.rostov_guide.web.app",
+      "type": "Module",
+      "label": "app",
+      "path": "src/rostov_guide/web/app.py",
+      "lines": 85,
+      "lang": "python"
+    },
+    {
+      "id": "src.rostov_guide.web.app.lifespan",
+      "type": "Function",
+      "label": "lifespan",
+      "path": "src/rostov_guide/web/app.py",
+      "parent": "src.rostov_guide.web.app",
+      "start_line": 31,
+      "end_line": 56
+    },
+    {
+      "id": "src.rostov_guide.web.app.create_app",
+      "type": "Function",
+      "label": "create_app",
+      "path": "src/rostov_guide/web/app.py",
+      "parent": "src.rostov_guide.web.app",
+      "start_line": 59,
+      "end_line": 84
+    },
+    {
+      "id": "src.rostov_guide.web.app.same_origin_guard",
+      "type": "Function",
+      "label": "same_origin_guard",
+      "path": "src/rostov_guide/web/app.py",
+      "parent": "src.rostov_guide.web.app",
+      "start_line": 63,
+      "end_line": 74
+    },
+    {
+      "id": "src.rostov_guide.web.app.index",
+      "type": "Function",
+      "label": "index",
+      "path": "src/rostov_guide/web/app.py",
+      "parent": "src.rostov_guide.web.app",
+      "start_line": 81,
+      "end_line": 82
+    },
+    {
+      "id": "src.rostov_guide.web.auth",
+      "type": "Module",
+      "label": "auth",
+      "path": "src/rostov_guide/web/auth.py",
+      "lines": 180,
+      "lang": "python"
+    },
+    {
+      "id": "src.rostov_guide.web.auth.User",
+      "type": "Class",
+      "label": "User",
+      "path": "src/rostov_guide/web/auth.py",
+      "parent": "src.rostov_guide.web.auth",
+      "start_line": 36,
+      "end_line": 38
+    },
+    {
+      "id": "src.rostov_guide.web.auth.Credentials",
+      "type": "Class",
+      "label": "Credentials",
+      "path": "src/rostov_guide/web/auth.py",
+      "parent": "src.rostov_guide.web.auth",
+      "start_line": 41,
+      "end_line": 43
+    },
+    {
+      "id": "src.rostov_guide.web.auth._hash",
+      "type": "Function",
+      "label": "_hash",
+      "path": "src/rostov_guide/web/auth.py",
+      "parent": "src.rostov_guide.web.auth",
+      "start_line": 46,
+      "end_line": 47
+    },
+    {
+      "id": "src.rostov_guide.web.auth.hash_password",
+      "type": "Function",
+      "label": "hash_password",
+      "path": "src/rostov_guide/web/auth.py",
+      "parent": "src.rostov_guide.web.auth",
+      "start_line": 50,
+      "end_line": 53
+    },
+    {
+      "id": "src.rostov_guide.web.auth.verify_password",
+      "type": "Function",
+      "label": "verify_password",
+      "path": "src/rostov_guide/web/auth.py",
+      "parent": "src.rostov_guide.web.auth",
+      "start_line": 56,
+      "end_line": 62
+    },
+    {
+      "id": "src.rostov_guide.web.auth.UserStore",
+      "type": "Class",
+      "label": "UserStore",
+      "path": "src/rostov_guide/web/auth.py",
+      "parent": "src.rostov_guide.web.auth",
+      "start_line": 65,
+      "end_line": 99
+    },
+    {
+      "id": "src.rostov_guide.web.auth.UserStore.__init__",
+      "type": "Function",
+      "label": "__init__",
+      "path": "src/rostov_guide/web/auth.py",
+      "parent": "src.rostov_guide.web.auth.UserStore",
+      "start_line": 66,
+      "end_line": 67
+    },
+    {
+      "id": "src.rostov_guide.web.auth.UserStore.init",
+      "type": "Function",
+      "label": "init",
+      "path": "src/rostov_guide/web/auth.py",
+      "parent": "src.rostov_guide.web.auth.UserStore",
+      "start_line": 69,
+      "end_line": 78
+    },
+    {
+      "id": "src.rostov_guide.web.auth.UserStore.create",
+      "type": "Function",
+      "label": "create",
+      "path": "src/rostov_guide/web/auth.py",
+      "parent": "src.rostov_guide.web.auth.UserStore",
+      "start_line": 80,
+      "end_line": 90
+    },
+    {
+      "id": "src.rostov_guide.web.auth.UserStore.authenticate",
+      "type": "Function",
+      "label": "authenticate",
+      "path": "src/rostov_guide/web/auth.py",
+      "parent": "src.rostov_guide.web.auth.UserStore",
+      "start_line": 92,
+      "end_line": 99
+    },
+    {
+      "id": "src.rostov_guide.web.auth.LoginLimiter",
+      "type": "Class",
+      "label": "LoginLimiter",
+      "path": "src/rostov_guide/web/auth.py",
+      "parent": "src.rostov_guide.web.auth",
+      "start_line": 102,
+      "end_line": 116
+    },
+    {
+      "id": "src.rostov_guide.web.auth.LoginLimiter.__init__",
+      "type": "Function",
+      "label": "__init__",
+      "path": "src/rostov_guide/web/auth.py",
+      "parent": "src.rostov_guide.web.auth.LoginLimiter",
+      "start_line": 105,
+      "end_line": 107
+    },
+    {
+      "id": "src.rostov_guide.web.auth.LoginLimiter.check",
+      "type": "Function",
+      "label": "check",
+      "path": "src/rostov_guide/web/auth.py",
+      "parent": "src.rostov_guide.web.auth.LoginLimiter",
+      "start_line": 109,
+      "end_line": 116
+    },
+    {
+      "id": "src.rostov_guide.web.auth.issue_token",
+      "type": "Function",
+      "label": "issue_token",
+      "path": "src/rostov_guide/web/auth.py",
+      "parent": "src.rostov_guide.web.auth",
+      "start_line": 119,
+      "end_line": 122
+    },
+    {
+      "id": "src.rostov_guide.web.auth.current_user",
+      "type": "Function",
+      "label": "current_user",
+      "path": "src/rostov_guide/web/auth.py",
+      "parent": "src.rostov_guide.web.auth",
+      "start_line": 125,
+      "end_line": 133
+    },
+    {
+      "id": "src.rostov_guide.web.auth._set_cookie",
+      "type": "Function",
+      "label": "_set_cookie",
+      "path": "src/rostov_guide/web/auth.py",
+      "parent": "src.rostov_guide.web.auth",
+      "start_line": 139,
+      "end_line": 143
+    },
+    {
+      "id": "src.rostov_guide.web.auth.register",
+      "type": "Function",
+      "label": "register",
+      "path": "src/rostov_guide/web/auth.py",
+      "parent": "src.rostov_guide.web.auth",
+      "start_line": 147,
+      "end_line": 158
+    },
+    {
+      "id": "src.rostov_guide.web.auth.login",
+      "type": "Function",
+      "label": "login",
+      "path": "src/rostov_guide/web/auth.py",
+      "parent": "src.rostov_guide.web.auth",
+      "start_line": 162,
+      "end_line": 168
+    },
+    {
+      "id": "src.rostov_guide.web.auth.logout",
+      "type": "Function",
+      "label": "logout",
+      "path": "src/rostov_guide/web/auth.py",
+      "parent": "src.rostov_guide.web.auth",
+      "start_line": 172,
+      "end_line": 174
+    },
+    {
+      "id": "src.rostov_guide.web.auth.me",
+      "type": "Function",
+      "label": "me",
+      "path": "src/rostov_guide/web/auth.py",
+      "parent": "src.rostov_guide.web.auth",
+      "start_line": 178,
+      "end_line": 179
+    },
+    {
+      "id": "src.rostov_guide.web.events",
+      "type": "Module",
+      "label": "events",
+      "path": "src/rostov_guide/web/events.py",
+      "lines": 181,
+      "lang": "python"
+    },
+    {
+      "id": "src.rostov_guide.web.events._q",
+      "type": "Function",
+      "label": "_q",
+      "path": "src/rostov_guide/web/events.py",
+      "parent": "src.rostov_guide.web.events",
+      "start_line": 30,
+      "end_line": 31
+    },
+    {
+      "id": "src.rostov_guide.web.events.tool_title",
+      "type": "Function",
+      "label": "tool_title",
+      "path": "src/rostov_guide/web/events.py",
+      "parent": "src.rostov_guide.web.events",
+      "start_line": 34,
+      "end_line": 64
+    },
+    {
+      "id": "src.rostov_guide.web.events.result_view",
+      "type": "Function",
+      "label": "result_view",
+      "path": "src/rostov_guide/web/events.py",
+      "parent": "src.rostov_guide.web.events",
+      "start_line": 67,
+      "end_line": 108
+    },
+    {
+      "id": "src.rostov_guide.web.events.translate",
+      "type": "Function",
+      "label": "translate",
+      "path": "src/rostov_guide/web/events.py",
+      "parent": "src.rostov_guide.web.events",
+      "start_line": 111,
+      "end_line": 143
+    },
+    {
+      "id": "src.rostov_guide.web.events.history",
+      "type": "Function",
+      "label": "history",
+      "path": "src/rostov_guide/web/events.py",
+      "parent": "src.rostov_guide.web.events",
+      "start_line": 146,
+      "end_line": 180
+    },
+    {
+      "id": "src.rostov_guide.web.routes",
+      "type": "Module",
+      "label": "routes",
+      "path": "src/rostov_guide/web/routes.py",
+      "lines": 224,
+      "lang": "python"
+    },
+    {
+      "id": "src.rostov_guide.web.routes.Location",
+      "type": "Class",
+      "label": "Location",
+      "path": "src/rostov_guide/web/routes.py",
+      "parent": "src.rostov_guide.web.routes",
+      "start_line": 27,
+      "end_line": 30
+    },
+    {
+      "id": "src.rostov_guide.web.routes.Ask",
+      "type": "Class",
+      "label": "Ask",
+      "path": "src/rostov_guide/web/routes.py",
+      "parent": "src.rostov_guide.web.routes",
+      "start_line": 33,
+      "end_line": 35
+    },
+    {
+      "id": "src.rostov_guide.web.routes._title",
+      "type": "Function",
+      "label": "_title",
+      "path": "src/rostov_guide/web/routes.py",
+      "parent": "src.rostov_guide.web.routes",
+      "start_line": 38,
+      "end_line": 43
+    },
+    {
+      "id": "src.rostov_guide.web.routes._sessions",
+      "type": "Function",
+      "label": "_sessions",
+      "path": "src/rostov_guide/web/routes.py",
+      "parent": "src.rostov_guide.web.routes",
+      "start_line": 46,
+      "end_line": 47
+    },
+    {
+      "id": "src.rostov_guide.web.routes._own_session",
+      "type": "Function",
+      "label": "_own_session",
+      "path": "src/rostov_guide/web/routes.py",
+      "parent": "src.rostov_guide.web.routes",
+      "start_line": 50,
+      "end_line": 54
+    },
+    {
+      "id": "src.rostov_guide.web.routes.list_chats",
+      "type": "Function",
+      "label": "list_chats",
+      "path": "src/rostov_guide/web/routes.py",
+      "parent": "src.rostov_guide.web.routes",
+      "start_line": 60,
+      "end_line": 68
+    },
+    {
+      "id": "src.rostov_guide.web.routes.create_chat",
+      "type": "Function",
+      "label": "create_chat",
+      "path": "src/rostov_guide/web/routes.py",
+      "parent": "src.rostov_guide.web.routes",
+      "start_line": 72,
+      "end_line": 75
+    },
+    {
+      "id": "src.rostov_guide.web.routes.get_chat",
+      "type": "Function",
+      "label": "get_chat",
+      "path": "src/rostov_guide/web/routes.py",
+      "parent": "src.rostov_guide.web.routes",
+      "start_line": 79,
+      "end_line": 88
+    },
+    {
+      "id": "src.rostov_guide.web.routes.delete_chat",
+      "type": "Function",
+      "label": "delete_chat",
+      "path": "src/rostov_guide/web/routes.py",
+      "parent": "src.rostov_guide.web.routes",
+      "start_line": 92,
+      "end_line": 98
+    },
+    {
+      "id": "src.rostov_guide.web.routes.ask",
+      "type": "Function",
+      "label": "ask",
+      "path": "src/rostov_guide/web/routes.py",
+      "parent": "src.rostov_guide.web.routes",
+      "start_line": 104,
+      "end_line": 120
+    },
+    {
+      "id": "src.rostov_guide.web.routes._own_run",
+      "type": "Function",
+      "label": "_own_run",
+      "path": "src/rostov_guide/web/routes.py",
+      "parent": "src.rostov_guide.web.routes",
+      "start_line": 123,
+      "end_line": 127
+    },
+    {
+      "id": "src.rostov_guide.web.routes.run_events",
+      "type": "Function",
+      "label": "run_events",
+      "path": "src/rostov_guide/web/routes.py",
+      "parent": "src.rostov_guide.web.routes",
+      "start_line": 131,
+      "end_line": 145
+    },
+    {
+      "id": "src.rostov_guide.web.routes.stream",
+      "type": "Function",
+      "label": "stream",
+      "path": "src/rostov_guide/web/routes.py",
+      "parent": "src.rostov_guide.web.routes",
+      "start_line": 139,
+      "end_line": 143
+    },
+    {
+      "id": "src.rostov_guide.web.routes.cancel_run",
+      "type": "Function",
+      "label": "cancel_run",
+      "path": "src/rostov_guide/web/routes.py",
+      "parent": "src.rostov_guide.web.routes",
+      "start_line": 149,
+      "end_line": 152
+    },
+    {
+      "id": "src.rostov_guide.web.routes.place",
+      "type": "Function",
+      "label": "place",
+      "path": "src/rostov_guide/web/routes.py",
+      "parent": "src.rostov_guide.web.routes",
+      "start_line": 158,
+      "end_line": 162
+    },
+    {
+      "id": "src.rostov_guide.web.routes.reverse",
+      "type": "Function",
+      "label": "reverse",
+      "path": "src/rostov_guide/web/routes.py",
+      "parent": "src.rostov_guide.web.routes",
+      "start_line": 166,
+      "end_line": 175
+    },
+    {
+      "id": "src.rostov_guide.web.routes._llm_probe_state",
+      "type": "Function",
+      "label": "_llm_probe_state",
+      "path": "src/rostov_guide/web/routes.py",
+      "parent": "src.rostov_guide.web.routes",
+      "start_line": 181,
+      "end_line": 208
+    },
+    {
+      "id": "src.rostov_guide.web.routes.status",
+      "type": "Function",
+      "label": "status",
+      "path": "src/rostov_guide/web/routes.py",
+      "parent": "src.rostov_guide.web.routes",
+      "start_line": 212,
+      "end_line": 223
+    },
+    {
+      "id": "src.rostov_guide.web.runs",
+      "type": "Module",
+      "label": "runs",
+      "path": "src/rostov_guide/web/runs.py",
+      "lines": 223,
+      "lang": "python"
+    },
+    {
+      "id": "src.rostov_guide.web.runs.Busy",
+      "type": "Class",
+      "label": "Busy",
+      "path": "src/rostov_guide/web/runs.py",
+      "parent": "src.rostov_guide.web.runs",
+      "start_line": 38,
+      "end_line": 39
+    },
+    {
+      "id": "src.rostov_guide.web.runs.Run",
+      "type": "Class",
+      "label": "Run",
+      "path": "src/rostov_guide/web/runs.py",
+      "parent": "src.rostov_guide.web.runs",
+      "start_line": 43,
+      "end_line": 66
+    },
+    {
+      "id": "src.rostov_guide.web.runs.Run.finished",
+      "type": "Function",
+      "label": "finished",
+      "path": "src/rostov_guide/web/runs.py",
+      "parent": "src.rostov_guide.web.runs.Run",
+      "start_line": 59,
+      "end_line": 60
+    },
+    {
+      "id": "src.rostov_guide.web.runs.Run.emit",
+      "type": "Function",
+      "label": "emit",
+      "path": "src/rostov_guide/web/runs.py",
+      "parent": "src.rostov_guide.web.runs.Run",
+      "start_line": 62,
+      "end_line": 66
+    },
+    {
+      "id": "src.rostov_guide.web.runs.RunManager",
+      "type": "Class",
+      "label": "RunManager",
+      "path": "src/rostov_guide/web/runs.py",
+      "parent": "src.rostov_guide.web.runs",
+      "start_line": 69,
+      "end_line": 209
+    },
+    {
+      "id": "src.rostov_guide.web.runs.RunManager.__init__",
+      "type": "Function",
+      "label": "__init__",
+      "path": "src/rostov_guide/web/runs.py",
+      "parent": "src.rostov_guide.web.runs.RunManager",
+      "start_line": 70,
+      "end_line": 77
+    },
+    {
+      "id": "src.rostov_guide.web.runs.RunManager.active_for_chat",
+      "type": "Function",
+      "label": "active_for_chat",
+      "path": "src/rostov_guide/web/runs.py",
+      "parent": "src.rostov_guide.web.runs.RunManager",
+      "start_line": 81,
+      "end_line": 82
+    },
+    {
+      "id": "src.rostov_guide.web.runs.RunManager.start",
+      "type": "Function",
+      "label": "start",
+      "path": "src/rostov_guide/web/runs.py",
+      "parent": "src.rostov_guide.web.runs.RunManager",
+      "start_line": 84,
+      "end_line": 97
+    },
+    {
+      "id": "src.rostov_guide.web.runs.RunManager.cancel",
+      "type": "Function",
+      "label": "cancel",
+      "path": "src/rostov_guide/web/runs.py",
+      "parent": "src.rostov_guide.web.runs.RunManager",
+      "start_line": 99,
+      "end_line": 102
+    },
+    {
+      "id": "src.rostov_guide.web.runs.RunManager._broadcast_queue",
+      "type": "Function",
+      "label": "_broadcast_queue",
+      "path": "src/rostov_guide/web/runs.py",
+      "parent": "src.rostov_guide.web.runs.RunManager",
+      "start_line": 106,
+      "end_line": 108
+    },
+    {
+      "id": "src.rostov_guide.web.runs.RunManager._execute",
+      "type": "Function",
+      "label": "_execute",
+      "path": "src/rostov_guide/web/runs.py",
+      "parent": "src.rostov_guide.web.runs.RunManager",
+      "start_line": 110,
+      "end_line": 172
+    },
+    {
+      "id": "src.rostov_guide.web.runs.RunManager.subscribe",
+      "type": "Function",
+      "label": "subscribe",
+      "path": "src/rostov_guide/web/runs.py",
+      "parent": "src.rostov_guide.web.runs.RunManager",
+      "start_line": 176,
+      "end_line": 189
+    },
+    {
+      "id": "src.rostov_guide.web.runs.RunManager._cleanup_loop",
+      "type": "Function",
+      "label": "_cleanup_loop",
+      "path": "src/rostov_guide/web/runs.py",
+      "parent": "src.rostov_guide.web.runs.RunManager",
+      "start_line": 191,
+      "end_line": 197
+    },
+    {
+      "id": "src.rostov_guide.web.runs.RunManager.shutdown",
+      "type": "Function",
+      "label": "shutdown",
+      "path": "src/rostov_guide/web/runs.py",
+      "parent": "src.rostov_guide.web.runs.RunManager",
+      "start_line": 199,
+      "end_line": 205
+    },
+    {
+      "id": "src.rostov_guide.web.runs.RunManager.stats",
+      "type": "Function",
+      "label": "stats",
+      "path": "src/rostov_guide/web/runs.py",
+      "parent": "src.rostov_guide.web.runs.RunManager",
+      "start_line": 207,
+      "end_line": 209
+    },
+    {
+      "id": "src.rostov_guide.web.runs._humanize",
+      "type": "Function",
+      "label": "_humanize",
+      "path": "src/rostov_guide/web/runs.py",
+      "parent": "src.rostov_guide.web.runs",
+      "start_line": 212,
+      "end_line": 222
+    },
+    {
+      "id": "tests.conftest",
+      "type": "Module",
+      "label": "conftest",
+      "path": "tests/conftest.py",
+      "lines": 91,
+      "lang": "python"
+    },
+    {
+      "id": "tests.conftest._row",
+      "type": "Function",
+      "label": "_row",
+      "path": "tests/conftest.py",
+      "parent": "tests.conftest",
+      "start_line": 34,
+      "end_line": 37
+    },
+    {
+      "id": "tests.conftest.poi_db",
+      "type": "Function",
+      "label": "poi_db",
+      "path": "tests/conftest.py",
+      "parent": "tests.conftest",
+      "start_line": 41,
+      "end_line": 48
+    },
+    {
+      "id": "tests.conftest.repo",
+      "type": "Function",
+      "label": "repo",
+      "path": "tests/conftest.py",
+      "parent": "tests.conftest",
+      "start_line": 52,
+      "end_line": 53
+    },
+    {
+      "id": "tests.conftest.FakeEmbedder",
+      "type": "Class",
+      "label": "FakeEmbedder",
+      "path": "tests/conftest.py",
+      "parent": "tests.conftest",
+      "start_line": 56,
+      "end_line": 85
+    },
+    {
+      "id": "tests.conftest.FakeEmbedder.__init__",
+      "type": "Function",
+      "label": "__init__",
+      "path": "tests/conftest.py",
+      "parent": "tests.conftest.FakeEmbedder",
+      "start_line": 66,
+      "end_line": 67
+    },
+    {
+      "id": "tests.conftest.FakeEmbedder._vec",
+      "type": "Function",
+      "label": "_vec",
+      "path": "tests/conftest.py",
+      "parent": "tests.conftest.FakeEmbedder",
+      "start_line": 69,
+      "end_line": 75
+    },
+    {
+      "id": "tests.conftest.FakeEmbedder.embed",
+      "type": "Function",
+      "label": "embed",
+      "path": "tests/conftest.py",
+      "parent": "tests.conftest.FakeEmbedder",
+      "start_line": 77,
+      "end_line": 79
+    },
+    {
+      "id": "tests.conftest.FakeEmbedder.embed_query",
+      "type": "Function",
+      "label": "embed_query",
+      "path": "tests/conftest.py",
+      "parent": "tests.conftest.FakeEmbedder",
+      "start_line": 81,
+      "end_line": 82
+    },
+    {
+      "id": "tests.conftest.FakeEmbedder.aclose",
+      "type": "Function",
+      "label": "aclose",
+      "path": "tests/conftest.py",
+      "parent": "tests.conftest.FakeEmbedder",
+      "start_line": 84,
+      "end_line": 85
+    },
+    {
+      "id": "tests.conftest.fake_embedder",
+      "type": "Function",
+      "label": "fake_embedder",
+      "path": "tests/conftest.py",
+      "parent": "tests.conftest",
+      "start_line": 89,
+      "end_line": 90
+    },
+    {
+      "id": "tests.fakes",
+      "type": "Module",
+      "label": "fakes",
+      "path": "tests/fakes.py",
+      "lines": 61,
+      "lang": "python"
+    },
+    {
+      "id": "tests.fakes.scripted_answer",
+      "type": "Function",
+      "label": "scripted_answer",
+      "path": "tests/fakes.py",
+      "parent": "tests.fakes",
+      "start_line": 14,
+      "end_line": 30
+    },
+    {
+      "id": "tests.fakes.FakeRunner",
+      "type": "Class",
+      "label": "FakeRunner",
+      "path": "tests/fakes.py",
+      "parent": "tests.fakes",
+      "start_line": 33,
+      "end_line": 60
+    },
+    {
+      "id": "tests.fakes.FakeRunner.__init__",
+      "type": "Function",
+      "label": "__init__",
+      "path": "tests/fakes.py",
+      "parent": "tests.fakes.FakeRunner",
+      "start_line": 34,
+      "end_line": 38
+    },
+    {
+      "id": "tests.fakes.FakeRunner.run_async",
+      "type": "Function",
+      "label": "run_async",
+      "path": "tests/fakes.py",
+      "parent": "tests.fakes.FakeRunner",
+      "start_line": 40,
+      "end_line": 60
+    },
+    {
+      "id": "tests.test_api",
+      "type": "Module",
+      "label": "test_api",
+      "path": "tests/test_api.py",
+      "lines": 169,
+      "lang": "python"
+    },
+    {
+      "id": "tests.test_api.app",
+      "type": "Function",
+      "label": "app",
+      "path": "tests/test_api.py",
+      "parent": "tests.test_api",
+      "start_line": 22,
+      "end_line": 36
+    },
+    {
+      "id": "tests.test_api._client",
+      "type": "Function",
+      "label": "_client",
+      "path": "tests/test_api.py",
+      "parent": "tests.test_api",
+      "start_line": 39,
+      "end_line": 40
+    },
+    {
+      "id": "tests.test_api._signup",
+      "type": "Function",
+      "label": "_signup",
+      "path": "tests/test_api.py",
+      "parent": "tests.test_api",
+      "start_line": 43,
+      "end_line": 46
+    },
+    {
+      "id": "tests.test_api.test_register_login_me",
+      "type": "Function",
+      "label": "test_register_login_me",
+      "path": "tests/test_api.py",
+      "parent": "tests.test_api",
+      "start_line": 49,
+      "end_line": 59
+    },
+    {
+      "id": "tests.test_api.test_weak_credentials_rejected",
+      "type": "Function",
+      "label": "test_weak_credentials_rejected",
+      "path": "tests/test_api.py",
+      "parent": "tests.test_api",
+      "start_line": 62,
+      "end_line": 65
+    },
+    {
+      "id": "tests.test_api.test_foreign_origin_is_blocked",
+      "type": "Function",
+      "label": "test_foreign_origin_is_blocked",
+      "path": "tests/test_api.py",
+      "parent": "tests.test_api",
+      "start_line": 68,
+      "end_line": 72
+    },
+    {
+      "id": "tests.test_api._ask_and_stream",
+      "type": "Function",
+      "label": "_ask_and_stream",
+      "path": "tests/test_api.py",
+      "parent": "tests.test_api",
+      "start_line": 75,
+      "end_line": 81
+    },
+    {
+      "id": "tests.test_api.test_question_streams_and_lands_in_history",
+      "type": "Function",
+      "label": "test_question_streams_and_lands_in_history",
+      "path": "tests/test_api.py",
+      "parent": "tests.test_api",
+      "start_line": 84,
+      "end_line": 102
+    },
+    {
+      "id": "tests.test_api.test_users_cannot_see_each_other",
+      "type": "Function",
+      "label": "test_users_cannot_see_each_other",
+      "path": "tests/test_api.py",
+      "parent": "tests.test_api",
+      "start_line": 105,
+      "end_line": 115
+    },
+    {
+      "id": "tests.test_api.test_location_must_be_in_rostov",
+      "type": "Function",
+      "label": "test_location_must_be_in_rostov",
+      "path": "tests/test_api.py",
+      "parent": "tests.test_api",
+      "start_line": 118,
+      "end_line": 131
+    },
+    {
+      "id": "tests.test_api.test_delete_chat",
+      "type": "Function",
+      "label": "test_delete_chat",
+      "path": "tests/test_api.py",
+      "parent": "tests.test_api",
+      "start_line": 134,
+      "end_line": 139
+    },
+    {
+      "id": "tests.test_api.test_reverse_geocode_label",
+      "type": "Function",
+      "label": "test_reverse_geocode_label",
+      "path": "tests/test_api.py",
+      "parent": "tests.test_api",
+      "start_line": 142,
+      "end_line": 146
+    },
+    {
+      "id": "tests.test_api.test_queued_question_survives_reload",
+      "type": "Function",
+      "label": "test_queued_question_survives_reload",
+      "path": "tests/test_api.py",
+      "parent": "tests.test_api",
+      "start_line": 149,
+      "end_line": 168
+    },
+    {
+      "id": "tests.test_events",
+      "type": "Module",
+      "label": "test_events",
+      "path": "tests/test_events.py",
+      "lines": 71,
+      "lang": "python"
+    },
+    {
+      "id": "tests.test_events._event",
+      "type": "Function",
+      "label": "_event",
+      "path": "tests/test_events.py",
+      "parent": "tests.test_events",
+      "start_line": 9,
+      "end_line": 12
+    },
+    {
+      "id": "tests.test_events.test_partial_thought_and_answer_become_deltas",
+      "type": "Function",
+      "label": "test_partial_thought_and_answer_become_deltas",
+      "path": "tests/test_events.py",
+      "parent": "tests.test_events",
+      "start_line": 15,
+      "end_line": 19
+    },
+    {
+      "id": "tests.test_events.test_tool_call_gets_human_title",
+      "type": "Function",
+      "label": "test_tool_call_gets_human_title",
+      "path": "tests/test_events.py",
+      "parent": "tests.test_events",
+      "start_line": 22,
+      "end_line": 27
+    },
+    {
+      "id": "tests.test_events.test_tool_result_carries_cards_with_coordinates",
+      "type": "Function",
+      "label": "test_tool_result_carries_cards_with_coordinates",
+      "path": "tests/test_events.py",
+      "parent": "tests.test_events",
+      "start_line": 30,
+      "end_line": 38
+    },
+    {
+      "id": "tests.test_events.test_tool_error_is_shown_as_failed_step",
+      "type": "Function",
+      "label": "test_tool_error_is_shown_as_failed_step",
+      "path": "tests/test_events.py",
+      "parent": "tests.test_events",
+      "start_line": 41,
+      "end_line": 45
+    },
+    {
+      "id": "tests.test_events.test_usage_is_reported",
+      "type": "Function",
+      "label": "test_usage_is_reported",
+      "path": "tests/test_events.py",
+      "parent": "tests.test_events",
+      "start_line": 48,
+      "end_line": 52
+    },
+    {
+      "id": "tests.test_events.test_history_groups_steps_under_question",
+      "type": "Function",
+      "label": "test_history_groups_steps_under_question",
+      "path": "tests/test_events.py",
+      "parent": "tests.test_events",
+      "start_line": 55,
+      "end_line": 70
+    },
+    {
+      "id": "tests.test_hours",
+      "type": "Module",
+      "label": "test_hours",
+      "path": "tests/test_hours.py",
+      "lines": 58,
+      "lang": "python"
+    },
+    {
+      "id": "tests.test_hours.test_round_the_clock",
+      "type": "Function",
+      "label": "test_round_the_clock",
+      "path": "tests/test_hours.py",
+      "parent": "tests.test_hours",
+      "start_line": 12,
+      "end_line": 14
+    },
+    {
+      "id": "tests.test_hours.test_everyday_interval_without_days",
+      "type": "Function",
+      "label": "test_everyday_interval_without_days",
+      "path": "tests/test_hours.py",
+      "parent": "tests.test_hours",
+      "start_line": 17,
+      "end_line": 19
+    },
+    {
+      "id": "tests.test_hours.test_closed_before_opening_says_when",
+      "type": "Function",
+      "label": "test_closed_before_opening_says_when",
+      "path": "tests/test_hours.py",
+      "parent": "tests.test_hours",
+      "start_line": 22,
+      "end_line": 24
+    },
+    {
+      "id": "tests.test_hours.test_weekday_rules_and_day_off",
+      "type": "Function",
+      "label": "test_weekday_rules_and_day_off",
+      "path": "tests/test_hours.py",
+      "parent": "tests.test_hours",
+      "start_line": 27,
+      "end_line": 32
+    },
+    {
+      "id": "tests.test_hours.test_lunch_break_is_closed",
+      "type": "Function",
+      "label": "test_lunch_break_is_closed",
+      "path": "tests/test_hours.py",
+      "parent": "tests.test_hours",
+      "start_line": 35,
+      "end_line": 37
+    },
+    {
+      "id": "tests.test_hours.test_overnight_interval_spills_into_next_day",
+      "type": "Function",
+      "label": "test_overnight_interval_spills_into_next_day",
+      "path": "tests/test_hours.py",
+      "parent": "tests.test_hours",
+      "start_line": 40,
+      "end_line": 42
+    },
+    {
+      "id": "tests.test_hours.test_midnight_is_written_as_24",
+      "type": "Function",
+      "label": "test_midnight_is_written_as_24",
+      "path": "tests/test_hours.py",
+      "parent": "tests.test_hours",
+      "start_line": 45,
+      "end_line": 46
+    },
+    {
+      "id": "tests.test_hours.test_unknown_format_is_unknown_not_closed",
+      "type": "Function",
+      "label": "test_unknown_format_is_unknown_not_closed",
+      "path": "tests/test_hours.py",
+      "parent": "tests.test_hours",
+      "start_line": 49,
+      "end_line": 52
+    },
+    {
+      "id": "tests.test_hours.test_later_rule_overrides_earlier",
+      "type": "Function",
+      "label": "test_later_rule_overrides_earlier",
+      "path": "tests/test_hours.py",
+      "parent": "tests.test_hours",
+      "start_line": 55,
+      "end_line": 57
+    },
+    {
+      "id": "tests.test_places",
+      "type": "Module",
+      "label": "test_places",
+      "path": "tests/test_places.py",
+      "lines": 77,
+      "lang": "python"
+    },
+    {
+      "id": "tests.test_places.test_resolve_kind_accepts_tag_russian_and_variants",
+      "type": "Function",
+      "label": "test_resolve_kind_accepts_tag_russian_and_variants",
+      "path": "tests/test_places.py",
+      "parent": "tests.test_places",
+      "start_line": 8,
+      "end_line": 14
+    },
+    {
+      "id": "tests.test_places.test_suggestions_for_typos",
+      "type": "Function",
+      "label": "test_suggestions_for_typos",
+      "path": "tests/test_places.py",
+      "parent": "tests.test_places",
+      "start_line": 17,
+      "end_line": 18
+    },
+    {
+      "id": "tests.test_places.test_cuisine_labels_are_russian_and_deduplicated",
+      "type": "Function",
+      "label": "test_cuisine_labels_are_russian_and_deduplicated",
+      "path": "tests/test_places.py",
+      "parent": "tests.test_places",
+      "start_line": 21,
+      "end_line": 23
+    },
+    {
+      "id": "tests.test_places.test_repository_filters",
+      "type": "Function",
+      "label": "test_repository_filters",
+      "path": "tests/test_places.py",
+      "parent": "tests.test_places",
+      "start_line": 26,
+      "end_line": 33
+    },
+    {
+      "id": "tests.test_places.test_geocode_house_street_and_place",
+      "type": "Function",
+      "label": "test_geocode_house_street_and_place",
+      "path": "tests/test_places.py",
+      "parent": "tests.test_places",
+      "start_line": 36,
+      "end_line": 43
+    },
+    {
+      "id": "tests.test_places.test_nearest_by_distance",
+      "type": "Function",
+      "label": "test_nearest_by_distance",
+      "path": "tests/test_places.py",
+      "parent": "tests.test_places",
+      "start_line": 46,
+      "end_line": 50
+    },
+    {
+      "id": "tests.test_places.test_brief_says_what_is_missing",
+      "type": "Function",
+      "label": "test_brief_says_what_is_missing",
+      "path": "tests/test_places.py",
+      "parent": "tests.test_places",
+      "start_line": 53,
+      "end_line": 57
+    },
+    {
+      "id": "tests.test_places.test_stemming_matches_word_forms",
+      "type": "Function",
+      "label": "test_stemming_matches_word_forms",
+      "path": "tests/test_places.py",
+      "parent": "tests.test_places",
+      "start_line": 60,
+      "end_line": 63
+    },
+    {
+      "id": "tests.test_places.test_query_noise_words_do_not_reach_lexical_search",
+      "type": "Function",
+      "label": "test_query_noise_words_do_not_reach_lexical_search",
+      "path": "tests/test_places.py",
+      "parent": "tests.test_places",
+      "start_line": 66,
+      "end_line": 70
+    },
+    {
+      "id": "tests.test_places.test_document_is_expanded_with_dishes_and_needs",
+      "type": "Function",
+      "label": "test_document_is_expanded_with_dishes_and_needs",
+      "path": "tests/test_places.py",
+      "parent": "tests.test_places",
+      "start_line": 73,
+      "end_line": 76
+    },
+    {
+      "id": "tests.test_plugins",
+      "type": "Module",
+      "label": "test_plugins",
+      "path": "tests/test_plugins.py",
+      "lines": 58,
+      "lang": "python"
+    },
+    {
+      "id": "tests.test_plugins._tool_ctx",
+      "type": "Function",
+      "label": "_tool_ctx",
+      "path": "tests/test_plugins.py",
+      "parent": "tests.test_plugins",
+      "start_line": 11,
+      "end_line": 12
+    },
+    {
+      "id": "tests.test_plugins.test_repeat_guard_blocks_identical_call_only",
+      "type": "Function",
+      "label": "test_repeat_guard_blocks_identical_call_only",
+      "path": "tests/test_plugins.py",
+      "parent": "tests.test_plugins",
+      "start_line": 15,
+      "end_line": 25
+    },
+    {
+      "id": "tests.test_plugins.test_repeat_guard_forgets_finished_runs",
+      "type": "Function",
+      "label": "test_repeat_guard_forgets_finished_runs",
+      "path": "tests/test_plugins.py",
+      "parent": "tests.test_plugins",
+      "start_line": 28,
+      "end_line": 33
+    },
+    {
+      "id": "tests.test_plugins._content",
+      "type": "Function",
+      "label": "_content",
+      "path": "tests/test_plugins.py",
+      "parent": "tests.test_plugins",
+      "start_line": 36,
+      "end_line": 37
+    },
+    {
+      "id": "tests.test_plugins.test_question_is_restored_after_compaction",
+      "type": "Function",
+      "label": "test_question_is_restored_after_compaction",
+      "path": "tests/test_plugins.py",
+      "parent": "tests.test_plugins",
+      "start_line": 40,
+      "end_line": 49
+    },
+    {
+      "id": "tests.test_plugins.test_request_with_question_is_left_alone",
+      "type": "Function",
+      "label": "test_request_with_question_is_left_alone",
+      "path": "tests/test_plugins.py",
+      "parent": "tests.test_plugins",
+      "start_line": 52,
+      "end_line": 57
+    },
+    {
+      "id": "tests.test_runs",
+      "type": "Module",
+      "label": "test_runs",
+      "path": "tests/test_runs.py",
+      "lines": 104,
+      "lang": "python"
+    },
+    {
+      "id": "tests.test_runs._settings",
+      "type": "Function",
+      "label": "_settings",
+      "path": "tests/test_runs.py",
+      "parent": "tests.test_runs",
+      "start_line": 13,
+      "end_line": 14
+    },
+    {
+      "id": "tests.test_runs._collect",
+      "type": "Function",
+      "label": "_collect",
+      "path": "tests/test_runs.py",
+      "parent": "tests.test_runs",
+      "start_line": 17,
+      "end_line": 18
+    },
+    {
+      "id": "tests.test_runs.test_events_stream_ends_with_totals",
+      "type": "Function",
+      "label": "test_events_stream_ends_with_totals",
+      "path": "tests/test_runs.py",
+      "parent": "tests.test_runs",
+      "start_line": 21,
+      "end_line": 32
+    },
+    {
+      "id": "tests.test_runs.test_reconnect_replays_only_missed_events",
+      "type": "Function",
+      "label": "test_reconnect_replays_only_missed_events",
+      "path": "tests/test_runs.py",
+      "parent": "tests.test_runs",
+      "start_line": 35,
+      "end_line": 40
+    },
+    {
+      "id": "tests.test_runs.test_queue_positions_when_model_is_busy",
+      "type": "Function",
+      "label": "test_queue_positions_when_model_is_busy",
+      "path": "tests/test_runs.py",
+      "parent": "tests.test_runs",
+      "start_line": 43,
+      "end_line": 54
+    },
+    {
+      "id": "tests.test_runs.test_one_run_per_chat_and_two_per_user",
+      "type": "Function",
+      "label": "test_one_run_per_chat_and_two_per_user",
+      "path": "tests/test_runs.py",
+      "parent": "tests.test_runs",
+      "start_line": 57,
+      "end_line": 67
+    },
+    {
+      "id": "tests.test_runs.test_queue_overflow_is_refused",
+      "type": "Function",
+      "label": "test_queue_overflow_is_refused",
+      "path": "tests/test_runs.py",
+      "parent": "tests.test_runs",
+      "start_line": 70,
+      "end_line": 79
+    },
+    {
+      "id": "tests.test_runs.test_cancel_stops_the_run",
+      "type": "Function",
+      "label": "test_cancel_stops_the_run",
+      "path": "tests/test_runs.py",
+      "parent": "tests.test_runs",
+      "start_line": 82,
+      "end_line": 90
+    },
+    {
+      "id": "tests.test_runs.test_errors_reach_the_user_in_plain_words",
+      "type": "Function",
+      "label": "test_errors_reach_the_user_in_plain_words",
+      "path": "tests/test_runs.py",
+      "parent": "tests.test_runs",
+      "start_line": 97,
+      "end_line": 103
+    },
+    {
+      "id": "tests.test_search",
+      "type": "Module",
+      "label": "test_search",
+      "path": "tests/test_search.py",
+      "lines": 51,
+      "lang": "python"
+    },
+    {
+      "id": "tests.test_search._index",
+      "type": "Function",
+      "label": "_index",
+      "path": "tests/test_search.py",
+      "parent": "tests.test_search",
+      "start_line": 6,
+      "end_line": 7
+    },
+    {
+      "id": "tests.test_search.test_search_before_build_is_refused",
+      "type": "Function",
+      "label": "test_search_before_build_is_refused",
+      "path": "tests/test_search.py",
+      "parent": "tests.test_search",
+      "start_line": 10,
+      "end_line": 19
+    },
+    {
+      "id": "tests.test_search.test_rebuild_then_hybrid_search",
+      "type": "Function",
+      "label": "test_rebuild_then_hybrid_search",
+      "path": "tests/test_search.py",
+      "parent": "tests.test_search",
+      "start_line": 22,
+      "end_line": 34
+    },
+    {
+      "id": "tests.test_search.test_kind_filter_and_lexical_mode",
+      "type": "Function",
+      "label": "test_kind_filter_and_lexical_mode",
+      "path": "tests/test_search.py",
+      "parent": "tests.test_search",
+      "start_line": 37,
+      "end_line": 44
+    },
+    {
+      "id": "tests.test_search.test_embedded_mode_always_rebuilds_from_cache",
+      "type": "Function",
+      "label": "test_embedded_mode_always_rebuilds_from_cache",
+      "path": "tests/test_search.py",
+      "parent": "tests.test_search",
+      "start_line": 47,
+      "end_line": 50
+    },
+    {
+      "id": "tests.test_tools",
+      "type": "Module",
+      "label": "test_tools",
+      "path": "tests/test_tools.py",
+      "lines": 96,
+      "lang": "python"
+    },
+    {
+      "id": "tests.test_tools.FakeToolContext",
+      "type": "Class",
+      "label": "FakeToolContext",
+      "path": "tests/test_tools.py",
+      "parent": "tests.test_tools",
+      "start_line": 11,
+      "end_line": 13
+    },
+    {
+      "id": "tests.test_tools.FakeToolContext.__init__",
+      "type": "Function",
+      "label": "__init__",
+      "path": "tests/test_tools.py",
+      "parent": "tests.test_tools.FakeToolContext",
+      "start_line": 12,
+      "end_line": 13
+    },
+    {
+      "id": "tests.test_tools.tools",
+      "type": "Function",
+      "label": "tools",
+      "path": "tests/test_tools.py",
+      "parent": "tests.test_tools",
+      "start_line": 17,
+      "end_line": 23
+    },
+    {
+      "id": "tests.test_tools.test_find_places_total_answers_how_many",
+      "type": "Function",
+      "label": "test_find_places_total_answers_how_many",
+      "path": "tests/test_tools.py",
+      "parent": "tests.test_tools",
+      "start_line": 26,
+      "end_line": 29
+    },
+    {
+      "id": "tests.test_tools.test_unknown_kind_is_an_observation_with_hint",
+      "type": "Function",
+      "label": "test_unknown_kind_is_an_observation_with_hint",
+      "path": "tests/test_tools.py",
+      "parent": "tests.test_tools",
+      "start_line": 32,
+      "end_line": 34
+    },
+    {
+      "id": "tests.test_tools.test_find_places_requires_some_filter",
+      "type": "Function",
+      "label": "test_find_places_requires_some_filter",
+      "path": "tests/test_tools.py",
+      "parent": "tests.test_tools",
+      "start_line": 37,
+      "end_line": 38
+    },
+    {
+      "id": "tests.test_tools.test_nearest_by_address",
+      "type": "Function",
+      "label": "test_nearest_by_address",
+      "path": "tests/test_tools.py",
+      "parent": "tests.test_tools",
+      "start_line": 41,
+      "end_line": 45
+    },
+    {
+      "id": "tests.test_tools.test_nearest_uses_point_from_map",
+      "type": "Function",
+      "label": "test_nearest_uses_point_from_map",
+      "path": "tests/test_tools.py",
+      "parent": "tests.test_tools",
+      "start_line": 48,
+      "end_line": 51
+    },
+    {
+      "id": "tests.test_tools.test_nearest_without_anchor_asks_for_one",
+      "type": "Function",
+      "label": "test_nearest_without_anchor_asks_for_one",
+      "path": "tests/test_tools.py",
+      "parent": "tests.test_tools",
+      "start_line": 54,
+      "end_line": 56
+    },
+    {
+      "id": "tests.test_tools.test_search_places_marks_how_found",
+      "type": "Function",
+      "label": "test_search_places_marks_how_found",
+      "path": "tests/test_tools.py",
+      "parent": "tests.test_tools",
+      "start_line": 59,
+      "end_line": 62
+    },
+    {
+      "id": "tests.test_tools.test_search_food_kind_covers_whole_food_group",
+      "type": "Function",
+      "label": "test_search_food_kind_covers_whole_food_group",
+      "path": "tests/test_tools.py",
+      "parent": "tests.test_tools",
+      "start_line": 65,
+      "end_line": 68
+    },
+    {
+      "id": "tests.test_tools.test_place_details_unknown_id",
+      "type": "Function",
+      "label": "test_place_details_unknown_id",
+      "path": "tests/test_tools.py",
+      "parent": "tests.test_tools",
+      "start_line": 71,
+      "end_line": 74
+    },
+    {
+      "id": "tests.test_tools.test_nearest_can_be_limited_to_round_the_clock",
+      "type": "Function",
+      "label": "test_nearest_can_be_limited_to_round_the_clock",
+      "path": "tests/test_tools.py",
+      "parent": "tests.test_tools",
+      "start_line": 77,
+      "end_line": 79
+    },
+    {
+      "id": "tests.test_tools.test_query_repeating_kind_does_not_shrink_the_pool",
+      "type": "Function",
+      "label": "test_query_repeating_kind_does_not_shrink_the_pool",
+      "path": "tests/test_tools.py",
+      "parent": "tests.test_tools",
+      "start_line": 82,
+      "end_line": 87
+    },
+    {
+      "id": "tests.test_tools.test_query_adds_meaning",
+      "type": "Function",
+      "label": "test_query_adds_meaning",
+      "path": "tests/test_tools.py",
+      "parent": "tests.test_tools",
+      "start_line": 90,
+      "end_line": 95
+    }
+  ],
+  "edges": [
+    {
+      "source": "src.rostov_guide",
+      "target": "src.rostov_guide.main",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide",
+      "target": "src.rostov_guide.run_index",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide",
+      "target": "src.rostov_guide.run_eval",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide",
+      "target": "src.rostov_guide.run_agent_eval",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide",
+      "target": "argparse",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide",
+      "target": "asyncio",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide",
+      "target": "json",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide",
+      "target": "logging",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide",
+      "target": "os",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide",
+      "target": "uvicorn",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.agent.evaluate",
+      "target": "src.rostov_guide.agent.evaluate.wilson_low",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.agent.evaluate",
+      "target": "src.rostov_guide.agent.evaluate._norm",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.agent.evaluate",
+      "target": "src.rostov_guide.agent.evaluate.Turn",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.agent.evaluate",
+      "target": "src.rostov_guide.agent.evaluate.Case",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.agent.evaluate",
+      "target": "src.rostov_guide.agent.evaluate._contains",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.agent.evaluate",
+      "target": "src.rostov_guide.agent.evaluate.check",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.agent.evaluate",
+      "target": "src.rostov_guide.agent.evaluate.build_cases",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.agent.evaluate",
+      "target": "src.rostov_guide.agent.evaluate.phone_followup",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.agent.evaluate",
+      "target": "src.rostov_guide.agent.evaluate.nearest_24_7_check",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.agent.evaluate",
+      "target": "src.rostov_guide.agent.evaluate.any_shawarma",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.agent.evaluate",
+      "target": "src.rostov_guide.agent.evaluate.off_topic",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.agent.evaluate",
+      "target": "src.rostov_guide.agent.evaluate._run_case",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.agent.evaluate",
+      "target": "src.rostov_guide.agent.evaluate.evaluate_agent",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.agent.evaluate",
+      "target": "json",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.agent.evaluate",
+      "target": "re",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.agent.evaluate",
+      "target": "time",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.agent.evaluate",
+      "target": "collections.abc",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.agent.evaluate",
+      "target": "dataclasses",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.agent.evaluate",
+      "target": "pathlib",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.agent.evaluate",
+      "target": "google.adk.agents.run_config",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.agent.evaluate",
+      "target": "google.adk.runners",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.agent.evaluate",
+      "target": "google.adk.sessions",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.agent.evaluate",
+      "target": "google.genai",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.agent.factory",
+      "target": "src.rostov_guide.agent.factory.build_model",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.agent.factory",
+      "target": "src.rostov_guide.agent.factory.build_agent",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.agent.factory",
+      "target": "src.rostov_guide.agent.factory.build_runner",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.agent.factory",
+      "target": "google.adk.agents",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.agent.factory",
+      "target": "google.adk.apps",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.agent.factory",
+      "target": "google.adk.apps.app",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.agent.factory",
+      "target": "google.adk.apps.llm_event_summarizer",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.agent.factory",
+      "target": "google.adk.models.lite_llm",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.agent.factory",
+      "target": "google.adk.runners",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.agent.factory",
+      "target": "google.adk.sessions.sqlite_session_service",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.agent.plugins",
+      "target": "src.rostov_guide.agent.plugins.ToolErrorsAsObservations",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.agent.plugins.ToolErrorsAsObservations",
+      "target": "src.rostov_guide.agent.plugins.ToolErrorsAsObservations.__init__",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.agent.plugins.ToolErrorsAsObservations",
+      "target": "src.rostov_guide.agent.plugins.ToolErrorsAsObservations.on_tool_error_callback",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.agent.plugins",
+      "target": "src.rostov_guide.agent.plugins.RepeatGuard",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.agent.plugins.RepeatGuard",
+      "target": "src.rostov_guide.agent.plugins.RepeatGuard.__init__",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.agent.plugins.RepeatGuard",
+      "target": "src.rostov_guide.agent.plugins.RepeatGuard.before_tool_callback",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.agent.plugins.RepeatGuard",
+      "target": "src.rostov_guide.agent.plugins.RepeatGuard.after_run_callback",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.agent.plugins",
+      "target": "src.rostov_guide.agent.plugins.UserTurnGuard",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.agent.plugins.UserTurnGuard",
+      "target": "src.rostov_guide.agent.plugins.UserTurnGuard.__init__",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.agent.plugins.UserTurnGuard",
+      "target": "src.rostov_guide.agent.plugins.UserTurnGuard.before_model_callback",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.agent.plugins",
+      "target": "src.rostov_guide.agent.plugins._short",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.agent.plugins",
+      "target": "src.rostov_guide.agent.plugins.JournalPlugin",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.agent.plugins.JournalPlugin",
+      "target": "src.rostov_guide.agent.plugins.JournalPlugin.__init__",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.agent.plugins.JournalPlugin",
+      "target": "src.rostov_guide.agent.plugins.JournalPlugin._write",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.agent.plugins.JournalPlugin",
+      "target": "src.rostov_guide.agent.plugins.JournalPlugin.before_run_callback",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.agent.plugins.JournalPlugin",
+      "target": "src.rostov_guide.agent.plugins.JournalPlugin.before_model_callback",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.agent.plugins.JournalPlugin",
+      "target": "src.rostov_guide.agent.plugins.JournalPlugin.after_model_callback",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.agent.plugins.JournalPlugin",
+      "target": "src.rostov_guide.agent.plugins.JournalPlugin.before_tool_callback",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.agent.plugins.JournalPlugin",
+      "target": "src.rostov_guide.agent.plugins.JournalPlugin.after_tool_callback",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.agent.plugins.JournalPlugin",
+      "target": "src.rostov_guide.agent.plugins.JournalPlugin.on_model_error_callback",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.agent.plugins.JournalPlugin",
+      "target": "src.rostov_guide.agent.plugins.JournalPlugin.after_run_callback",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.agent.plugins",
+      "target": "src.rostov_guide.agent.plugins._append",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.agent.plugins",
+      "target": "asyncio",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.agent.plugins",
+      "target": "json",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.agent.plugins",
+      "target": "logging",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.agent.plugins",
+      "target": "time",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.agent.plugins",
+      "target": "datetime",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.agent.plugins",
+      "target": "pathlib",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.agent.plugins",
+      "target": "typing",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.agent.plugins",
+      "target": "google.adk.agents.callback_context",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.agent.plugins",
+      "target": "google.adk.agents.invocation_context",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.agent.plugins",
+      "target": "google.adk.models.llm_request",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.agent.plugins",
+      "target": "google.adk.models.llm_response",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.agent.plugins",
+      "target": "google.adk.plugins.base_plugin",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.agent.plugins",
+      "target": "google.adk.tools.base_tool",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.agent.plugins",
+      "target": "google.adk.tools.tool_context",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.agent.prompt",
+      "target": "src.rostov_guide.agent.prompt.build_instruction",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.agent.prompt",
+      "target": "datetime",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.agent.prompt",
+      "target": "google.adk.agents.readonly_context",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.agent.tools",
+      "target": "src.rostov_guide.agent.tools.query_adds_meaning",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.agent.tools",
+      "target": "src.rostov_guide.agent.tools._now",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.agent.tools",
+      "target": "src.rostov_guide.agent.tools._limit",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.agent.tools",
+      "target": "src.rostov_guide.agent.tools.make_tools",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.agent.tools",
+      "target": "src.rostov_guide.agent.tools.kind_or_error",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.agent.tools",
+      "target": "src.rostov_guide.agent.tools.user_point",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.agent.tools",
+      "target": "src.rostov_guide.agent.tools.with_distance",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.agent.tools",
+      "target": "src.rostov_guide.agent.tools.search_places",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.agent.tools",
+      "target": "src.rostov_guide.agent.tools.find_places",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.agent.tools",
+      "target": "src.rostov_guide.agent.tools.nearest_places",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.agent.tools",
+      "target": "src.rostov_guide.agent.tools.place_details",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.agent.tools",
+      "target": "datetime",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.agent.tools",
+      "target": "google.adk.tools",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.config",
+      "target": "src.rostov_guide.config.Settings",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.config.Settings",
+      "target": "src.rostov_guide.config.Settings.embed_url",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.config.Settings",
+      "target": "src.rostov_guide.config.Settings.embed_key",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.config.Settings",
+      "target": "src.rostov_guide.config.Settings.poi_db",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.config.Settings",
+      "target": "src.rostov_guide.config.Settings.app_db",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.config.Settings",
+      "target": "src.rostov_guide.config.Settings.sessions_db",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.config.Settings",
+      "target": "src.rostov_guide.config.Settings.jwt_secret",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.config",
+      "target": "src.rostov_guide.config.get_settings",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.config",
+      "target": "secrets",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.config",
+      "target": "functools",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.config",
+      "target": "pathlib",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.config",
+      "target": "pydantic_settings",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.places.hours",
+      "target": "src.rostov_guide.places.hours.HoursStatus",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.places.hours",
+      "target": "src.rostov_guide.places.hours._days",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.places.hours",
+      "target": "src.rostov_guide.places.hours._intervals",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.places.hours",
+      "target": "src.rostov_guide.places.hours.parse",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.places.hours",
+      "target": "src.rostov_guide.places.hours._fmt",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.places.hours",
+      "target": "src.rostov_guide.places.hours.status",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.places.hours",
+      "target": "re",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.places.hours",
+      "target": "dataclasses",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.places.hours",
+      "target": "datetime",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.places.kinds",
+      "target": "src.rostov_guide.places.kinds.kind_label",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.places.kinds",
+      "target": "src.rostov_guide.places.kinds.cuisine_labels",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.places.kinds",
+      "target": "src.rostov_guide.places.kinds.cuisine_dishes",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.places.kinds",
+      "target": "src.rostov_guide.places.kinds._stem",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.places.kinds",
+      "target": "src.rostov_guide.places.kinds.resolve_kind",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.places.kinds",
+      "target": "src.rostov_guide.places.kinds.suggest_kinds",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.places.kinds",
+      "target": "re",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.places.kinds",
+      "target": "difflib",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.places.repository",
+      "target": "src.rostov_guide.places.repository.Place",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.places.repository.Place",
+      "target": "src.rostov_guide.places.repository.Place.address",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.places.repository.Place",
+      "target": "src.rostov_guide.places.repository.Place.title",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.places.repository.Place",
+      "target": "src.rostov_guide.places.repository.Place.brief",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.places.repository.Place",
+      "target": "src.rostov_guide.places.repository.Place.card",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.places.repository",
+      "target": "src.rostov_guide.places.repository.Point",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.places.repository",
+      "target": "src.rostov_guide.places.repository.distance_m",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.places.repository",
+      "target": "src.rostov_guide.places.repository._stem",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.places.repository",
+      "target": "src.rostov_guide.places.repository.PlaceRepository",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.places.repository.PlaceRepository",
+      "target": "src.rostov_guide.places.repository.PlaceRepository.load",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.places.repository.PlaceRepository",
+      "target": "src.rostov_guide.places.repository.PlaceRepository.__len__",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.places.repository.PlaceRepository",
+      "target": "src.rostov_guide.places.repository.PlaceRepository.get",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.places.repository.PlaceRepository",
+      "target": "src.rostov_guide.places.repository.PlaceRepository.filter",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.places.repository.PlaceRepository",
+      "target": "src.rostov_guide.places.repository.PlaceRepository.by_distance",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.places.repository.PlaceRepository",
+      "target": "src.rostov_guide.places.repository.PlaceRepository.geocode",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.places.repository",
+      "target": "src.rostov_guide.places.repository._street_key",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.places.repository",
+      "target": "math",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.places.repository",
+      "target": "re",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.places.repository",
+      "target": "collections",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.places.repository",
+      "target": "dataclasses",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.places.repository",
+      "target": "datetime",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.places.repository",
+      "target": "pathlib",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.places.repository",
+      "target": "aiosqlite",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.search.documents",
+      "target": "src.rostov_guide.search.documents.group_of",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.search.documents",
+      "target": "src.rostov_guide.search.documents.document",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.search.embeddings",
+      "target": "src.rostov_guide.search.embeddings.EmbeddingError",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.search.embeddings",
+      "target": "src.rostov_guide.search.embeddings.EmbeddingClient",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.search.embeddings.EmbeddingClient",
+      "target": "src.rostov_guide.search.embeddings.EmbeddingClient.__init__",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.search.embeddings.EmbeddingClient",
+      "target": "src.rostov_guide.search.embeddings.EmbeddingClient._request",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.search.embeddings.EmbeddingClient",
+      "target": "src.rostov_guide.search.embeddings.EmbeddingClient.embed",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.search.embeddings.EmbeddingClient",
+      "target": "src.rostov_guide.search.embeddings.EmbeddingClient.embed_query",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.search.embeddings.EmbeddingClient",
+      "target": "src.rostov_guide.search.embeddings.EmbeddingClient._key",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.search.embeddings.EmbeddingClient",
+      "target": "src.rostov_guide.search.embeddings.EmbeddingClient._cache_get",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.search.embeddings.EmbeddingClient",
+      "target": "src.rostov_guide.search.embeddings.EmbeddingClient._cache_put",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.search.embeddings.EmbeddingClient",
+      "target": "src.rostov_guide.search.embeddings.EmbeddingClient.aclose",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.search.embeddings",
+      "target": "array",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.search.embeddings",
+      "target": "asyncio",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.search.embeddings",
+      "target": "hashlib",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.search.embeddings",
+      "target": "collections",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.search.embeddings",
+      "target": "pathlib",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.search.embeddings",
+      "target": "aiosqlite",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.search.embeddings",
+      "target": "httpx",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.search.evaluate",
+      "target": "src.rostov_guide.search.evaluate._name",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.search.evaluate",
+      "target": "src.rostov_guide.search.evaluate._cuisine",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.search.evaluate",
+      "target": "src.rostov_guide.search.evaluate._kind",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.search.evaluate",
+      "target": "src.rostov_guide.search.evaluate._any",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.search.evaluate",
+      "target": "src.rostov_guide.search.evaluate.ModeScore",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.search.evaluate",
+      "target": "src.rostov_guide.search.evaluate.evaluate",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.search.evaluate",
+      "target": "json",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.search.evaluate",
+      "target": "time",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.search.evaluate",
+      "target": "collections.abc",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.search.evaluate",
+      "target": "dataclasses",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.search.evaluate",
+      "target": "pathlib",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.search.sparse",
+      "target": "src.rostov_guide.search.sparse._stem",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.search.sparse",
+      "target": "src.rostov_guide.search.sparse.terms",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.search.sparse",
+      "target": "src.rostov_guide.search.sparse.term_id",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.search.sparse",
+      "target": "src.rostov_guide.search.sparse.encode_document",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.search.sparse",
+      "target": "src.rostov_guide.search.sparse.encode_query",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.search.sparse",
+      "target": "src.rostov_guide.search.sparse.meaningful_terms",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.search.sparse",
+      "target": "re",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.search.sparse",
+      "target": "zlib",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.search.sparse",
+      "target": "collections",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.search.sparse",
+      "target": "functools",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.search.sparse",
+      "target": "snowballstemmer",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.search.store",
+      "target": "src.rostov_guide.search.store.Hit",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.search.store.Hit",
+      "target": "src.rostov_guide.search.store.Hit.found_by",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.search.store",
+      "target": "src.rostov_guide.search.store.IndexStatus",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.search.store.IndexStatus",
+      "target": "src.rostov_guide.search.store.IndexStatus.as_dict",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.search.store",
+      "target": "src.rostov_guide.search.store.PlaceIndex",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.search.store.PlaceIndex",
+      "target": "src.rostov_guide.search.store.PlaceIndex.open",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.search.store.PlaceIndex",
+      "target": "src.rostov_guide.search.store.PlaceIndex._expected",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.search.store.PlaceIndex",
+      "target": "src.rostov_guide.search.store.PlaceIndex._read_meta",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.search.store.PlaceIndex",
+      "target": "src.rostov_guide.search.store.PlaceIndex.attach",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.search.store.PlaceIndex",
+      "target": "src.rostov_guide.search.store.PlaceIndex.rebuild",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.search.store.PlaceIndex",
+      "target": "src.rostov_guide.search.store.PlaceIndex.search",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.search.store.PlaceIndex",
+      "target": "src.rostov_guide.search.store.PlaceIndex.aclose",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.search.store",
+      "target": "asyncio",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.search.store",
+      "target": "hashlib",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.search.store",
+      "target": "json",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.search.store",
+      "target": "logging",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.search.store",
+      "target": "time",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.search.store",
+      "target": "collections.abc",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.search.store",
+      "target": "dataclasses",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.search.store",
+      "target": "pathlib",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.search.store",
+      "target": "qdrant_client",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.services",
+      "target": "src.rostov_guide.services.Services",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.services.Services",
+      "target": "src.rostov_guide.services.Services.ensure_index",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.services.Services",
+      "target": "src.rostov_guide.services.Services.build",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.services.Services",
+      "target": "src.rostov_guide.services.Services.aclose",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.services",
+      "target": "src.rostov_guide.services._progress",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.services",
+      "target": "src.rostov_guide.services.build_services",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.services",
+      "target": "asyncio",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.services",
+      "target": "logging",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.services",
+      "target": "sys",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.services",
+      "target": "dataclasses",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.static.js.api",
+      "target": "src.rostov_guide.static.js.api.ApiError",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.api.ApiError",
+      "target": "src.rostov_guide.static.js.api.ApiError.constructor",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.api",
+      "target": "src.rostov_guide.static.js.api.request",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.api",
+      "target": "src.rostov_guide.static.js.api.follow",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.app",
+      "target": "src.rostov_guide.static.js.app.stick",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.app",
+      "target": "src.rostov_guide.static.js.app.showAuth",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.app",
+      "target": "src.rostov_guide.static.js.app.showApp",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.app",
+      "target": "src.rostov_guide.static.js.app.bindUi",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.app",
+      "target": "src.rostov_guide.static.js.app.autosize",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.app",
+      "target": "src.rostov_guide.static.js.app.updateSend",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.app",
+      "target": "src.rostov_guide.static.js.app.setRunning",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.app",
+      "target": "src.rostov_guide.static.js.app.closeDrawers",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.app",
+      "target": "src.rostov_guide.static.js.app.toggleMap",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.app",
+      "target": "src.rostov_guide.static.js.app.isDark",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.app",
+      "target": "src.rostov_guide.static.js.app.toggleTheme",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.app",
+      "target": "src.rostov_guide.static.js.app.updateThemeIcon",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.app",
+      "target": "src.rostov_guide.static.js.app.refreshStatus",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.app",
+      "target": "src.rostov_guide.static.js.app.renderStatus",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.app",
+      "target": "src.rostov_guide.static.js.app.setContext",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.app",
+      "target": "src.rostov_guide.static.js.app.loadChats",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.app",
+      "target": "src.rostov_guide.static.js.app.renderChatList",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.app",
+      "target": "src.rostov_guide.static.js.app.detachRun",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.app",
+      "target": "src.rostov_guide.static.js.app.newChat",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.app",
+      "target": "src.rostov_guide.static.js.app.renderEmpty",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.app",
+      "target": "src.rostov_guide.static.js.app.openChat",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.app",
+      "target": "src.rostov_guide.static.js.app.viewOptions",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.app",
+      "target": "src.rostov_guide.static.js.app.send",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.app",
+      "target": "src.rostov_guide.static.js.app.attachRun",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.app",
+      "target": "src.rostov_guide.static.js.app.startPick",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.app",
+      "target": "src.rostov_guide.static.js.app.cancelPick",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.app",
+      "target": "src.rostov_guide.static.js.app.onMapPick",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.app",
+      "target": "src.rostov_guide.static.js.app.setLocation",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.app",
+      "target": "src.rostov_guide.static.js.app.renderLocation",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.app",
+      "target": "./api.js",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.static.js.app",
+      "target": "./chat.js",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.static.js.app",
+      "target": "./map.js",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.static.js.app",
+      "target": "./ui.js",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.static.js.chat",
+      "target": "src.rostov_guide.static.js.chat.userMessage",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.chat",
+      "target": "src.rostov_guide.static.js.chat.systemNote",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.chat",
+      "target": "src.rostov_guide.static.js.chat.AssistantView",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.chat.AssistantView",
+      "target": "src.rostov_guide.static.js.chat.AssistantView.constructor",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.chat.AssistantView",
+      "target": "src.rostov_guide.static.js.chat.AssistantView.startTimer",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.chat.AssistantView",
+      "target": "src.rostov_guide.static.js.chat.AssistantView.stopTimer",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.chat.AssistantView",
+      "target": "src.rostov_guide.static.js.chat.AssistantView.handle",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.chat.AssistantView",
+      "target": "src.rostov_guide.static.js.chat.AssistantView.setQueued",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.chat.AssistantView",
+      "target": "src.rostov_guide.static.js.chat.AssistantView.setStatus",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.chat.AssistantView",
+      "target": "src.rostov_guide.static.js.chat.AssistantView.appendThought",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.chat.AssistantView",
+      "target": "src.rostov_guide.static.js.chat.AssistantView.finishThought",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.chat.AssistantView",
+      "target": "src.rostov_guide.static.js.chat.AssistantView.addMoreLink",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.chat.AssistantView",
+      "target": "src.rostov_guide.static.js.chat.AssistantView.step",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.chat.AssistantView",
+      "target": "src.rostov_guide.static.js.chat.AssistantView.addToolCall",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.chat.AssistantView",
+      "target": "src.rostov_guide.static.js.chat.AssistantView.addToolResult",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.chat.AssistantView",
+      "target": "src.rostov_guide.static.js.chat.AssistantView.setUsage",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.chat.AssistantView",
+      "target": "src.rostov_guide.static.js.chat.AssistantView.scheduleAnswer",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.chat.AssistantView",
+      "target": "src.rostov_guide.static.js.chat.AssistantView.showError",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.chat.AssistantView",
+      "target": "src.rostov_guide.static.js.chat.AssistantView.finish",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.chat.AssistantView",
+      "target": "src.rostov_guide.static.js.chat.AssistantView.cardsToShow",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.chat.AssistantView",
+      "target": "src.rostov_guide.static.js.chat.AssistantView.renderCards",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.chat.AssistantView",
+      "target": "src.rostov_guide.static.js.chat.AssistantView.showOnMap",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.chat.AssistantView",
+      "target": "src.rostov_guide.static.js.chat.AssistantView.cardEl",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.chat.AssistantView",
+      "target": "src.rostov_guide.static.js.chat.AssistantView.focusPlace",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.chat.AssistantView",
+      "target": "src.rostov_guide.static.js.chat.AssistantView.linkPlaces",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.chat.AssistantView",
+      "target": "src.rostov_guide.static.js.chat.AssistantView.renderMeta",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.chat.AssistantView",
+      "target": "src.rostov_guide.static.js.chat.AssistantView.stick",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.chat.AssistantView",
+      "target": "src.rostov_guide.static.js.chat.AssistantView.fromHistory",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.chat.AssistantView",
+      "target": "src.rostov_guide.static.js.chat.AssistantView.finishFromHistory",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.chat",
+      "target": "./markdown.js",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.static.js.chat",
+      "target": "./ui.js",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.static.js.map",
+      "target": "src.rostov_guide.static.js.map.pinIcon",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.map",
+      "target": "src.rostov_guide.static.js.map.popupFor",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.map",
+      "target": "src.rostov_guide.static.js.map.PlaceMap",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.map.PlaceMap",
+      "target": "src.rostov_guide.static.js.map.PlaceMap.constructor",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.map.PlaceMap",
+      "target": "src.rostov_guide.static.js.map.PlaceMap.init",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.map.PlaceMap",
+      "target": "src.rostov_guide.static.js.map.PlaceMap.setTheme",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.map.PlaceMap",
+      "target": "src.rostov_guide.static.js.map.PlaceMap.invalidate",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.map.PlaceMap",
+      "target": "src.rostov_guide.static.js.map.PlaceMap.showPlaces",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.map.PlaceMap",
+      "target": "src.rostov_guide.static.js.map.PlaceMap.highlight",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.map.PlaceMap",
+      "target": "src.rostov_guide.static.js.map.PlaceMap.focus",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.map.PlaceMap",
+      "target": "src.rostov_guide.static.js.map.PlaceMap.setUser",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.map.PlaceMap",
+      "target": "src.rostov_guide.static.js.map.PlaceMap.startPick",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.map.PlaceMap",
+      "target": "src.rostov_guide.static.js.map.PlaceMap.stopPick",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.map",
+      "target": "./ui.js",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.static.js.markdown",
+      "target": "src.rostov_guide.static.js.markdown.escapeHtml",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.markdown",
+      "target": "src.rostov_guide.static.js.markdown.inline",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.markdown",
+      "target": "src.rostov_guide.static.js.markdown.renderMarkdown",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.ui",
+      "target": "src.rostov_guide.static.js.ui.h",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.ui",
+      "target": "src.rostov_guide.static.js.ui.icon",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.ui",
+      "target": "src.rostov_guide.static.js.ui.spinner",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.ui",
+      "target": "src.rostov_guide.static.js.ui.plural",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.ui",
+      "target": "src.rostov_guide.static.js.ui.fmtTokens",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.ui",
+      "target": "src.rostov_guide.static.js.ui.fmtSeconds",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.ui",
+      "target": "src.rostov_guide.static.js.ui.fmtDistance",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.ui",
+      "target": "src.rostov_guide.static.js.ui.relTime",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.ui",
+      "target": "src.rostov_guide.static.js.ui.toast",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.ui",
+      "target": "src.rostov_guide.static.js.ui.get",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.ui",
+      "target": "src.rostov_guide.static.js.ui.set",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.static.js.ui",
+      "target": "src.rostov_guide.static.js.ui.remove",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.app",
+      "target": "src.rostov_guide.web.app.lifespan",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.app",
+      "target": "src.rostov_guide.web.app.create_app",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.app",
+      "target": "src.rostov_guide.web.app.same_origin_guard",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.app",
+      "target": "src.rostov_guide.web.app.index",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.app",
+      "target": "logging",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.web.app",
+      "target": "mimetypes",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.web.app",
+      "target": "contextlib",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.web.app",
+      "target": "pathlib",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.web.app",
+      "target": "urllib.parse",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.web.app",
+      "target": "fastapi",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.web.app",
+      "target": "fastapi.responses",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.web.app",
+      "target": "fastapi.staticfiles",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.web.app",
+      "target": "litellm",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.web.auth",
+      "target": "src.rostov_guide.web.auth.User",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.auth",
+      "target": "src.rostov_guide.web.auth.Credentials",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.auth",
+      "target": "src.rostov_guide.web.auth._hash",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.auth",
+      "target": "src.rostov_guide.web.auth.hash_password",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.auth",
+      "target": "src.rostov_guide.web.auth.verify_password",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.auth",
+      "target": "src.rostov_guide.web.auth.UserStore",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.auth.UserStore",
+      "target": "src.rostov_guide.web.auth.UserStore.__init__",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.auth.UserStore",
+      "target": "src.rostov_guide.web.auth.UserStore.init",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.auth.UserStore",
+      "target": "src.rostov_guide.web.auth.UserStore.create",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.auth.UserStore",
+      "target": "src.rostov_guide.web.auth.UserStore.authenticate",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.auth",
+      "target": "src.rostov_guide.web.auth.LoginLimiter",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.auth.LoginLimiter",
+      "target": "src.rostov_guide.web.auth.LoginLimiter.__init__",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.auth.LoginLimiter",
+      "target": "src.rostov_guide.web.auth.LoginLimiter.check",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.auth",
+      "target": "src.rostov_guide.web.auth.issue_token",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.auth",
+      "target": "src.rostov_guide.web.auth.current_user",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.auth",
+      "target": "src.rostov_guide.web.auth._set_cookie",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.auth",
+      "target": "src.rostov_guide.web.auth.register",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.auth",
+      "target": "src.rostov_guide.web.auth.login",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.auth",
+      "target": "src.rostov_guide.web.auth.logout",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.auth",
+      "target": "src.rostov_guide.web.auth.me",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.auth",
+      "target": "asyncio",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.web.auth",
+      "target": "base64",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.web.auth",
+      "target": "hashlib",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.web.auth",
+      "target": "hmac",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.web.auth",
+      "target": "re",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.web.auth",
+      "target": "secrets",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.web.auth",
+      "target": "time",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.web.auth",
+      "target": "uuid",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.web.auth",
+      "target": "collections",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.web.auth",
+      "target": "dataclasses",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.web.auth",
+      "target": "pathlib",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.web.auth",
+      "target": "aiosqlite",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.web.auth",
+      "target": "jwt",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.web.auth",
+      "target": "fastapi",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.web.auth",
+      "target": "pydantic",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.web.events",
+      "target": "src.rostov_guide.web.events._q",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.events",
+      "target": "src.rostov_guide.web.events.tool_title",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.events",
+      "target": "src.rostov_guide.web.events.result_view",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.events",
+      "target": "src.rostov_guide.web.events.translate",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.events",
+      "target": "src.rostov_guide.web.events.history",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.events",
+      "target": "collections.abc",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.web.events",
+      "target": "datetime",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.web.events",
+      "target": "typing",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.web.events",
+      "target": "google.adk.events",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.web.routes",
+      "target": "src.rostov_guide.web.routes.Location",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.routes",
+      "target": "src.rostov_guide.web.routes.Ask",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.routes",
+      "target": "src.rostov_guide.web.routes._title",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.routes",
+      "target": "src.rostov_guide.web.routes._sessions",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.routes",
+      "target": "src.rostov_guide.web.routes._own_session",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.routes",
+      "target": "src.rostov_guide.web.routes.list_chats",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.routes",
+      "target": "src.rostov_guide.web.routes.create_chat",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.routes",
+      "target": "src.rostov_guide.web.routes.get_chat",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.routes",
+      "target": "src.rostov_guide.web.routes.delete_chat",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.routes",
+      "target": "src.rostov_guide.web.routes.ask",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.routes",
+      "target": "src.rostov_guide.web.routes._own_run",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.routes",
+      "target": "src.rostov_guide.web.routes.run_events",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.routes",
+      "target": "src.rostov_guide.web.routes.stream",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.routes",
+      "target": "src.rostov_guide.web.routes.cancel_run",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.routes",
+      "target": "src.rostov_guide.web.routes.place",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.routes",
+      "target": "src.rostov_guide.web.routes.reverse",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.routes",
+      "target": "src.rostov_guide.web.routes._llm_probe_state",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.routes",
+      "target": "src.rostov_guide.web.routes.status",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.routes",
+      "target": "asyncio",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.web.routes",
+      "target": "json",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.web.routes",
+      "target": "time",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.web.routes",
+      "target": "datetime",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.web.routes",
+      "target": "httpx",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.web.routes",
+      "target": "fastapi",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.web.routes",
+      "target": "pydantic",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.web.routes",
+      "target": "sse_starlette.sse",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.web.runs",
+      "target": "src.rostov_guide.web.runs.Busy",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.runs",
+      "target": "src.rostov_guide.web.runs.Run",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.runs.Run",
+      "target": "src.rostov_guide.web.runs.Run.finished",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.runs.Run",
+      "target": "src.rostov_guide.web.runs.Run.emit",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.runs",
+      "target": "src.rostov_guide.web.runs.RunManager",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.runs.RunManager",
+      "target": "src.rostov_guide.web.runs.RunManager.__init__",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.runs.RunManager",
+      "target": "src.rostov_guide.web.runs.RunManager.active_for_chat",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.runs.RunManager",
+      "target": "src.rostov_guide.web.runs.RunManager.start",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.runs.RunManager",
+      "target": "src.rostov_guide.web.runs.RunManager.cancel",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.runs.RunManager",
+      "target": "src.rostov_guide.web.runs.RunManager._broadcast_queue",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.runs.RunManager",
+      "target": "src.rostov_guide.web.runs.RunManager._execute",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.runs.RunManager",
+      "target": "src.rostov_guide.web.runs.RunManager.subscribe",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.runs.RunManager",
+      "target": "src.rostov_guide.web.runs.RunManager._cleanup_loop",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.runs.RunManager",
+      "target": "src.rostov_guide.web.runs.RunManager.shutdown",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.runs.RunManager",
+      "target": "src.rostov_guide.web.runs.RunManager.stats",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.runs",
+      "target": "src.rostov_guide.web.runs._humanize",
+      "type": "contains"
+    },
+    {
+      "source": "src.rostov_guide.web.runs",
+      "target": "asyncio",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.web.runs",
+      "target": "logging",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.web.runs",
+      "target": "time",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.web.runs",
+      "target": "uuid",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.web.runs",
+      "target": "collections.abc",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.web.runs",
+      "target": "dataclasses",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.web.runs",
+      "target": "google.adk.agents.invocation_context",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.web.runs",
+      "target": "google.adk.agents.run_config",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.web.runs",
+      "target": "google.adk.runners",
+      "type": "imports"
+    },
+    {
+      "source": "src.rostov_guide.web.runs",
+      "target": "google.genai",
+      "type": "imports"
+    },
+    {
+      "source": "tests.conftest",
+      "target": "tests.conftest._row",
+      "type": "contains"
+    },
+    {
+      "source": "tests.conftest",
+      "target": "tests.conftest.poi_db",
+      "type": "contains"
+    },
+    {
+      "source": "tests.conftest",
+      "target": "tests.conftest.repo",
+      "type": "contains"
+    },
+    {
+      "source": "tests.conftest",
+      "target": "tests.conftest.FakeEmbedder",
+      "type": "contains"
+    },
+    {
+      "source": "tests.conftest.FakeEmbedder",
+      "target": "tests.conftest.FakeEmbedder.__init__",
+      "type": "contains"
+    },
+    {
+      "source": "tests.conftest.FakeEmbedder",
+      "target": "tests.conftest.FakeEmbedder._vec",
+      "type": "contains"
+    },
+    {
+      "source": "tests.conftest.FakeEmbedder",
+      "target": "tests.conftest.FakeEmbedder.embed",
+      "type": "contains"
+    },
+    {
+      "source": "tests.conftest.FakeEmbedder",
+      "target": "tests.conftest.FakeEmbedder.embed_query",
+      "type": "contains"
+    },
+    {
+      "source": "tests.conftest.FakeEmbedder",
+      "target": "tests.conftest.FakeEmbedder.aclose",
+      "type": "contains"
+    },
+    {
+      "source": "tests.conftest",
+      "target": "tests.conftest.fake_embedder",
+      "type": "contains"
+    },
+    {
+      "source": "tests.conftest",
+      "target": "hashlib",
+      "type": "imports"
+    },
+    {
+      "source": "tests.conftest",
+      "target": "math",
+      "type": "imports"
+    },
+    {
+      "source": "tests.conftest",
+      "target": "sqlite3",
+      "type": "imports"
+    },
+    {
+      "source": "tests.conftest",
+      "target": "pathlib",
+      "type": "imports"
+    },
+    {
+      "source": "tests.conftest",
+      "target": "pytest",
+      "type": "imports"
+    },
+    {
+      "source": "tests.conftest",
+      "target": "rostov_guide.places.repository",
+      "type": "imports"
+    },
+    {
+      "source": "tests.fakes",
+      "target": "tests.fakes.scripted_answer",
+      "type": "contains"
+    },
+    {
+      "source": "tests.fakes",
+      "target": "tests.fakes.FakeRunner",
+      "type": "contains"
+    },
+    {
+      "source": "tests.fakes.FakeRunner",
+      "target": "tests.fakes.FakeRunner.__init__",
+      "type": "contains"
+    },
+    {
+      "source": "tests.fakes.FakeRunner",
+      "target": "tests.fakes.FakeRunner.run_async",
+      "type": "contains"
+    },
+    {
+      "source": "tests.fakes",
+      "target": "asyncio",
+      "type": "imports"
+    },
+    {
+      "source": "tests.fakes",
+      "target": "uuid",
+      "type": "imports"
+    },
+    {
+      "source": "tests.fakes",
+      "target": "google.adk.events",
+      "type": "imports"
+    },
+    {
+      "source": "tests.fakes",
+      "target": "google.genai",
+      "type": "imports"
+    },
+    {
+      "source": "tests.fakes",
+      "target": "rostov_guide.agent.factory",
+      "type": "imports"
+    },
+    {
+      "source": "tests.test_api",
+      "target": "tests.test_api.app",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_api",
+      "target": "tests.test_api._client",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_api",
+      "target": "tests.test_api._signup",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_api",
+      "target": "tests.test_api.test_register_login_me",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_api",
+      "target": "tests.test_api.test_weak_credentials_rejected",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_api",
+      "target": "tests.test_api.test_foreign_origin_is_blocked",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_api",
+      "target": "tests.test_api._ask_and_stream",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_api",
+      "target": "tests.test_api.test_question_streams_and_lands_in_history",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_api",
+      "target": "tests.test_api.test_users_cannot_see_each_other",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_api",
+      "target": "tests.test_api.test_location_must_be_in_rostov",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_api",
+      "target": "tests.test_api.test_delete_chat",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_api",
+      "target": "tests.test_api.test_reverse_geocode_label",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_api",
+      "target": "tests.test_api.test_queued_question_survives_reload",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_api",
+      "target": "asyncio",
+      "type": "imports"
+    },
+    {
+      "source": "tests.test_api",
+      "target": "json",
+      "type": "imports"
+    },
+    {
+      "source": "tests.test_api",
+      "target": "types",
+      "type": "imports"
+    },
+    {
+      "source": "tests.test_api",
+      "target": "httpx",
+      "type": "imports"
+    },
+    {
+      "source": "tests.test_api",
+      "target": "pytest",
+      "type": "imports"
+    },
+    {
+      "source": "tests.test_api",
+      "target": "google.adk.sessions.sqlite_session_service",
+      "type": "imports"
+    },
+    {
+      "source": "tests.test_api",
+      "target": "fakes",
+      "type": "imports"
+    },
+    {
+      "source": "tests.test_api",
+      "target": "rostov_guide.config",
+      "type": "imports"
+    },
+    {
+      "source": "tests.test_api",
+      "target": "rostov_guide.search.store",
+      "type": "imports"
+    },
+    {
+      "source": "tests.test_api",
+      "target": "rostov_guide.web",
+      "type": "imports"
+    },
+    {
+      "source": "tests.test_api",
+      "target": "rostov_guide.web.app",
+      "type": "imports"
+    },
+    {
+      "source": "tests.test_api",
+      "target": "rostov_guide.web.runs",
+      "type": "imports"
+    },
+    {
+      "source": "tests.test_events",
+      "target": "tests.test_events._event",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_events",
+      "target": "tests.test_events.test_partial_thought_and_answer_become_deltas",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_events",
+      "target": "tests.test_events.test_tool_call_gets_human_title",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_events",
+      "target": "tests.test_events.test_tool_result_carries_cards_with_coordinates",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_events",
+      "target": "tests.test_events.test_tool_error_is_shown_as_failed_step",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_events",
+      "target": "tests.test_events.test_usage_is_reported",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_events",
+      "target": "tests.test_events.test_history_groups_steps_under_question",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_events",
+      "target": "google.adk.events",
+      "type": "imports"
+    },
+    {
+      "source": "tests.test_events",
+      "target": "google.genai",
+      "type": "imports"
+    },
+    {
+      "source": "tests.test_events",
+      "target": "rostov_guide.web.events",
+      "type": "imports"
+    },
+    {
+      "source": "tests.test_hours",
+      "target": "tests.test_hours.test_round_the_clock",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_hours",
+      "target": "tests.test_hours.test_everyday_interval_without_days",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_hours",
+      "target": "tests.test_hours.test_closed_before_opening_says_when",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_hours",
+      "target": "tests.test_hours.test_weekday_rules_and_day_off",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_hours",
+      "target": "tests.test_hours.test_lunch_break_is_closed",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_hours",
+      "target": "tests.test_hours.test_overnight_interval_spills_into_next_day",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_hours",
+      "target": "tests.test_hours.test_midnight_is_written_as_24",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_hours",
+      "target": "tests.test_hours.test_unknown_format_is_unknown_not_closed",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_hours",
+      "target": "tests.test_hours.test_later_rule_overrides_earlier",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_hours",
+      "target": "datetime",
+      "type": "imports"
+    },
+    {
+      "source": "tests.test_hours",
+      "target": "rostov_guide.places.hours",
+      "type": "imports"
+    },
+    {
+      "source": "tests.test_places",
+      "target": "tests.test_places.test_resolve_kind_accepts_tag_russian_and_variants",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_places",
+      "target": "tests.test_places.test_suggestions_for_typos",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_places",
+      "target": "tests.test_places.test_cuisine_labels_are_russian_and_deduplicated",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_places",
+      "target": "tests.test_places.test_repository_filters",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_places",
+      "target": "tests.test_places.test_geocode_house_street_and_place",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_places",
+      "target": "tests.test_places.test_nearest_by_distance",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_places",
+      "target": "tests.test_places.test_brief_says_what_is_missing",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_places",
+      "target": "tests.test_places.test_stemming_matches_word_forms",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_places",
+      "target": "tests.test_places.test_query_noise_words_do_not_reach_lexical_search",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_places",
+      "target": "tests.test_places.test_document_is_expanded_with_dishes_and_needs",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_places",
+      "target": "rostov_guide.places.kinds",
+      "type": "imports"
+    },
+    {
+      "source": "tests.test_places",
+      "target": "rostov_guide.search",
+      "type": "imports"
+    },
+    {
+      "source": "tests.test_places",
+      "target": "rostov_guide.search.documents",
+      "type": "imports"
+    },
+    {
+      "source": "tests.test_plugins",
+      "target": "tests.test_plugins._tool_ctx",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_plugins",
+      "target": "tests.test_plugins.test_repeat_guard_blocks_identical_call_only",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_plugins",
+      "target": "tests.test_plugins.test_repeat_guard_forgets_finished_runs",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_plugins",
+      "target": "tests.test_plugins._content",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_plugins",
+      "target": "tests.test_plugins.test_question_is_restored_after_compaction",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_plugins",
+      "target": "tests.test_plugins.test_request_with_question_is_left_alone",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_plugins",
+      "target": "types",
+      "type": "imports"
+    },
+    {
+      "source": "tests.test_plugins",
+      "target": "google.adk.models.llm_request",
+      "type": "imports"
+    },
+    {
+      "source": "tests.test_plugins",
+      "target": "google.genai",
+      "type": "imports"
+    },
+    {
+      "source": "tests.test_plugins",
+      "target": "rostov_guide.agent.plugins",
+      "type": "imports"
+    },
+    {
+      "source": "tests.test_runs",
+      "target": "tests.test_runs._settings",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_runs",
+      "target": "tests.test_runs._collect",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_runs",
+      "target": "tests.test_runs.test_events_stream_ends_with_totals",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_runs",
+      "target": "tests.test_runs.test_reconnect_replays_only_missed_events",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_runs",
+      "target": "tests.test_runs.test_queue_positions_when_model_is_busy",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_runs",
+      "target": "tests.test_runs.test_one_run_per_chat_and_two_per_user",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_runs",
+      "target": "tests.test_runs.test_queue_overflow_is_refused",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_runs",
+      "target": "tests.test_runs.test_cancel_stops_the_run",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_runs",
+      "target": "tests.test_runs.test_errors_reach_the_user_in_plain_words",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_runs",
+      "target": "asyncio",
+      "type": "imports"
+    },
+    {
+      "source": "tests.test_runs",
+      "target": "pytest",
+      "type": "imports"
+    },
+    {
+      "source": "tests.test_runs",
+      "target": "google.adk.agents.invocation_context",
+      "type": "imports"
+    },
+    {
+      "source": "tests.test_runs",
+      "target": "fakes",
+      "type": "imports"
+    },
+    {
+      "source": "tests.test_runs",
+      "target": "rostov_guide.config",
+      "type": "imports"
+    },
+    {
+      "source": "tests.test_runs",
+      "target": "rostov_guide.web.runs",
+      "type": "imports"
+    },
+    {
+      "source": "tests.test_search",
+      "target": "tests.test_search._index",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_search",
+      "target": "tests.test_search.test_search_before_build_is_refused",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_search",
+      "target": "tests.test_search.test_rebuild_then_hybrid_search",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_search",
+      "target": "tests.test_search.test_kind_filter_and_lexical_mode",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_search",
+      "target": "tests.test_search.test_embedded_mode_always_rebuilds_from_cache",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_search",
+      "target": "json",
+      "type": "imports"
+    },
+    {
+      "source": "tests.test_search",
+      "target": "rostov_guide.search.store",
+      "type": "imports"
+    },
+    {
+      "source": "tests.test_tools",
+      "target": "tests.test_tools.FakeToolContext",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_tools.FakeToolContext",
+      "target": "tests.test_tools.FakeToolContext.__init__",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_tools",
+      "target": "tests.test_tools.tools",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_tools",
+      "target": "tests.test_tools.test_find_places_total_answers_how_many",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_tools",
+      "target": "tests.test_tools.test_unknown_kind_is_an_observation_with_hint",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_tools",
+      "target": "tests.test_tools.test_find_places_requires_some_filter",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_tools",
+      "target": "tests.test_tools.test_nearest_by_address",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_tools",
+      "target": "tests.test_tools.test_nearest_uses_point_from_map",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_tools",
+      "target": "tests.test_tools.test_nearest_without_anchor_asks_for_one",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_tools",
+      "target": "tests.test_tools.test_search_places_marks_how_found",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_tools",
+      "target": "tests.test_tools.test_search_food_kind_covers_whole_food_group",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_tools",
+      "target": "tests.test_tools.test_place_details_unknown_id",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_tools",
+      "target": "tests.test_tools.test_nearest_can_be_limited_to_round_the_clock",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_tools",
+      "target": "tests.test_tools.test_query_repeating_kind_does_not_shrink_the_pool",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_tools",
+      "target": "tests.test_tools.test_query_adds_meaning",
+      "type": "contains"
+    },
+    {
+      "source": "tests.test_tools",
+      "target": "types",
+      "type": "imports"
+    },
+    {
+      "source": "tests.test_tools",
+      "target": "pytest",
+      "type": "imports"
+    },
+    {
+      "source": "tests.test_tools",
+      "target": "rostov_guide.agent.tools",
+      "type": "imports"
+    },
+    {
+      "source": "tests.test_tools",
+      "target": "rostov_guide.search.store",
+      "type": "imports"
+    },
+    {
+      "source": "tests.test_tools",
+      "target": "rostov_guide.agent.tools",
+      "type": "imports"
+    }
+  ],
+  "warnings": [
+    "custom exclude dirs applied: runs, data",
+    "gitignore rules applied from: .gitignore"
+  ]
+}

@@ -1,0 +1,221 @@
+{
+  "summary": {
+    "model": "qwen3.5-4b",
+    "cases": 9,
+    "repeats": 1,
+    "pass_at_1": 0.889,
+    "pass_at_1_wilson_low": 0.565,
+    "pass_all_n": 0.889,
+    "pass_all_n_wilson_low": 0.565,
+    "avg_seconds": 11.4,
+    "avg_llm_calls": 3.33,
+    "avg_input_tokens": 9156,
+    "avg_output_tokens": 906,
+    "per_case": {
+      "count_24_7": "1/1",
+      "nearest_by_address": "1/1",
+      "forgot_name": "1/1",
+      "memory_followup": "1/1",
+      "filter_followup": "1/1",
+      "brand_count": "1/1",
+      "dish_search": "1/1",
+      "off_topic": "1/1",
+      "nearest_by_landmark": "0/1"
+    }
+  },
+  "runs": [
+    {
+      "case": "count_24_7",
+      "ok": true,
+      "why": "ждём «19» в ответе",
+      "seconds": 13.2,
+      "input_tokens": 4857,
+      "output_tokens": 320,
+      "llm_calls": 2,
+      "turns": [
+        {
+          "q": "Сколько в Ростове круглосуточных аптек?",
+          "tools": [
+            "find_places"
+          ],
+          "answer": "В Ростове-на-Дону **19** круглосуточных аптек."
+        }
+      ],
+      "attempt": 1
+    },
+    {
+      "case": "nearest_by_address",
+      "ok": true,
+      "why": "ждём «Лаки Фарма» в ответе",
+      "seconds": 7.6,
+      "input_tokens": 4763,
+      "output_tokens": 599,
+      "llm_calls": 2,
+      "turns": [
+        {
+          "q": "Где ближайшая аптека к Белорусской, 44?",
+          "tools": [
+            "nearest_places"
+          ],
+          "answer": "**Лаки Фарма** — ул. Белорусская, 44 (123 м) — открыто до 21:00  \n**Аптека** — ул. Белорусская, 45 (410 м)  \n**Вита Экспресс** — ул. Белорусская, 46 (410 м) — открыто до 21:00  \n**36,6** — ул. Белорусская, 47 (411 м)  \n**Аптека** — ул. Белорусская, 48 (418 м)"
+        }
+      ],
+      "attempt": 1
+    },
+    {
+      "case": "forgot_name",
+      "ok": true,
+      "why": "ждём «Пельмень» в ответе",
+      "seconds": 9.6,
+      "input_tokens": 4698,
+      "output_tokens": 780,
+      "llm_calls": 2,
+      "turns": [
+        {
+          "q": "Забыл название кафе — помню только, что там были пельмени",
+          "tools": [
+            "search_places"
+          ],
+          "answer": "**Пельмень** — открыто до 21:00  \n**ПАРК** — проспект Сельмаш, 1В — открыто до 24:00  \n**EL Команданте** — русская кухня  \n**Пельмешка**  \n**Вкуснолюбов** — фастфуд, русская кухня  \n\nКакой из них вам ближе?"
+        }
+      ],
+      "attempt": 1
+    },
+    {
+      "case": "memory_followup",
+      "ok": true,
+      "why": "телефон +7 900 2580278;+7 918 2012222",
+      "seconds": 11.2,
+      "input_tokens": 10093,
+      "output_tokens": 821,
+      "llm_calls": 4,
+      "turns": [
+        {
+          "q": "Где ближайшая аптека к Белорусской, 44?",
+          "tools": [
+            "nearest_places"
+          ],
+          "answer": "**Ближайшая аптека:**\n- **Лаки Фарма** — Белорусская, 45 — открыто до 21:00 (123 м)\n\n**Другие ближайшие аптеки:**\n- **Аптека** — Белорусская, 46 — открыто до 21:00 (410 м)\n- **Вита Экспресс** — Белорусская, 50 — открыто до 21:00 (410 м)"
+        },
+        {
+          "q": "А какой у неё телефон?",
+          "tools": [
+            "place_details"
+          ],
+          "answer": "**Телефон «Лаки Фарма»:** +7 900 2580278; +7 918 2012222"
+        }
+      ],
+      "attempt": 1
+    },
+    {
+      "case": "filter_followup",
+      "ok": true,
+      "why": "ждём «Аптека», 781 м",
+      "seconds": 24.0,
+      "input_tokens": 21393,
+      "output_tokens": 2316,
+      "llm_calls": 7,
+      "turns": [
+        {
+          "q": "Сколько в Ростове круглосуточных аптек?",
+          "tools": [
+            "find_places"
+          ],
+          "answer": "В Ростове-на-Дону **19** круглосуточных аптек."
+        },
+        {
+          "q": "А какая из них ближе всего к Белорусской, 44?",
+          "tools": [
+            "nearest_places",
+            "place_details",
+            "find_places",
+            "search_places"
+          ],
+          "answer": "**Ближайшая круглосуточная аптека к Белорусской 44:**  \n- **Аптека** — 781 метр от адреса, работает круглосуточно (24/7).  \n\nЕсли нужен точный адрес или телефон — напишите, уточню!"
+        }
+      ],
+      "attempt": 1
+    },
+    {
+      "case": "brand_count",
+      "ok": true,
+      "why": "ждём «680» в ответе",
+      "seconds": 4.3,
+      "input_tokens": 5031,
+      "output_tokens": 287,
+      "llm_calls": 2,
+      "turns": [
+        {
+          "q": "Сколько в городе пунктов выдачи Ozon?",
+          "tools": [
+            "find_places"
+          ],
+          "answer": "В городе **680** пунктов выдачи Ozon."
+        }
+      ],
+      "attempt": 1
+    },
+    {
+      "case": "dish_search",
+      "ok": true,
+      "why": "хотя бы одно место с шаурмой из базы",
+      "seconds": 7.2,
+      "input_tokens": 5011,
+      "output_tokens": 576,
+      "llm_calls": 2,
+      "turns": [
+        {
+          "q": "Где в Ростове поесть шаурму?",
+          "tools": [
+            "search_places"
+          ],
+          "answer": "Вот места в Ростове, где можно поесть шаурму:\n\n**Шаурма маркет** — Социалистическая улица — Пн-Вс 08:00-22:00  \n**Лучшая Шаурма в Ростове** — (адрес не указан)  \n**Kikchak** — Ворошиловский проспект, 75 — Пн-Вс 11:00-23:00  \n\nХотите узнать подробности о каком-то конкретном месте? Назовите его название или номер."
+        }
+      ],
+      "attempt": 1
+    },
+    {
+      "case": "off_topic",
+      "ok": true,
+      "why": "посторонний вопрос — без вызова инструментов",
+      "seconds": 1.9,
+      "input_tokens": 2137,
+      "output_tokens": 194,
+      "llm_calls": 1,
+      "turns": [
+        {
+          "q": "Реши уравнение x^2 - 5x + 6 = 0",
+          "tools": [],
+          "answer": "К сожалению, я справочник по местам Ростова-на-Дону и не могу решать математические уравнения. \n\nХотите узнать о кафе, ресторанах или других местах в городе?"
+        }
+      ],
+      "attempt": 1
+    },
+    {
+      "case": "nearest_by_landmark",
+      "ok": false,
+      "why": "LlmCallsLimitExceededError: Max number of llm calls limit of `8` exceeded",
+      "seconds": 23.8,
+      "input_tokens": 24420,
+      "output_tokens": 2260,
+      "llm_calls": 8,
+      "turns": [
+        {
+          "q": "Где ближайший банкомат к Центральному рынку?",
+          "tools": [
+            "nearest_places",
+            "place_details",
+            "place_details",
+            "place_details",
+            "find_places",
+            "search_places",
+            "search_places",
+            "find_places"
+          ],
+          "answer": ""
+        }
+      ],
+      "attempt": 1
+    }
+  ]
+}

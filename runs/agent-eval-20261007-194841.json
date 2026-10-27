@@ -1,0 +1,225 @@
+{
+  "summary": {
+    "model": "qwen3.5-4b",
+    "cases": 9,
+    "repeats": 1,
+    "pass_at_1": 0.889,
+    "pass_at_1_wilson_low": 0.565,
+    "pass_all_n": 0.889,
+    "pass_all_n_wilson_low": 0.565,
+    "avg_seconds": 19.6,
+    "avg_llm_calls": 3.0,
+    "avg_input_tokens": 8691,
+    "avg_output_tokens": 1113,
+    "per_case": {
+      "count_24_7": "1/1",
+      "nearest_by_address": "1/1",
+      "forgot_name": "1/1",
+      "memory_followup": "1/1",
+      "filter_followup": "0/1",
+      "brand_count": "1/1",
+      "dish_search": "1/1",
+      "off_topic": "1/1",
+      "nearest_by_landmark": "1/1"
+    }
+  },
+  "runs": [
+    {
+      "case": "count_24_7",
+      "ok": true,
+      "why": "ждём «19» в ответе",
+      "seconds": 18.2,
+      "input_tokens": 4875,
+      "output_tokens": 561,
+      "llm_calls": 2,
+      "turns": [
+        {
+          "q": "Сколько в Ростове круглосуточных аптек?",
+          "tools": [
+            "find_places"
+          ],
+          "answer": "В Ростове **19** круглосуточных аптек. Вот несколько из них:\n\n*   **Актека 24** — круглосуточно\n*   **Аптека Ригла** — круглосуточно\n*   **Аптека круглосуточно** — круглосуточно\n*   **Вита Центральная** — круглосуточно\n*   **Дежурная аптека** — круглосуточно\n\nЕсли нужны адреса или конкретное место рядом с вами, напишите адрес."
+        }
+      ],
+      "attempt": 1
+    },
+    {
+      "case": "nearest_by_address",
+      "ok": true,
+      "why": "ждём «Лаки Фарма» в ответе",
+      "seconds": 8.7,
+      "input_tokens": 4771,
+      "output_tokens": 555,
+      "llm_calls": 2,
+      "turns": [
+        {
+          "q": "Где ближайшая аптека к Белорусской, 44?",
+          "tools": [
+            "nearest_places"
+          ],
+          "answer": "**Лаки Фарма** — ул. Белорусская, д. 45 — открыто до 21:00 (123 м)"
+        }
+      ],
+      "attempt": 1
+    },
+    {
+      "case": "forgot_name",
+      "ok": true,
+      "why": "ждём «Пельмень» в ответе",
+      "seconds": 8.1,
+      "input_tokens": 4670,
+      "output_tokens": 423,
+      "llm_calls": 2,
+      "turns": [
+        {
+          "q": "Забыл название кафе — помню только, что там были пельмени",
+          "tools": [
+            "search_places"
+          ],
+          "answer": "**Пельмень** — открыто до 21:00  \n**ПАРК** (проспект Сельмаш, 1В) — открыто до 24:00  \n**EL Команданте** — русская кухня  \n**Пельмешка**  \n**Вкуснолюбов** (фастфуд, русская кухня)\n\nКакой из них вам ближе? Если нужно больше деталей или адрес конкретного места — напишите."
+        }
+      ],
+      "attempt": 1
+    },
+    {
+      "case": "memory_followup",
+      "ok": true,
+      "why": "телефон +7 900 2580278;+7 918 2012222",
+      "seconds": 18.6,
+      "input_tokens": 10067,
+      "output_tokens": 1276,
+      "llm_calls": 4,
+      "turns": [
+        {
+          "q": "Где ближайшая аптека к Белорусской, 44?",
+          "tools": [
+            "nearest_places"
+          ],
+          "answer": "**Лаки Фарма** — ул. Белорусская, 44 — открыто до 21:00  \n**Аптека** — ул. Белорусская, 45 — часы работы не указаны  \n**Вита Экспресс** — ул. Белорусская, 46 — открыто до 21:00  \n\nБлижайшая аптека — Лаки Фарма (123 м)."
+        },
+        {
+          "q": "А какой у неё телефон?",
+          "tools": [
+            "place_details"
+          ],
+          "answer": "**Лаки Фарма**: +7 900 2580278; +7 918 2012222"
+        }
+      ],
+      "attempt": 1
+    },
+    {
+      "case": "filter_followup",
+      "ok": false,
+      "why": "BadRequestError: litellm.BadRequestError: OpenAIException - Error code: 400 - {'error': 'Engine protocol predict request failed: fetch failed'} LiteLLM Retried: 2 times",
+      "seconds": 71.6,
+      "input_tokens": 31238,
+      "output_tokens": 3977,
+      "llm_calls": 8,
+      "turns": [
+        {
+          "q": "Сколько в Ростове круглосуточных аптек?",
+          "tools": [
+            "find_places",
+            "place_details",
+            "place_details",
+            "place_details",
+            "place_details",
+            "place_details",
+            "search_places",
+            "find_places",
+            "nearest_places",
+            "search_places",
+            "find_places"
+          ],
+          "answer": "В Ростове-на-Дону **19** круглосуточных аптек. Вот несколько из них:\n\n* **Актека 24** — круглосуточно  \n* **Аптека Ригла** — круглосуточно  \n* **Аптека круглосуточно** — круглосуточно  \n* **Вита Центральная** — круглосуточно  \n* **Дежурная аптека** — круглосуточно  \n\n(адреса в базе данных отсутствуют)\n\nЕсли нужно найти ближайшую к вашему месту — укажите адрес или поставьте точку на карте (кнопка с булавкой)."
+        },
+        {
+          "q": "А какая из них ближе всего к Белорусской, 44?",
+          "tools": [],
+          "answer": ""
+        }
+      ],
+      "attempt": 1
+    },
+    {
+      "case": "brand_count",
+      "ok": true,
+      "why": "ждём «680» в ответе",
+      "seconds": 14.0,
+      "input_tokens": 5047,
+      "output_tokens": 383,
+      "llm_calls": 2,
+      "turns": [
+        {
+          "q": "Сколько в городе пунктов выдачи Ozon?",
+          "tools": [
+            "find_places"
+          ],
+          "answer": "В Ростове-на-Дону **680** пунктов выдачи Ozon."
+        }
+      ],
+      "attempt": 1
+    },
+    {
+      "case": "dish_search",
+      "ok": true,
+      "why": "хотя бы одно место с шаурмой из базы",
+      "seconds": 16.7,
+      "input_tokens": 7837,
+      "output_tokens": 1312,
+      "llm_calls": 3,
+      "turns": [
+        {
+          "q": "Где в Ростове поесть шаурму?",
+          "tools": [
+            "search_places",
+            "place_details",
+            "place_details",
+            "place_details",
+            "place_details",
+            "place_details"
+          ],
+          "answer": "Вот места с шаурмой в Ростове:\n\n**Шаурма маркет** — Социалистическая улица — PH,Mo-Su 08:00-22:00  \n**Шаурма \"Chili\"** — часы не указаны  \n**Ливанская шаурма** — часы не указаны  \n**Фастфуд (шаурма)** — часы не указаны  \n**Шаурма** — часы не указаны\n\nЕсли нужно найти конкретное место ближе к вашему адресу или узнать больше деталей, напишите, где вы находитесь."
+        }
+      ],
+      "attempt": 1
+    },
+    {
+      "case": "off_topic",
+      "ok": true,
+      "why": "посторонний вопрос — без вызова инструментов",
+      "seconds": 3.5,
+      "input_tokens": 2120,
+      "output_tokens": 239,
+      "llm_calls": 1,
+      "turns": [
+        {
+          "q": "Реши уравнение x^2 - 5x + 6 = 0",
+          "tools": [],
+          "answer": "К сожалению, я — справочник по местам Ростова-на-Дону и не умею решать математические уравнения. Для решения x² - 5x + 6 = 0 можно воспользоваться калькулятором или онлайн-ресурсами."
+        }
+      ],
+      "attempt": 1
+    },
+    {
+      "case": "nearest_by_landmark",
+      "ok": true,
+      "why": "ждём «АО \"БМ-Банк\"» в ответе",
+      "seconds": 16.6,
+      "input_tokens": 7597,
+      "output_tokens": 1289,
+      "llm_calls": 3,
+      "turns": [
+        {
+          "q": "Где ближайший банкомат к Центральному рынку?",
+          "tools": [
+            "nearest_places",
+            "place_details"
+          ],
+          "answer": "**АО «БМ-Банк»** — 426 м от Центрального рынка — круглосуточно"
+        }
+      ],
+      "attempt": 1
+    }
+  ]
+}

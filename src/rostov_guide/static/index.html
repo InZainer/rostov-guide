@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Ростов-гид</title>
+  <meta name="description" content="Справочник по 8860 местам Ростова-на-Дону: спросите словами, даже если забыли название.">
+  <meta name="theme-color" content="#0f6b63">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230f6b63'/%3E%3Cpath d='M32 13c-8.3 0-15 6.5-15 14.6C17 39 32 51 32 51s15-12 15-23.4C47 19.5 40.3 13 32 13z' fill='%23fff'/%3E%3Ccircle cx='32' cy='28' r='6' fill='%230f6b63'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+  <link rel="stylesheet" href="/static/css/app.css">
+  <script>try { const t = JSON.parse(localStorage.getItem("theme")); if (t) document.documentElement.dataset.theme = t; } catch (e) {}</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js" defer></script>
+  <script type="module" src="/static/js/app.js"></script>
+</head>
+<body>
+  <div class="boot" id="boot" role="status" aria-label="Загрузка"><span class="spinner"></span></div>
+
+  <!-- ===================================================== вход -->
+  <section class="auth" id="auth" hidden>
+    <div class="auth-card">
+      <div class="brand brand-lg">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>Ростов-гид</span>
+      </div>
+      <p class="auth-lead">Справочник по&nbsp;8860 местам Ростова-на-Дону. Спросите словами&nbsp;— даже если забыли название.</p>
+      <div class="auth-tabs" role="tablist">
+        <button type="button" role="tab" class="auth-tab active" data-mode="login" aria-selected="true">Вход</button>
+        <button type="button" role="tab" class="auth-tab" data-mode="register" aria-selected="false">Регистрация</button>
+      </div>
+      <form class="auth-form" id="authForm" novalidate>
+        <label class="field">
+          <span>Имя пользователя</span>
+          <input name="username" autocomplete="username" required minlength="3" maxlength="32" spellcheck="false" autocapitalize="off">
+        </label>
+        <label class="field">
+          <span>Пароль</span>
+          <input name="password" type="password" autocomplete="current-password" required minlength="6">
+        </label>
+        <p class="auth-hint" id="authHint">Нет аккаунта? Регистрация занимает пять секунд.</p>
+        <p class="auth-error" id="authError" role="alert" hidden></p>
+        <button class="btn btn-primary btn-block" type="submit" id="authSubmit">Войти</button>
+      </form>
+      <ul class="auth-features">
+        <li><b>По смыслу.</b> «Там были пельмени» найдёт кафе, даже если в названии нет этого слова.</li>
+        <li><b>Видно, как думает.</b> Каждый шаг агента — в реальном времени.</li>
+        <li><b>Помнит разговор.</b> «А до скольки работает второе?» — поймёт.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===================================================== приложение -->
+  <div class="app" id="app" hidden>
+    <aside class="sidebar" id="sidebar" aria-label="Чаты">
+      <div class="sidebar-top">
+        <div class="brand"><span class="brand-mark" aria-hidden="true"></span><span>Ростов-гид</span></div>
+        <button class="icon-btn only-mobile" id="closeSidebar" aria-label="Закрыть список чатов">
+          <svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+      </div>
+      <button class="btn btn-primary btn-block" id="newChat">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+        Новый чат
+      </button>
+      <nav class="chat-list" id="chatList"></nav>
+      <div class="sidebar-foot">
+        <div class="system" id="systemStatus"></div>
+        <div class="user-row">
+          <span class="avatar" id="userAvatar" aria-hidden="true"></span>
+          <span class="user-name" id="userName"></span>
+          <button class="icon-btn" id="themeToggle" aria-label="Сменить тему" title="Сменить тему">
+            <svg viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1111.2 3a7 7 0 009.8 9.8z"/></svg>
+          </button>
+          <button class="icon-btn" id="logout" aria-label="Выйти" title="Выйти">
+            <svg viewBox="0 0 24 24"><path d="M15 17l5-5-5-5M20 12H9M12 21H5a2 2 0 01-2-2V5a2 2 0 012-2h7"/></svg>
+          </button>
+        </div>
+      </div>
+    </aside>
+    <div class="scrim" id="scrim" hidden></div>
+
+    <main class="chat" id="chat">
+      <header class="chat-head">
+        <button class="icon-btn only-mobile" id="openSidebar" aria-label="Открыть список чатов">
+          <svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+        <h1 class="chat-title" id="chatTitle">Новый чат</h1>
+        <div class="context-meter" id="contextMeter" title="">
+          <span class="context-label">Контекст</span>
+          <span class="context-bar"><span id="contextFill"></span></span>
+          <span class="context-value" id="contextValue">0</span>
+        </div>
+        <button class="icon-btn map-toggle" id="mapToggle" aria-label="Показать карту" title="Карта">
+          <svg viewBox="0 0 24 24"><path d="M9 4L3 6v14l6-2 6 2 6-2V4l-6 2-6-2zM9 4v14M15 6v14"/></svg>
+        </button>
+      </header>
+
+      <div class="messages" id="messages">
+        <div class="messages-inner" id="messagesInner"></div>
+      </div>
+
+      <form class="composer" id="composer" autocomplete="off">
+        <div class="composer-box">
+          <div class="location-chip" id="locationChip" hidden>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0119 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+            <span id="locationLabel"></span>
+            <button type="button" id="clearLocation" aria-label="Убрать точку">×</button>
+          </div>
+          <textarea id="input" rows="1" maxlength="1000" placeholder="Спросите о местах Ростова…" aria-label="Вопрос"></textarea>
+          <div class="composer-actions">
+            <button type="button" class="icon-btn" id="pickLocation" aria-label="Поставить точку на карте" title="Я здесь: поставить точку на карте">
+              <svg viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0119 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+            </button>
+            <button type="submit" class="send-btn" id="send" aria-label="Отправить" disabled>
+              <svg viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
+            </button>
+            <button type="button" class="send-btn stop" id="stop" aria-label="Остановить" hidden>
+              <svg viewBox="0 0 24 24"><rect x="7" y="7" width="10" height="10" rx="2"/></svg>
+            </button>
+          </div>
+        </div>
+        <p class="composer-hint">Enter — отправить · Shift+Enter — новая строка · ответы только по базе OpenStreetMap</p>
+      </form>
+    </main>
+
+    <section class="map-panel" id="mapPanel" aria-label="Карта">
+      <div id="map"></div>
+      <div class="map-banner" id="mapBanner" hidden>Кликните по карте, чтобы отметить, где вы. <button type="button" id="cancelPick">Отмена</button></div>
+      <button class="icon-btn map-close only-mobile" id="mapClose" aria-label="Скрыть карту">
+        <svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+      <div class="map-legend" id="mapLegend" hidden></div>
+    </section>
+  </div>
+
+  <div class="toasts" id="toasts" aria-live="assertive"></div>
+</body>
+</html>
